@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v-model</title>
+</head>
+<body>
+  <div id="app">
+    <p>金額を入力してください</p>
+    <input type="number" v-bind:value="money" v-model.lazy="sum">
+    <p>税込み金額:{{ sum * tax }}円</p>
+    <hr>
+    名字：<input type="text" v-model="first">
+    名前：<input type="text" v-model="last">
+    <p>あなたの名前は{{first + last}}</p>
+    <hr>
+    <input type="checkbox" v-model="flag">
+    <p>true or false：{{ flag }}</p>
+    <hr>
+    <input type="checkbox" v-model="checkValue" true-value="はい" false-value="いいえ">
+    <p>はいorいいえ:{{ checkValue }}</p>
+    <hr>
+    <input type="checkbox" id="development" v-model="selectJob" value="開発職">
+    <label for="development">開発職</label>
+    <input type="checkbox" id="sales" v-model="selectJob" value="営業職">
+    <label for="sales">営業職</label>
+    <input type="checkbox" id="clerk" v-model="selectJob" value="事務職">
+    <label for="clerk">事務職</label>
+    <p>あなたの経験した職業:{{selectJob}}</p>
+    <hr>
+    <input type="radio" id="director" v-model="selectPost" value="部長">
+    <label for="director">部長</label>
+    <input type="radio" id="manager" v-model="selectPost" value="課長">
+    <label for="manager">課長</label>
+    <input type="radio" id="cheif" v-model="selectPost" value="主任">
+    <label for="cheif">主任</label>
+    <p>あなたの現在の役職:{{selectPost}}</p>
+  </div>
+  <script src="vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

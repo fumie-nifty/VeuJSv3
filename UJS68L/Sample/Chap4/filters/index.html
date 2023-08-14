@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>filters</title>
+</head>
+<body>
+  <div id="app">
+    <p>数値を入植してください</p>
+    <input type="number" v-model="number">
+    <p>数値3桁区切り: {{ number | numberFormat }}</p>
+    <p>文字を入力してください</p>
+    <input type="text" v-model="text">
+    <p>文字3桁まで出力: {{ text | stringFormat }}</p>
+    <p>金額を入力してください</p>
+    <input type="number" v-model="money">
+    <p>フィルタの連結（消費税込み＋数値3桁区切り）：{{ money | taxCalculation | numberFormat}}円</p>
+  </div>
+  <script src="vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

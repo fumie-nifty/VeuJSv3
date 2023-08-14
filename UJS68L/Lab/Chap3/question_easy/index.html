@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>購入アンケート</title>
+  <style>
+    .red{
+      color: red;
+      font-size: large;
+   }
+  </style>
+</head>
+<body>
+	<div id="app">
+    <p>１：購入した商品を選択してください</p>
+     <!-- 商品名productNameと双方向データバインディング -->
+    <select v-model="">
+			<option>ハイカットスニーカー</option>
+			<option>ローカットスニーカー</option>
+			<option>サンダル</option>
+		</select>
+    <p>２：購入した商品の満足度を教えてください</p>
+    <!-- 満足度levelと双方向データバインディング  radioのためすべて同じ値-->
+    <label><input type="radio" v-model="" value="満足">満足</label>
+    <label><input type="radio" v-model="" value="普通">普通</label>
+    <label><input type="radio" v-model="" value="不満">不満</label>
+    <p>３：上記２の理由をご記入ください</p>
+    <!-- 自由記述欄freeと双方向データバインディング 拡張子にlazyを使用 -->
+    <textarea cols="30" rows="10" v-model.lazy="" placeholder="自由記述"></textarea>
+    <p>入力した情報は以下の通りです</p>
+    <p>商品名：{{ productName }}</p>
+    <p>満足度：{{ level }}</p>
+    <!-- <style>のredをv-bindによりデータバインディング ""の中に''を入れる-->
+    <p v-bind:class="">自由記述欄:{{ free }}</p>
+	</div>
+	<script src="vue.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

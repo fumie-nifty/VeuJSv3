@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>directive2_Ans</title>
+</head>
+<body>
+	<div id="app">
+		<p>お名前を入力してください</p>
+		<!-- Todo1 -->
+		<input type="text" v-model.lazy="name">
+
+		<p>年齢を選んでください</p>
+		<!-- Todo2 -->
+		<input type="radio" v-model="age" value="10代">10代
+		<input type="radio" v-model="age" value="20代">20代
+		<input type="radio" v-model="age" value="30代">30代
+
+		<p>血液型を選んでください</p>
+		<!-- Todo3 -->
+		<select v-model="type">
+			<option>A型</option>
+			<option>B型</option>
+			<option>O型</option>
+			<option>AB型</option>
+			<option>不明</option>
+		</select>
+		<hr>
+		<button v-on:click="showResult">入力した内容を確認する</button>
+		<!-- Todo4 -->
+		<table border="1" v-show="show">
+			<th>名前</th>
+			<th>年齢</th>
+			<th>血液型</th>
+			<!-- Todo5 -->
+			<tr><td>{{name}}</td><td>{{age}}</td><td>{{type}}</td>
+			</tr>
+		</table>
+	</div>
+	<script src="vue.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

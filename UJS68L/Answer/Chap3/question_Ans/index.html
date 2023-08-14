@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>購入アンケート</title>
+  <style>
+    .red {
+      color: red;
+      font-size: large;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <p>１：購入した商品を選択してください</p>
+    <select v-model="productName">
+      <option>ハイカットスニーカー</option>
+      <option>ローカットスニーカー</option>
+      <option>サンダル</option>
+    </select>
+    <p>２：購入した商品の満足度を教えてください</p>
+    <label><input type="radio" v-model="level" value="満足">満足</label>
+    <label><input type="radio" v-model="level" value="普通">普通</label>
+    <label><input type="radio" v-model="level" value="不満">不満</label>
+    <p>３：上記２の理由をご記入ください</p>
+    <textarea cols="30" rows="10" v-model.lazy="free" placeholder="自由記述"></textarea>
+    <p>入力した情報は以下のとおりです</p>
+    <p>商品名：{{ productName }}</p>
+    <p>満足度：{{ level }}</p>
+    <p v-bind:class="'red'">自由記述欄:{{ free }}</p>
+  </div>
+  <script src="vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

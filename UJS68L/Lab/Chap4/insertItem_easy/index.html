@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>商品登録</title>
+</head>
+<body>
+	<div id="app"> 
+		<p>登録したい商品情報を入力後、商品登録ボタンを押下してください</p>
+
+		<p>商品名一覧
+      <!-- 商品名と双方向データバインディング -->
+			<select v-model="">
+				<option>ハイカットスニーカー</option>
+				<option>ミドルスニーカー</option>
+				<option>ローカットスニーカー</option>
+				<option>サンダル</option>
+			</select>
+		</p>
+
+		<p>カラー
+      <!-- 色と双方向データバインディング -->
+			<input type="radio" value="赤" v-model="">赤
+			<input type="radio" value="青" v-model="">青
+		</p>
+
+    <!-- 金額と双方向データバインディング -->
+		<p>金額<input type="number" min="0" v-model=""></p>
+
+    <!-- v-on:clickを使用し、"insertItem()"を呼び出す -->
+		<button v-on:click="">商品登録</button>
+
+		<table border="1">
+			<thead>
+				<th>No</th>
+				<th>商品名</th>
+				<th>カラー</th>
+				<th>金額</th>
+				<th>ボタン</th>
+			</thead>
+			<tbody>
+        <!-- v-for(indexあり)を使用し、listsの値を表示する。 -->
+				<tr v-for="" v-bind:key="list.id">
+					<td>{{ index + 1 }}</td>
+					<td>{{  }}</td>
+					<td>{{  }}</td>
+          <td>{{  }}円</td>
+          <!-- v-on:clickを使用し、"deleteItem(index)"を呼び出す -->
+					<td><button v-on:click="">削除</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="vue.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

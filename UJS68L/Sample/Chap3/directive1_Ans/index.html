@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>directive1_Ans</title>
+</head>
+<body>
+  <div id="app">
+    <table border="1" align="center" v-show="flag">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Id</th>
+          <th>社員名</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(employee, index) in employeeLists" v-bind:key="employee.id">
+          <td>{{ index }}</td>
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>else-if else</title>
+</head>
+<body>
+  <div id="app">
+    <p v-if="type === 'A'"> A型 </p>
+    <p v-else-if="type === 'B'"> B型 </p>
+    <p v-else-if="type === 'O'"> O型 </p>
+    <p v-else-if="type ==='AB'"> AB型 </p>
+    <p v-else> 該当なし </p>
+  </div>
+  <script src="vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

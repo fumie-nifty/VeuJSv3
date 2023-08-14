@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>商品登録</title>
+</head>
+<body>
+	<div id="app"> 
+		<p>登録したい商品情報を入力後、商品登録ボタンを押下してください</p>
+
+		<p>商品名一覧
+      <!-- 実装１ -->
+			<select>
+				<option>ハイカットスニーカー</option>
+				<option>ミドルスニーカー</option>
+				<option>ローカットスニーカー</option>
+				<option>サンダル</option>
+			</select>
+		</p>
+
+		<p>カラー
+      <!-- 実装２ -->
+			<input type="radio" value="赤">赤
+			<input type="radio" value="青">青
+		</p>
+
+    <!-- 実装３ -->
+		<p>金額<input type="number" min="0"></p>
+
+    <!-- 実装４ -->
+		<button>商品登録</button>
+
+    <!-- 実装５ -->
+		<table border="1">
+			<thead>
+				<th>No</th>
+				<th>商品名</th>
+				<th>カラー</th>
+				<th>金額</th>
+				<th>ボタン</th>
+			</thead>
+			<tbody>
+        <!-- 実装６ -->
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="vue.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
