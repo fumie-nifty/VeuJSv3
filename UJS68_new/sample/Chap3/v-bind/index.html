@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v-bind</title>
+  <style>
+    .red{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <p v-bind:class="{red:true}">コースを入力してください</p>
+    <input type="text"  v-bind:value="title">
+    <p>省略記法<input type="text"  :value="title"></p>
+    <p><a v-bind:href="'https://www.knowledgewing.com/kw/'">富士通ラーニングメディア社</a></p>
+  </div>
+  <script src="vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

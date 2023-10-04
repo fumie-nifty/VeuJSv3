@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v-for</title>
+</head>
+<body>
+  <div id="app">
+    <!-- indexを使用 -->
+    <ul v-for="(list,index) in lists" v-bind:key="list">
+      <li>{{ index }}番目:{{ list }}</li>
+    </ul>
+  </div>
+  <script src="vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

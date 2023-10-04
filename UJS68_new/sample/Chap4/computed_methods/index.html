@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>computed_methods</title>
+</head>
+<body>
+  <div id="app">
+    <p>computed　dataに変更がなければキャッシュ</p>
+    <p>{{ getComputed }}</p>
+    <p>{{ getComputed }}</p>
+    <p>{{ getComputed }}</p>
+
+    <p>methods 呼び出す度に結果が変わる</p>
+    <p>{{ getMethods() }}</p>
+    <p>{{ getMethods() }}</p>
+    <p>{{ getMethods() }}</p>
+  </div>
+  <script src="vue.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
