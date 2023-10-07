@@ -1,8 +1,10 @@
-const app = new Vue({
-
-  //以下に記述
-  el:'',
-  data:{
-      
+const { createApp} = Vue
+  
+createApp({
+  data() {
+    return {
+    //以下に記述
+    text:''
+    }
   }
-})
+}).mount('#app')

@@ -14,4 +14,20 @@ const app = new Vue({
     }
   }
 })
+const {createApp,methods } = Vue
+  
+createApp({
+  data() {
+    return {
+      name:'', //名前
+      age:'',　//年齢
+      type:'', //血液型
+      show:false //表示フラグ
+     }
+  }
+}).mount('#app')
+
+const publisshowResulthedBooksMessage = methods(() => {
+  this.show = true
+})
 
