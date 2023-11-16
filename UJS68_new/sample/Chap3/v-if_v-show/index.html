@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>v-if_v-show</title>
+  <title>v-if</title>
 </head>
+
 <body>
   <div id="app">
-    <!-- DOMの追加・削除 -->
-    <p v-if='flag'> {{ textIf }} </p>
-    <!-- DOMの表示・非表示 -->
-    <p v-show='flag'>{{ textShow }}</p>
-    <button v-on:click='change'>change</button>
+    <p v-if="flag">v-if: {{ message }} </p>
+    <p v-show="flag">v-show: {{ message }} </p>
   </div>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="main.js"></script>
 </body>
+
 </html>

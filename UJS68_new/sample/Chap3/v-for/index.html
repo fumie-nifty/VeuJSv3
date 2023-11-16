@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>v-for</title>
 </head>
+
 <body>
   <div id="app">
     <!-- indexを使用 -->
-    <ul v-for="(list,index) in lists" v-bind:key="list">
-      <li>{{ index }}番目:{{ list }}</li>
+    <ul v-for="(week,index) in weekList" v-bind:key="week">
+      <li>{{ index }}番目:{{ week }}</li>
     </ul>
   </div>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="main.js"></script>
 </body>
+
 </html>

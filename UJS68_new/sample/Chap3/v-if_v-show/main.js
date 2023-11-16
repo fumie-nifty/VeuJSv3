@@ -1,15 +1,12 @@
-const app = new Vue({
-
-    el:'#app',
-    data:{
-        textIf:'if',
-        textShow:'show',
-        flag:true,
-    },
-    methods:{
-        //表示制御
-        change:function(){
-            this.flag = !this.flag
-        }
+const {createApp,ref} = Vue
+  
+createApp({
+  setup() {
+    const message = ref('Hello Vue!!')
+    const flag = ref(false)
+    return {
+      message,
+      flag
     }
-})
+  }
+}).mount('#app')
