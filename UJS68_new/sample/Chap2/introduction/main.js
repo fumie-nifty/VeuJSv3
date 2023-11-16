@@ -1,10 +1,11 @@
-const { createApp} = Vue
+const {createApp,ref} = Vue
   
 createApp({
-  data() {
+  setup() {
     return {
-    //以下に記述
-    text:''
+      //以下に記述
+      text:ref('')
     }
   }
 }).mount('#app')
+

@@ -1,7 +1,10 @@
-const app = new Vue({
-
-  el:'#app',
-  data:{
-    type :'B'//物理的に値を変更する
+const {createApp,ref} = Vue
+  
+createApp({
+  setup() {
+    const type = ref('B')
+    return {
+      type
+    }
   }
-})
+}).mount('#app')

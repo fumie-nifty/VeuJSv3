@@ -1,9 +1,12 @@
-const {createApp} = Vue
+const {createApp,ref} = Vue
   
 createApp({
-  data() {
+  setup() {
+    const message = ref('Hello Vue!!')
+    const name = ref('kuga')
     return {
-      text:'Hello Vue!!'
+      message,
+      name
     }
   }
 }).mount('#app')

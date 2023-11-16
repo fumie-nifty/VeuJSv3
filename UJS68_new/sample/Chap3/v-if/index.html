@@ -7,7 +7,8 @@
 </head>
 <body>
   <div id="app">
-    <p v-if="flag"> {{ text }} </p>
+    <p v-if="!flag"> {{ message1 }} </p>
+    <p v-if="flag"> {{ message2 }} </p>
   </div>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="main.js"></script>
