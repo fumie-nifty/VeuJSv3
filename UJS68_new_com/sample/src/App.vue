@@ -1,12 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
   <header>
     <div class="wrapper">
-      <h1>Sample</h1>
+      <RouterLink to="/"><h1>Sample</h1></RouterLink>
       <h2>3章</h2>
       <nav>
         <RouterLink to="/mustache">リアクティブ変数＆マスタッシュ構文</RouterLink><br>
@@ -18,7 +17,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/bind">v-bind</RouterLink><br>
         <RouterLink to="/bind_reference">v-bind 参考</RouterLink><br>
         <RouterLink to="/model">v-model</RouterLink><br>
-        <RouterLink to="/cloak">v-cloak</RouterLink><br>
+        <a href="/chap3/v-cloak/index.html" target="_blank" rel="noopener noreferrer">v-cloak</a><br>
         <RouterLink to="/directive2">ハンズオン3-2</RouterLink><br>
         <RouterLink to="/directive2_ans">ハンズオン3-2　解答</RouterLink><br>
       </nav>

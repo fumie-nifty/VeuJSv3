@@ -35,11 +35,6 @@ const router = createRouter({
       component: () => import('/src/views/chap3/BindReferenceView.vue')
     },
     {
-      path: '/cloak',
-      name: 'cloak',
-      component: () => import('/src/views/chap3/CloakView.vue')
-    },
-    {
       path: '/for',
       name: 'for',
       component: () => import('/src/views/chap3/ForView.vue')
