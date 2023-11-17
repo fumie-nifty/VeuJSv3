@@ -1,9 +1,10 @@
 <script setup>
-  import Directive1 from '/src/components/chap3/Directive1.vue'
+  import Cloak from '/src/components/chap3/Cloak.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <h3>3章　v-cloak</h3>
+    <Cloak />
   </main>
 </template>

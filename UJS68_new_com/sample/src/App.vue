@@ -9,17 +9,18 @@ import HelloWorld from './components/HelloWorld.vue'
       <h1>Sample</h1>
       <h2>3章</h2>
       <nav>
-        <RouterLink to="/">リアクティブ変数＆マスタッシュ構文</RouterLink><br>
-        <RouterLink to="/v-if_v-show">v-if</RouterLink><br>
-        <RouterLink to="/">v-else-if v-else</RouterLink><br>
-        <RouterLink to="/">v-show</RouterLink><br>
-        <RouterLink to="/">v-for</RouterLink><br>
+        <RouterLink to="/mustache">リアクティブ変数＆マスタッシュ構文</RouterLink><br>
+        <RouterLink to="/if_show">v-if</RouterLink><br>
+        <RouterLink to="/if_else">v-else-if v-else</RouterLink><br>
+        <RouterLink to="/for">v-for</RouterLink><br>
         <RouterLink to="/directive1">ハンズオン3-1</RouterLink><br>
         <RouterLink to="/directive1_ans">ハンズオン3-1　解答</RouterLink><br>
-        <RouterLink to="/">v-bind</RouterLink><br>
-        <RouterLink to="/">v-model</RouterLink><br>
-        <RouterLink to="/">v-cloak</RouterLink><br>
-        <RouterLink to="/">ハンズオン3-2</RouterLink><br>
+        <RouterLink to="/bind">v-bind</RouterLink><br>
+        <RouterLink to="/bind_reference">v-bind 参考</RouterLink><br>
+        <RouterLink to="/model">v-model</RouterLink><br>
+        <RouterLink to="/cloak">v-cloak</RouterLink><br>
+        <RouterLink to="/directive2">ハンズオン3-2</RouterLink><br>
+        <RouterLink to="/directive2_ans">ハンズオン3-2　解答</RouterLink><br>
       </nav>
 
       <h2>4章</h2>

@@ -1,9 +1,10 @@
 <script setup>
-  import Directive1 from '/src/components/chap3/Directive1.vue'
+  import Model from '/src/components/chap3/Model.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <h3>3章　v-model</h3>
+    <Model />
   </main>
 </template>

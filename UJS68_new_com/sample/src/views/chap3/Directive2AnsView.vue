@@ -1,9 +1,10 @@
 <script setup>
-  import Directive1 from '/src/components/chap3/Directive1.vue'
+  import Directive2Ans from '/src/components/chap3/Directive2Ans.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <h3>3章　ハンズオン3-2【解答】</h3>
+    <Directive2Ans />
   </main>
 </template>

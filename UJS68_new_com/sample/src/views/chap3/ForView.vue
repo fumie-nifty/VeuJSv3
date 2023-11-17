@@ -1,9 +1,10 @@
 <script setup>
-  import Directive1 from '/src/components/chap3/Directive1.vue'
+  import For from '/src/components/chap3/For.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <h3>3章　v-for</h3>
+    <For />
   </main>
 </template>

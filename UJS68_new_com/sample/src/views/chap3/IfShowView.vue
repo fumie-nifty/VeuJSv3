@@ -4,7 +4,7 @@
 
 <template>
   <main>
-    <h3>2章　v-if、v-show</h3>
+    <h3>3章　v-if、v-show</h3>
     <VIf_VShow />
   </main>
 </template>

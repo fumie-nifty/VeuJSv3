@@ -1,9 +1,10 @@
 <script setup>
-  import Directive1 from '/src/components/chap3/Directive1.vue'
+  import IfElse from '/src/components/chap3/IfElse.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <h3>3章　v-else-if v-else</h3>
+    <IfElse />
   </main>
 </template>

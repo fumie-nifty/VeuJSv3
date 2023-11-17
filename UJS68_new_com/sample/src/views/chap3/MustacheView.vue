@@ -1,9 +1,10 @@
 <script setup>
-  import Directive1 from '/src/components/chap3/Directive1.vue'
+  import Mustache from '/src/components/chap3/Mustache.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <h3>3章　リアクティブ変数＆マスタッシュ構文</h3>
+    <Mustache />
   </main>
 </template>

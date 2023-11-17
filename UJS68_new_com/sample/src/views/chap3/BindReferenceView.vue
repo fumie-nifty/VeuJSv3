@@ -1,9 +1,10 @@
 <script setup>
-  import Directive1 from '/src/components/chap3/Directive1.vue'
+  import BindReference from '/src/components/chap3/BindReference.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <h3>3章　v-bind　参考</h3>
+    <BindReference />
   </main>
 </template>
