@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>v-cloak</title>
+  <title>v-model</title>
   <style>
     /* バインディングされるまで表示されない */
     [v-cloak] {
@@ -15,34 +15,16 @@
 
 <body>
   <div id="app" v-cloak>
-    <p>お名前を入力してください</p>
-    <input type="text" v-model="name">
-
-    <p>年齢を選んでください</p>
-    <input type="radio" v-model="age" value="10代">10代
-    <input type="radio" v-model="age" value="20代">20代
-    <input type="radio" v-model="age" value="30代">30代
-
-    <p>血液型を選んでください</p>
-    <select v-model="type">
-      <option>A型</option>
-      <option>B型</option>
-      <option>O型</option>
-      <option>AB型</option>
-      <option>不明</option>
-    </select>
-    <hr>
-    <button v-on:click="showResult">入力した内容を確認する</button>
-    <table border="1" v-show="show">
-      <th>名前</th>
-      <th>年齢</th>
-      <th>血液型</th>
-      <tr>
-        <td>{{name}}</td>
-        <td>{{age}}</td>
-        <td>{{type}}</td>
-      </tr>
-    </table>
+    修飾子なし：
+      <input type="text" v-model="message"><br>
+    lazy：
+      <input type="text" v-model.lazy="message"><br>
+    trim：
+      <input type="text" v-model.trim="message"><br>
+    number：
+      <input type="text" v-model.number="message"><br>
+    <p>messageの内容：{{message}}</p>
+    <p>messageの型：{{typeof message}}</p>
   </div>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="main.js"></script>

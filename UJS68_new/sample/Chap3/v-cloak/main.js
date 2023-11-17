@@ -1,15 +1,10 @@
-const app = new Vue({
-
-  el:'#app',
-  data:{
-     name:'',
-     age:'',
-     type:'',
-     show:false
-  },
-  methods:{
-    showResult:function(){
-      this.show = true
+const {createApp,ref} = Vue
+  
+createApp({
+  setup() {
+    const message = ref('')
+    return {
+      message
     }
   }
-})
+}).mount('#app')

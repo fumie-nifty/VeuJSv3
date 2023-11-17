@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>directive2_Ans</title>
+	<title>directive2_Ans</title>
 </head>
+
 <body>
 	<div id="app">
 		<p>お名前を入力してください</p>
 		<!-- Todo1 -->
-		<input type="text" v-model.lazy="name">
+		<input type="text" v-model.lazy="employee.name">
 
 		<p>年齢を選んでください</p>
 		<!-- Todo2 -->
-		<input type="radio" v-model="age" value="10代">10代
-		<input type="radio" v-model="age" value="20代">20代
-		<input type="radio" v-model="age" value="30代">30代
+		<input type="radio" v-model="employee.age" value="10代">10代
+		<input type="radio" v-model="employee.age" value="20代">20代
+		<input type="radio" v-model="employee.age" value="30代">30代
 
 		<p>血液型を選んでください</p>
 		<!-- Todo3 -->
-		<select v-model="type">
+		<select v-model="employee.type">
 			<option>A型</option>
 			<option>B型</option>
 			<option>O型</option>
@@ -34,11 +36,15 @@
 			<th>年齢</th>
 			<th>血液型</th>
 			<!-- Todo5 -->
-			<tr><td>{{name}}</td><td>{{age}}</td><td>{{type}}</td>
+			<tr>
+				<td>{{employee.name}}</td>
+				<td>{{employee.age}}</td>
+				<td>{{employee.type}}</td>
 			</tr>
 		</table>
 	</div>
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	<script src="main.js"></script>
 </body>
+
 </html>

@@ -2,7 +2,9 @@ body {
   font-family: sans-serif;
   }
   
-
+div.colum{
+  margin-left: 20px;
+}
 /*フレーム*/
 .base {
     display: flex;
