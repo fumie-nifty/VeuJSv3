@@ -5,7 +5,16 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header>
     <div class="wrapper">
-      <RouterLink to="/"><h1>Sample</h1></RouterLink>
+      <RouterLink to="/">
+        <h1>Sample</h1>
+      </RouterLink>
+
+      <h2>2章</h2>
+      <nav>
+        <a href="/chap2/introduction_ans/index.html" target="_blank" rel="noopener noreferrer">CDNの利用</a><br>
+        <RouterLink to="/chap2/introduction">単一ファイルコンポーネント</RouterLink><br>
+      </nav>
+
       <h2>3章</h2>
       <nav>
         <RouterLink to="/mustache">リアクティブ変数＆マスタッシュ構文</RouterLink><br>
@@ -24,13 +33,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
       <h2>4章</h2>
       <nav>
-        <RouterLink to="/">リアクティビティー</RouterLink><br>
-        <RouterLink to="/">算出プロパティ</RouterLink><br>
-        <RouterLink to="/">イベント</RouterLink><br>
-        <RouterLink to="/">ウォッチャー</RouterLink><br>
-        <RouterLink to="/">v-for</RouterLink><br>
-        <RouterLink to="/">ハンズオン4-1</RouterLink><br>
+        <RouterLink to="/chap4/ref">リアクティビティー ref()</RouterLink><br>
       </nav>
+
       <h2>5章</h2>
       <nav>
         <RouterLink to="/">Web API"</RouterLink><br>
@@ -48,7 +53,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/">状態管理</RouterLink><br>
         <RouterLink to="/">ハンズオン7-2</RouterLink><br>
       </nav>
-   </div>
+    </div>
   </header>
 
   <RouterView />

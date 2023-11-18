@@ -10,6 +10,11 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/chap2/introduction',
+      name: 'introduction',
+      component: () => import('/src/views/chap2/IntroductionView.vue')
+    },
+    {
       path: '/directive1',
       name: 'directive1',
       component: () => import('/src/views/chap3/Directive1View.vue')
@@ -63,6 +68,21 @@ const router = createRouter({
       path: '/directive2_ans',
       name: 'directive2_ans',
       component: () => import('/src/views/chap3/Directive2AnsView.vue')
+    },
+    {
+      path: '/chap4/ref',
+      name: 'chap4_ref',
+      component: () => import('/src/views/chap4/RefView.vue')
+    },
+    {
+      path: '/chap4/reactive',
+      name: 'chap4_reactive',
+      component: () => import('/src/views/chap4/ReactiveView.vue')
+    },
+    {
+      path: '/chap4/insert_member',
+      name: 'insert_member',
+      component: () => import('/src/views/chap4/InsertMemberView.vue')
     }
  ]
 
