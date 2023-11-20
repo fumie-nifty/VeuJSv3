@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>methods</title>
 </head>
+
 <body>
   <div id="app">
-    名字：<input type="text" v-model="first">
-    名前：<input type="text" v-model="last">
+    名字：<input type="text" v-model="data.first">
+    名前：<input type="text" v-model="data.last">
     <button v-on:click="clickFlag">クリックして表示</button>
-    <p v-show="nameShow">あなたの名前は{{first + last}}</p>
-    <hr>
-    部門：<input type="text" v-model="department">
-    <button v-on:mouseover="mouseFlag" v-on:mouseleave="mouseFlag">マウスオーバーして表示</button>
-    <p v-show="departmentShow">あなたの部門は{{ department }}</p>
+    <p v-show="showFlag">あなたの名前は{{data.first + data.last}}</p>
     <hr>
     <button v-on:click="clickEvent">イベントオブジェクト</button>
     <hr>
     <button v-on:click="sayHello('hello!!')">hello!!という文字を渡す</button>
     <hr>
     <button @click="countUp">v-onは省略可能</button>
-    <p>{{ count }}</p>
+    <p>{{ data.count }}</p>
     <button @click.once="countUp">一度しか実行されない</button>
   </div>
-  <script src="vue.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="main.js"></script>
 </body>
 

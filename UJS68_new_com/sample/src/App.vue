@@ -34,6 +34,12 @@ import { RouterLink, RouterView } from 'vue-router'
       <h2>4章</h2>
       <nav>
         <RouterLink to="/chap4/ref">リアクティビティー ref()</RouterLink><br>
+        <RouterLink to="/chap4/reactive">リアクティビティー reactive()</RouterLink><br>
+        <RouterLink to="/chap4/event">イベント処理</RouterLink><br>
+        <RouterLink to="/chap4/computed">算出プロパティ</RouterLink><br>
+        <RouterLink to="/chap4/ref">監視プロパティ</RouterLink><br>
+        <RouterLink to="/chap4/insert_member">ハンズオン4-1</RouterLink><br>
+        <RouterLink to="/chap4/insert_member">ハンズオン4-1　解答</RouterLink><br>
       </nav>
 
       <h2>5章</h2>
@@ -43,7 +49,7 @@ import { RouterLink, RouterView } from 'vue-router'
       </nav>
       <h2>6章</h2>
       <nav>
-        <RouterLink to="/">コンポーネント</RouterLink><br>
+        <RouterLink to="/">コンポーネント指向</RouterLink><br>
         <RouterLink to="/">ハンズオン6-1</RouterLink><br>
       </nav>
       <h2>7章</h2>

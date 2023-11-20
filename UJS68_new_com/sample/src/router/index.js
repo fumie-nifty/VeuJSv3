@@ -70,6 +70,11 @@ const router = createRouter({
       component: () => import('/src/views/chap3/Directive2AnsView.vue')
     },
     {
+      path: '/chap4/event',
+      name: 'chap4_event',
+      component: () => import('/src/views/chap4/EventView.vue')
+    },
+    {
       path: '/chap4/ref',
       name: 'chap4_ref',
       component: () => import('/src/views/chap4/RefView.vue')
@@ -78,6 +83,11 @@ const router = createRouter({
       path: '/chap4/reactive',
       name: 'chap4_reactive',
       component: () => import('/src/views/chap4/ReactiveView.vue')
+    },
+    {
+      path: '/chap4/computed',
+      name: 'chap4_computed',
+      component: () => import('/src/views/chap4/ComputedView.vue')
     },
     {
       path: '/chap4/insert_member',

@@ -1,5 +1,6 @@
 <script setup>
   import { ref } from 'vue'
+  //import imgurl from '@/assets/images/SH1006.gif'
 
   const textDisabled = ref(true)
   const imgAtr = ref({
@@ -24,7 +25,7 @@
   <h2>■複数の属性</h2>
   <div class="colum">
     <img v-bind="imgAtr" />
-    <!--レンダリング結果：<img alt="SH1006" title="ハイカットスニーカーFLM_RD" src="../../images/SH1006.gif">-->
+    <!--レンダリング結果：<img alt="SH1006" title="ハイカットスニーカーFLM_RD" src="/images/SH1006.gif">-->
   </div>
   <h2>■style属性</h2>
   <div class="colum">
