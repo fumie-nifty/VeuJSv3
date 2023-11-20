@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>axios_dog_Ans</title>
+</head>
+<body>
+  <div id="app">
+    <p>{{ message }}</p>
+    <select v-model="keyword">
+      <option>entlebucher</option>
+      <option>shiba</option>
+      <option>pomeranianiba</option>
+      </select>
+    <p><img v-bind:src="image" width="200px" height="200px"></p>
+    <p>{{ error }}</p>
+  </div>
+  <script src="vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
