@@ -95,9 +95,9 @@ const router = createRouter({
       component: () => import('/src/views/chap4/ComputedView.vue')
     },
     {
-      path: '/chap4/insert_member',
-      name: 'insert_member',
-      component: () => import('/src/views/chap4/InsertMemberView.vue')
+      path: '/chap4/insert_employee',
+      name: 'insert_employee',
+      component: () => import('/src/views/chap4/InsertEmployeeView.vue')
     }
  ]
 
