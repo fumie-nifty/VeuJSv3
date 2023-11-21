@@ -1,5 +1,5 @@
 <script setup>
-  import Introduction from '/src/components/chap2/Introduction.vue'
+  import Introduction from '@/components/chap2/Introduction.vue'
 </script>
 
 <template>

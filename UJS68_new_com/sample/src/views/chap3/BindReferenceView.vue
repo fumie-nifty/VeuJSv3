@@ -1,5 +1,5 @@
 <script setup>
-  import BindReference from '/src/components/chap3/BindReference.vue'
+  import BindReference from '@/components/chap3/BindReference.vue'
 </script>
 
 <template>

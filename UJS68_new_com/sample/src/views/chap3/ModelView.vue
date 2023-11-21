@@ -1,5 +1,5 @@
 <script setup>
-  import Model from '/src/components/chap3/Model.vue'
+  import Model from '@/components/chap3/Model.vue'
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup>
-  import Directive2Ans from '/src/components/chap3/Directive2Ans.vue'
+  import Directive2Ans from '@/components/chap3/Directive2Ans.vue'
 </script>
 
 <template>

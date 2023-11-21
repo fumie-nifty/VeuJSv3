@@ -1,5 +1,5 @@
 <script setup>
-  import IfElse from '/src/components/chap3/IfElse.vue'
+  import IfElse from '@/components/chap3/IfElse.vue'
 </script>
 
 <template>

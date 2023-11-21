@@ -1,5 +1,5 @@
 <script setup>
-  import Mustache from '/src/components/chap3/Mustache.vue'
+  import Mustache from '@/components/chap3/Mustache.vue'
 </script>
 
 <template>

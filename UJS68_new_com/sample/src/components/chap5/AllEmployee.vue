@@ -1,44 +1,51 @@
 <script setup>
-  import { ref } from 'vue'
+import { ref, reactive,onMounted } from 'vue'
+import axios from "axios"
 
-  const flag = ref(true)
-  const employeeList = ref([
-    {
-      "id": 922101,
-      "name": "千野 陽平"
-    },
-    {
-      "id": 922102,
-      "name": "結城 由加志"
-    },
-    {
-      "id": 922103,
-      "name": "高橋 直子"
-    },
-    {
-      "id": 922104,
-      "name": "吉田 真由"
-    }
-  ])
+const employeeId = ref('')
+const message = ref('従業員番号を入力して検索ボタンをクリックして下さい')
+
+const employeeList = ref([])
+
+onMounted(() => {
+	const url = 'http://localhost:3000/employee/'
+
+	axios.get(url)
+		.then((response) => {
+			message.value = '検索に成功しました'
+			employeeList.value = response.data
+		})
+		.catch((error) => {
+			message.value ='検索に失敗しました'
+			employeeList.value = []
+			console.log(error)
+		})
+
+})
+
 </script>
 
 <template>
-  <table border="1" style="margin: auto;" v-show="flag">
+	<p>従業員一覧</p>
+	<p class="message">{{ message }}</p>
+	<table border="1">
     <thead>
       <tr>
-        <th>No</th>
-        <th>Id</th>
-        <th>社員名</th>
+        <th>従業員番号</th>
+        <th>従業員名</th>
+        <th>所属</th>
+        <th>内線</th>
       </tr>
     </thead>
-    <tbody>
-      <tr v-for="(employee, index) in employeeList" v-bind:key="employee.id">
-        <td>{{ index }}</td>
-        <td>{{ employee.id }}</td>
-        <td>{{ employee.name }}</td>
-      </tr>
-    </tbody>
-  </table>
+		<tbody>
+			<tr v-for="(employee,index) in employeeList" v-bind:key="employee.id">
+				<td>{{ employee.id }}</td>
+				<td>{{ employee.name }}</td>
+				<td>{{ employee.section }}</td>
+				<td>{{ employee.phone }}</td>
+			</tr>
+		</tbody>
+	</table>
 </template>
 
 <style scoped></style>

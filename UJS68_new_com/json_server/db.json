@@ -16,57 +16,314 @@
   "profile": {
     "name": "typicode"
   },
-  "shoes":[
-    {"id":1,"ProductName":"ハイカットスニーカーFLM_GR01","Stock":10,"Order":2,"SalesPotential":8,"Price":7800,"Img":"SH1001.gif"},
-    {"id":2,"ProductName":"ハイカットスニーカーFLM_LG01","Stock":2,"Order":1,"SalesPotential":1,"Price":7900,"Img":"SH1002.gif"},
-    {"id":3,"ProductName":"ハイカットスニーカーFLM_BL","Stock":8,"Order":0,"SalesPotential":8,"Price":7900,"Img":"SH1003.gif"},
-    {"id":4,"ProductName":"ハイカットスニーカーFLM_GR","Stock":5,"Order":5,"SalesPotential":0,"Price":7500,"Img":"SH1004.gif"},
-    {"id":5,"ProductName":"ハイカットスニーカーFLM_WH","Stock":7,"Order":2,"SalesPotential":5,"Price":7800,"Img":"SH1005.gif"},
-    {"id":6,"ProductName":"ハイカットスニーカーFLM_RD","Stock":20,"Order":1,"SalesPotential":19,"Price":7700,"Img":"SH1006.gif"},
-    {"id":7,"ProductName":"ハイカットスニーカーFLM_GR02","Stock":11,"Order":2,"SalesPotential":10,"Price":6800,"Img":"SH1007.gif"},
-    {"id":8,"ProductName":"ハイカットスニーカーFLM_YL","Stock":12,"Order":1,"SalesPotential":11,"Price":7900,"Img":"SH1008.gif"},
-    {"id":9,"ProductName":"ハイカットスニーカーFLM_LG02","Stock":17,"Order":2,"SalesPotential":15,"Price":7200,"Img":"SH1009.gif"},
-    {"id":10,"ProductName":"ミドルカットスニーカーFLM_BL","Stock":10,"Order":1,"SalesPotential":9,"Price":7700,"Img":"SH1010.gif"},
-    {"id":11,"ProductName":"ミドルカットスニーカーFLM_WH","Stock":1,"Order":0,"SalesPotential":1,"Price":7500,"Img":"SH1011.gif"},
-    {"id":12,"ProductName":"ミドルカットスニーカーFLM_RD","Stock":4,"Order":1,"SalesPotential":3,"Price":7200,"Img":"SH1012.gif"},
-    {"id":13,"ProductName":"ミドルカットスニーカーFLM_GR","Stock":7,"Order":3,"SalesPotential":4,"Price":7900,"Img":"SH1013.gif"},
-    {"id":14,"ProductName":"ミドルカットスニーカーFLM_GR","Stock":5,"Order":5,"SalesPotential":0,"Price":7700,"Img":"SH1014.gif"},
-    {"id":15,"ProductName":"ミドルカットスニーカーFLM_YL","Stock":8,"Order":4,"SalesPotential":4,"Price":7800,"Img":"SH1015.gif"},
-    {"id":16,"ProductName":"ローカットスニーカーFLM_BK","Stock":12,"Order":1,"SalesPotential":11,"Price":7900,"Img":"SH1016.gif"},
-    {"id":17,"ProductName":"ローカットスニーカーFLM_WH","Stock":12,"Order":1,"SalesPotential":11,"Price":7900,"Img":"SH1017.gif"},
-    {"id":18,"ProductName":"ローカットスニーカーFLM_GR01","Stock":7,"Order":5,"SalesPotential":11,"Price":7900,"Img":"SH1018.gif"},
-    {"id":19,"ProductName":"ローカットスニーカーFLM_GR","Stock":12,"Order":1,"SalesPotential":2,"Price":7900,"Img":"SH1019.gif"},
-    {"id":20,"ProductName":"ローカットスニーカーFLM_YL","Stock":12,"Order":1,"SalesPotential":11,"Price":7900,"Img":"SH1020.gif"},
-    {"id":21,"ProductName":"ローカットスニーカーFLM_GR02","Stock":9,"Order":2,"SalesPotential":9,"Price":7600,"Img":"SH1021.gif"},
-    {"id":22,"ProductName":"ローカットスニーカーFLM_GR03","Stock":2,"Order":1,"SalesPotential":1,"Price":7500,"Img":"SH1022.gif"},
-    {"id":23,"ProductName":"スリッポンFLM_GR01","Stock":14,"Order":3,"SalesPotential":11,"Price":4200,"Img":"SH1023.gif"},
-    {"id":24,"ProductName":"スリッポンFLM_WH","Stock":25,"Order":4,"SalesPotential":21,"Price":4100,"Img":"SH1024.gif"},
-    {"id":25,"ProductName":"スリッポンFLM_GR02","Stock":11,"Order":1,"SalesPotential":10,"Price":4500,"Img":"SH1025.gif"},
-    {"id":26,"ProductName":"サンダルFLM_WH","Stock":17,"Order":3,"SalesPotential":14,"Price":3800,"Img":"SH1026.gif"},
-    {"id":27,"ProductName":"サンダルFLM_BL","Stock":5,"Order":2,"SalesPotential":3,"Price":3900,"Img":"SH1027.gif"},
-    {"id":28,"ProductName":"クロックスFLM_PK","Stock":12,"Order":1,"SalesPotential":11,"Price":4400,"Img":"SH1028.gif"},
-    {"id":29,"ProductName":"クロックスFLM_BL","Stock":21,"Order":5,"SalesPotential":16,"Price":4100,"Img":"SH1029.gif"},
-    {"id":30,"ProductName":"クロックスFLM_OR","Stock":7,"Order":1,"SalesPotential":6,"Price":4200,"Img":"SH1030.gif"}
-    ],
-    "employee" : [
-	    {
-	        "id":922101,
-	        "name":"千野 陽平"
-	    },
-	    {
-	        "id":922102,
-	        "name":"結城 由加志"
-	    },
-	    {
-	        "id":922103,
-	        "name":"高橋 直子"
-	    },
-	    {
-	        "id":922104,
-	        "name":"吉田 真由"
-	    }
-	]
+  "employee": [
+    {
+      "id": 922101,
+      "name": "鈴木　一郎",
+      "section": "研修部",
+      "phone": "7700-2257"
+    },
+    {
+      "id": 922102,
+      "name": "田村　正人",
+      "section": "研修部",
+      "phone": "7700-2258"
+    },
+    {
+      "id": 922103,
+      "name": "松田　明美",
+      "section": "開発部",
+      "phone": "7712-4418"
+    },
+    {
+      "id": 922104,
+      "name": "浅井　順二",
+      "section": "開発部",
+      "phone": "7712-4416"
+    },
+    {
+      "id": 922105,
+      "name": "高橋　道夫",
+      "section": "営業部",
+      "phone": "7712-3316"
+    },
+    {
+      "id": 922106,
+      "name": "夏木　裕子",
+      "section": "営業部",
+      "phone": "7712-3317"
+    }
+  ],
+  "shoes": [
+    {
+      "id": 1,
+      "ProductName": "ハイカットスニーカーFLM_GR01",
+      "Stock": 10,
+      "Order": 2,
+      "SalesPotential": 8,
+      "Price": 7800,
+      "Img": "SH1001.gif"
+    },
+    {
+      "id": 2,
+      "ProductName": "ハイカットスニーカーFLM_LG01",
+      "Stock": 2,
+      "Order": 1,
+      "SalesPotential": 1,
+      "Price": 7900,
+      "Img": "SH1002.gif"
+    },
+    {
+      "id": 3,
+      "ProductName": "ハイカットスニーカーFLM_BL",
+      "Stock": 8,
+      "Order": 0,
+      "SalesPotential": 8,
+      "Price": 7900,
+      "Img": "SH1003.gif"
+    },
+    {
+      "id": 4,
+      "ProductName": "ハイカットスニーカーFLM_GR",
+      "Stock": 5,
+      "Order": 5,
+      "SalesPotential": 0,
+      "Price": 7500,
+      "Img": "SH1004.gif"
+    },
+    {
+      "id": 5,
+      "ProductName": "ハイカットスニーカーFLM_WH",
+      "Stock": 7,
+      "Order": 2,
+      "SalesPotential": 5,
+      "Price": 7800,
+      "Img": "SH1005.gif"
+    },
+    {
+      "id": 6,
+      "ProductName": "ハイカットスニーカーFLM_RD",
+      "Stock": 20,
+      "Order": 1,
+      "SalesPotential": 19,
+      "Price": 7700,
+      "Img": "SH1006.gif"
+    },
+    {
+      "id": 7,
+      "ProductName": "ハイカットスニーカーFLM_GR02",
+      "Stock": 11,
+      "Order": 2,
+      "SalesPotential": 10,
+      "Price": 6800,
+      "Img": "SH1007.gif"
+    },
+    {
+      "id": 8,
+      "ProductName": "ハイカットスニーカーFLM_YL",
+      "Stock": 12,
+      "Order": 1,
+      "SalesPotential": 11,
+      "Price": 7900,
+      "Img": "SH1008.gif"
+    },
+    {
+      "id": 9,
+      "ProductName": "ハイカットスニーカーFLM_LG02",
+      "Stock": 17,
+      "Order": 2,
+      "SalesPotential": 15,
+      "Price": 7200,
+      "Img": "SH1009.gif"
+    },
+    {
+      "id": 10,
+      "ProductName": "ミドルカットスニーカーFLM_BL",
+      "Stock": 10,
+      "Order": 1,
+      "SalesPotential": 9,
+      "Price": 7700,
+      "Img": "SH1010.gif"
+    },
+    {
+      "id": 11,
+      "ProductName": "ミドルカットスニーカーFLM_WH",
+      "Stock": 1,
+      "Order": 0,
+      "SalesPotential": 1,
+      "Price": 7500,
+      "Img": "SH1011.gif"
+    },
+    {
+      "id": 12,
+      "ProductName": "ミドルカットスニーカーFLM_RD",
+      "Stock": 4,
+      "Order": 1,
+      "SalesPotential": 3,
+      "Price": 7200,
+      "Img": "SH1012.gif"
+    },
+    {
+      "id": 13,
+      "ProductName": "ミドルカットスニーカーFLM_GR",
+      "Stock": 7,
+      "Order": 3,
+      "SalesPotential": 4,
+      "Price": 7900,
+      "Img": "SH1013.gif"
+    },
+    {
+      "id": 14,
+      "ProductName": "ミドルカットスニーカーFLM_GR",
+      "Stock": 5,
+      "Order": 5,
+      "SalesPotential": 0,
+      "Price": 7700,
+      "Img": "SH1014.gif"
+    },
+    {
+      "id": 15,
+      "ProductName": "ミドルカットスニーカーFLM_YL",
+      "Stock": 8,
+      "Order": 4,
+      "SalesPotential": 4,
+      "Price": 7800,
+      "Img": "SH1015.gif"
+    },
+    {
+      "id": 16,
+      "ProductName": "ローカットスニーカーFLM_BK",
+      "Stock": 12,
+      "Order": 1,
+      "SalesPotential": 11,
+      "Price": 7900,
+      "Img": "SH1016.gif"
+    },
+    {
+      "id": 17,
+      "ProductName": "ローカットスニーカーFLM_WH",
+      "Stock": 12,
+      "Order": 1,
+      "SalesPotential": 11,
+      "Price": 7900,
+      "Img": "SH1017.gif"
+    },
+    {
+      "id": 18,
+      "ProductName": "ローカットスニーカーFLM_GR01",
+      "Stock": 7,
+      "Order": 5,
+      "SalesPotential": 11,
+      "Price": 7900,
+      "Img": "SH1018.gif"
+    },
+    {
+      "id": 19,
+      "ProductName": "ローカットスニーカーFLM_GR",
+      "Stock": 12,
+      "Order": 1,
+      "SalesPotential": 2,
+      "Price": 7900,
+      "Img": "SH1019.gif"
+    },
+    {
+      "id": 20,
+      "ProductName": "ローカットスニーカーFLM_YL",
+      "Stock": 12,
+      "Order": 1,
+      "SalesPotential": 11,
+      "Price": 7900,
+      "Img": "SH1020.gif"
+    },
+    {
+      "id": 21,
+      "ProductName": "ローカットスニーカーFLM_GR02",
+      "Stock": 9,
+      "Order": 2,
+      "SalesPotential": 9,
+      "Price": 7600,
+      "Img": "SH1021.gif"
+    },
+    {
+      "id": 22,
+      "ProductName": "ローカットスニーカーFLM_GR03",
+      "Stock": 2,
+      "Order": 1,
+      "SalesPotential": 1,
+      "Price": 7500,
+      "Img": "SH1022.gif"
+    },
+    {
+      "id": 23,
+      "ProductName": "スリッポンFLM_GR01",
+      "Stock": 14,
+      "Order": 3,
+      "SalesPotential": 11,
+      "Price": 4200,
+      "Img": "SH1023.gif"
+    },
+    {
+      "id": 24,
+      "ProductName": "スリッポンFLM_WH",
+      "Stock": 25,
+      "Order": 4,
+      "SalesPotential": 21,
+      "Price": 4100,
+      "Img": "SH1024.gif"
+    },
+    {
+      "id": 25,
+      "ProductName": "スリッポンFLM_GR02",
+      "Stock": 11,
+      "Order": 1,
+      "SalesPotential": 10,
+      "Price": 4500,
+      "Img": "SH1025.gif"
+    },
+    {
+      "id": 26,
+      "ProductName": "サンダルFLM_WH",
+      "Stock": 17,
+      "Order": 3,
+      "SalesPotential": 14,
+      "Price": 3800,
+      "Img": "SH1026.gif"
+    },
+    {
+      "id": 27,
+      "ProductName": "サンダルFLM_BL",
+      "Stock": 5,
+      "Order": 2,
+      "SalesPotential": 3,
+      "Price": 3900,
+      "Img": "SH1027.gif"
+    },
+    {
+      "id": 28,
+      "ProductName": "クロックスFLM_PK",
+      "Stock": 12,
+      "Order": 1,
+      "SalesPotential": 11,
+      "Price": 4400,
+      "Img": "SH1028.gif"
+    },
+    {
+      "id": 29,
+      "ProductName": "クロックスFLM_BL",
+      "Stock": 21,
+      "Order": 5,
+      "SalesPotential": 16,
+      "Price": 4100,
+      "Img": "SH1029.gif"
+    },
+    {
+      "id": 30,
+      "ProductName": "クロックスFLM_OR",
+      "Stock": 7,
+      "Order": 1,
+      "SalesPotential": 6,
+      "Price": 4200,
+      "Img": "SH1030.gif"
+    }
+  ]
 }
-
-
-

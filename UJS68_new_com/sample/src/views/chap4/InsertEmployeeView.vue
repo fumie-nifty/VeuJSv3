@@ -1,5 +1,5 @@
 <script setup>
-  import InsertMember from '/src/components/chap4/InsertEmployee.vue'
+  import InsertMember from '@/components/chap4/InsertEmployee.vue'
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup>
-  import Reactive from '/src/components/chap4/Reactive.vue'
+  import Reactive from '@/components/chap4/Reactive.vue'
 </script>
 
 <template>
