@@ -37,7 +37,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/chap4/reactive">リアクティビティー reactive()</RouterLink><br>
         <RouterLink to="/chap4/event">イベント処理</RouterLink><br>
         <RouterLink to="/chap4/computed">算出プロパティ</RouterLink><br>
-        <RouterLink to="/chap4/ref">監視プロパティ</RouterLink><br>
+        <RouterLink to="/chap4/watch">監視プロパティ</RouterLink><br>
         <RouterLink to="/chap4/insert_member">ハンズオン4-1</RouterLink><br>
         <RouterLink to="/chap4/insert_member">ハンズオン4-1　解答</RouterLink><br>
       </nav>

@@ -85,6 +85,11 @@ const router = createRouter({
       component: () => import('/src/views/chap4/ReactiveView.vue')
     },
     {
+      path: '/chap4/watch',
+      name: 'chap4_watch',
+      component: () => import('/src/views/chap4/WatchView.vue')
+    },
+    {
       path: '/chap4/computed',
       name: 'chap4_computed',
       component: () => import('/src/views/chap4/ComputedView.vue')
