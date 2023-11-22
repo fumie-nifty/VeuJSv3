@@ -1,5 +1,5 @@
 <script setup>
-  import Ref from '/src/components/chap4/Event.vue'
+  import Ref from '@/components/chap4/Event.vue'
 </script>
 
 <template>

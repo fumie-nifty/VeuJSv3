@@ -1,5 +1,5 @@
 <script setup>
-  import Ref from '/src/components/chap4/Computed.vue'
+  import Ref from '@/components/chap4/Computed.vue'
 </script>
 
 <template>

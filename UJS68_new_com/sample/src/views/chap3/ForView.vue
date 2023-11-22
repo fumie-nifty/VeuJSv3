@@ -1,5 +1,5 @@
 <script setup>
-  import For from '/src/components/chap3/For.vue'
+  import For from '@/components/chap3/For.vue'
 </script>
 
 <template>

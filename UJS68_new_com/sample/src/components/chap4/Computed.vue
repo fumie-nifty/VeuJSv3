@@ -9,12 +9,12 @@
 
   const calc = computed(() => {
     console.log('calc')
-    return employee.salary + employee.salary * 0.15
+    return employee.salary * 1.15
   })
 
   const methodCalc = () => {
     console.log('methodCalc')
-    return employee.salary + employee.salary * 0.15
+    return employee.salary * 1.15
   }
 
   const salaryUpdate = () => {

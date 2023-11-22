@@ -1,5 +1,5 @@
 <script setup>
-  import VIf_VShow from '/src/components/chap3/IfShow.vue'
+  import VIf_VShow from '@/components/chap3/IfShow.vue'
 </script>
 
 <template>

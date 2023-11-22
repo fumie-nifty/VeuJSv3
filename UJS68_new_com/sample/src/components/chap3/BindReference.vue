@@ -54,6 +54,7 @@
 h2 {
   font-size: 12pt;
   margin-top: 15px;
+  background-color: rgb(220, 253, 253);
 }
 
 .colum {

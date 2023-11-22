@@ -37,24 +37,24 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/chap4/reactive">リアクティビティー reactive()</RouterLink><br>
         <RouterLink to="/chap4/event">イベント処理</RouterLink><br>
         <RouterLink to="/chap4/computed">算出プロパティ</RouterLink><br>
-        <RouterLink to="/chap4/ref">監視プロパティ</RouterLink><br>
-        <RouterLink to="/chap4/insert_member">ハンズオン4-1</RouterLink><br>
-        <RouterLink to="/chap4/insert_member">ハンズオン4-1　解答</RouterLink><br>
+        <RouterLink to="/chap4/watch">監視プロパティ</RouterLink><br>
+        <RouterLink to="/chap4/insert_employee">ハンズオン4-1</RouterLink><br>
+        <RouterLink to="/chap4/insert_employee">ハンズオン4-1　解答</RouterLink><br>
       </nav>
 
       <h2>5章</h2>
       <nav>
-        <RouterLink to="/">Web API"</RouterLink><br>
-        <RouterLink to="/">ハンズオン5-1</RouterLink><br>
+        <RouterLink to="/chap5/find_employee">Web API</RouterLink><br>
+        <RouterLink to="/chap5/all_employee">ハンズオン5-1</RouterLink><br>
       </nav>
       <h2>6章</h2>
       <nav>
-        <RouterLink to="/">コンポーネント指向</RouterLink><br>
-        <RouterLink to="/">ハンズオン6-1</RouterLink><br>
+        <RouterLink to="/chap6/component">コンポーネント指向</RouterLink><br>
+        <RouterLink to="/chap6/find_employee_component">ハンズオン6-1</RouterLink><br>
       </nav>
       <h2>7章</h2>
       <nav>
-        <RouterLink to="/">ルーティング</RouterLink><br>
+        <RouterLink to="/chap7/ruting">ルーティング</RouterLink><br>
         <RouterLink to="/">ハンズオン7-1</RouterLink><br>
         <RouterLink to="/">状態管理</RouterLink><br>
         <RouterLink to="/">ハンズオン7-2</RouterLink><br>
