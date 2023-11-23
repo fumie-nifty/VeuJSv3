@@ -54,8 +54,8 @@ import { RouterLink, RouterView } from 'vue-router'
       </nav>
       <h2>7章</h2>
       <nav>
-        <RouterLink to="/chap7/ruting">ルーティング</RouterLink><br>
-        <RouterLink to="/">ハンズオン7-1</RouterLink><br>
+        <RouterLink to="/chap7/simple">ルーティング</RouterLink><br>
+        <RouterLink to="/chap7">ハンズオン7-1</RouterLink><br>
         <RouterLink to="/">状態管理</RouterLink><br>
         <RouterLink to="/">ハンズオン7-2</RouterLink><br>
       </nav>

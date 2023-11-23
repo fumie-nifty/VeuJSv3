@@ -120,9 +120,46 @@ const router = createRouter({
       component: () => import('@/views/chap6/ComponentView.vue')
     },
     {
-      path: '/chap7/ruting',
+      path: '/chap7/simple',
+      component: () => import('@/views/chap7/simple/SimpleRutingView.vue'),
+      children: [
+        {
+          path: 'nest',
+          component: () => import('@/views/chap7/simple/SimpeNestView.vue')
+        },
+        {
+          path: 'sendParam',
+          component: () => import('@/views/chap7/simple/SendParamView.vue'),
+        },
+        {
+          path: 'receiveParam/:id',
+          name:"receiveParam",
+          component: () => import('@/views/chap7/simple/ReceiveParamView.vue'),
+          props: true
+        }
+      ]
+
+    },
+   {
+      path: '/chap7',
       name: 'ruting',
-      component: () => import('@/views/chap7/RutingView.vue')
+      component: () => import('@/views/chap7/RutingView.vue'),
+      children: [
+        {
+          path: 'all_Employee',
+          component: () => import('@/views/chap7/AllEmployeeView.vue')
+        },
+        {
+          path: 'find_employee/:id',
+          name:"find_employee_param",
+          component: () => import('@/views/chap7/FindEmployeeView.vue'),
+          props: true
+        },
+        {
+          path: 'find_employee_component',
+          component: () => import('@/views/chap7/FindEmployeeComponentView.vue')
+        }
+      ]
     }
  ]
 
