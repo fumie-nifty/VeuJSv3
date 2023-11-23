@@ -17,18 +17,18 @@ import { RouterLink, RouterView } from 'vue-router'
 
       <h2>3章</h2>
       <nav>
-        <RouterLink to="/mustache">リアクティブ変数＆マスタッシュ構文</RouterLink><br>
-        <RouterLink to="/if_show">v-if</RouterLink><br>
-        <RouterLink to="/if_else">v-else-if v-else</RouterLink><br>
-        <RouterLink to="/for">v-for</RouterLink><br>
-        <RouterLink to="/directive1">ハンズオン3-1</RouterLink><br>
-        <RouterLink to="/directive1_ans">ハンズオン3-1　解答</RouterLink><br>
-        <RouterLink to="/bind">v-bind</RouterLink><br>
-        <RouterLink to="/bind_reference">v-bind 参考</RouterLink><br>
-        <RouterLink to="/model">v-model</RouterLink><br>
+        <RouterLink to="/chap3/mustache">リアクティブ変数＆マスタッシュ構文</RouterLink><br>
+        <RouterLink to="/chap3/if_show">v-if</RouterLink><br>
+        <RouterLink to="/chap3/if_else">v-else-if v-else</RouterLink><br>
+        <RouterLink to="/chap3/for">v-for</RouterLink><br>
+        <RouterLink to="/chap3/directive1">ハンズオン3-1</RouterLink><br>
+        <RouterLink to="/chap3/directive1_ans">ハンズオン3-1　解答</RouterLink><br>
+        <RouterLink to="/chap3/bind">v-bind</RouterLink><br>
+        <RouterLink to="/chap3/bind_reference">v-bind 参考</RouterLink><br>
+        <RouterLink to="/chap3/model">v-model</RouterLink><br>
         <a href="/chap3/v-cloak/index.html" target="_blank" rel="noopener noreferrer">v-cloak</a><br>
-        <RouterLink to="/directive2">ハンズオン3-2</RouterLink><br>
-        <RouterLink to="/directive2_ans">ハンズオン3-2　解答</RouterLink><br>
+        <RouterLink to="/chap3/directive2">ハンズオン3-2</RouterLink><br>
+        <RouterLink to="/chap3/directive2_ans">ハンズオン3-2　解答</RouterLink><br>
       </nav>
 
       <h2>4章</h2>
