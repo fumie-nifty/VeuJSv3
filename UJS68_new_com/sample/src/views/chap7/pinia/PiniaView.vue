@@ -1,5 +1,5 @@
 <script setup>
-  import PiniaParentComponent from '@/components/chap7/PiniaParentComponent.vue'
+  import PiniaParentComponent from '@/components/chap7/pinia/PiniaParentComponent.vue'
 </script>
 
 <template>

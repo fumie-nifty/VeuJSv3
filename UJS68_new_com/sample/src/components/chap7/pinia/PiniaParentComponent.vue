@@ -1,7 +1,7 @@
 <script setup>
 import { ref, reactive } from 'vue'
 import { useCounterStore } from '@/stores/counter';
-import PiniaChildComponent from '@/components/chap7/PiniaChildComponent.vue'
+import PiniaChildComponent from '@/components/chap7/pinia/PiniaChildComponent.vue'
 
 const counter = useCounterStore();
 </script>

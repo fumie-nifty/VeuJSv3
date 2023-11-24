@@ -1,5 +1,5 @@
 <script setup>
-  import Ref from '@/components/chap7/FindEmployeeComponent.vue'
+  import Ref from '@/components/chap7/route/FindEmployeeComponent.vue'
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup>
-  import Ref from '@/components/chap7/AllEmployee.vue'
+  import Ref from '@/components/chap7/route/AllEmployee.vue'
 </script>
 
 <template>

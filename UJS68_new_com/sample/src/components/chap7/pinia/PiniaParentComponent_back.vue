@@ -1,6 +1,6 @@
 <script setup>
 import { ref, reactive } from 'vue'
-import PiniaChildComponent from '/src/components/chap7/PiniaChildComponent.vue'
+import PiniaChildComponent from '/src/components/chap7/pinia/PiniaChildComponent.vue'
 import { useStoreCounter } from '@/stores/counter.js'
 
 

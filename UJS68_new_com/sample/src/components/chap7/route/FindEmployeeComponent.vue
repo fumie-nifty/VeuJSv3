@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-import FindEmployee from '/src/components/chap7/FindEmployee.vue'
+import FindEmployee from '/src/components/chap7/route/FindEmployee.vue'
 
 const employeeId = ref('')
 const inputId = ref('')

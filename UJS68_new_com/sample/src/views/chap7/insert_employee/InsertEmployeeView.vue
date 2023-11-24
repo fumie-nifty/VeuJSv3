@@ -1,5 +1,5 @@
 <script setup>
-  import InsertEmployee from '@/components/chap7/InsertEmployee.vue'
+  import InsertEmployee from '@/components/chap7/insert_employee/InsertEmployee.vue'
 </script>
 
 <template>

@@ -54,10 +54,10 @@ import { RouterLink, RouterView } from 'vue-router'
       </nav>
       <h2>7章</h2>
       <nav>
-        <RouterLink to="/chap7/simple">ルーティング</RouterLink><br>
-        <RouterLink to="/chap7">ハンズオン7-1</RouterLink><br>
+        <RouterLink to="/chap7/simple_route">ルーティング</RouterLink><br>
+        <RouterLink to="/chap7/route">ハンズオン7-1</RouterLink><br>
         <RouterLink to="/chap7/pinia">状態管理</RouterLink><br>
-        <RouterLink to="/chap7/insert_member">ハンズオン7-2</RouterLink><br>
+        <RouterLink to="/chap7/insert_employee">ハンズオン7-2</RouterLink><br>
       </nav>
     </div>
   </header>

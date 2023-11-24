@@ -1,5 +1,5 @@
 <script setup>
-  import CnfirmEmployee from '@/components/chap7/CnfirmEmployee.vue'
+  import CnfirmEmployee from '@/components/chap7/insert_employee/CnfirmEmployee.vue'
 </script>
 
 <template>

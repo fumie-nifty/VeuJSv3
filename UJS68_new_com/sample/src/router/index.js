@@ -140,56 +140,60 @@ const router = createRouter({
       ]
     },
     {//Chap7
-      path: '/chap7/pinia',
-      component: () => import('@/views/chap7/PiniaView.vue')
+      path: '/chap7',
+      children: [
+        {
+          path: 'pinia',
+          component: () => import('@/views/chap7/pinia/PiniaView.vue')
+        },
+        {
+          path: 'insert_employee',
+          component: () => import('@/views/chap7/insert_employee/InsertEmployeeView.vue')
+        },
+        {
+          path: 'confirm_employee',
+          component: () => import('@/views/chap7/insert_employee/ConfirmEmployeeView.vue')
+        }    
+      ]
     },
-    {
-      path: '/chap7/insert_member',
-      component: () => import('@/views/chap7/InsertEmployeeView.vue')
-    },
-    {
-      path: '/chap7/confirm_member',
-      component: () => import('@/views/chap7/ConfirmEmployeeView.vue')
-    },
-    {//Chap7/simple
-      path: '/chap7/simple',
-      component: () => import('@/views/chap7/simple/SimpleRutingView.vue'),
+    {//Chap7/simple_route
+      path: '/chap7/simple_route',
+      component: () => import('@/views/chap7/simple_route/SimpleRutingView.vue'),
       children: [
         {
           path: 'nest',
-          component: () => import('@/views/chap7/simple/SimpeNestView.vue')
+          component: () => import('@/views/chap7/simple_route/SimpeNestView.vue')
         },
         {
           path: 'sendParam',
-          component: () => import('@/views/chap7/simple/SendParamView.vue'),
+          component: () => import('@/views/chap7/simple_route/SendParamView.vue'),
         },
         {
           path: 'receiveParam/:id',
           name: "receiveParam",
-          component: () => import('@/views/chap7/simple/ReceiveParamView.vue'),
+          component: () => import('@/views/chap7/simple_route/ReceiveParamView.vue'),
           props: true
         }
       ]
-
     },
-    {//Chap7 BaseMenu
-      path: '/chap7',
+    {//Chap7 route
+      path: '/chap7/route',
       name: 'ruting',
-      component: () => import('@/views/chap7/RutingView.vue'),
+      component: () => import('@/views/chap7/route/RutingView.vue'),
       children: [
         {
           path: 'all_Employee',
-          component: () => import('@/views/chap7/AllEmployeeView.vue')
+          component: () => import('@/views/chap7/route/AllEmployeeView.vue')
         },
         {
           path: 'find_employee/:id',
           name: "find_employee_param",
-          component: () => import('@/views/chap7/FindEmployeeView.vue'),
+          component: () => import('@/views/chap7/route/FindEmployeeView.vue'),
           props: true
         },
         {
           path: 'find_employee_component',
-          component: () => import('@/views/chap7/FindEmployeeComponentView.vue')
+          component: () => import('@/views/chap7/route/FindEmployeeComponentView.vue')
         }
       ]
     }

@@ -1,5 +1,5 @@
 <script setup>
-import {defineProps ,ref,onMounted} from 'vue'
+import {defineProps ,ref,onMounted,onUpdated,onBeforeMount} from 'vue'
 import axios from "axios"
 
 const props = defineProps(['id'])
@@ -13,9 +13,10 @@ const url = 'http://localhost:3000/employee/' + props.id
 	if (props.id == '') {
 		message.value = '従業員番号が未入力です'
 		employee.value = {}
-		return
+		//return
 	}
 
+	if (props.id !== '') {
 	axios.get(url)
 		.then((response) => {
 			message.value = '検索に成功しました'
@@ -26,6 +27,7 @@ const url = 'http://localhost:3000/employee/' + props.id
 			employee.value = {}
 			console.log(error)
 		})
+	}
 })
 
 </script>

@@ -1,7 +1,7 @@
 <script setup>
   import { ref,reactive } from 'vue'
 	import { useRouter } from 'vue-router'
-	import CnfirmEmployee from '@/components/chap7/CnfirmEmployee.vue'
+	import CnfirmEmployee from '@/components/chap7/insert_employee/CnfirmEmployee.vue'
 	import { useEmployeeStore } from '@/stores/employee.js'
 
 	const router = useRouter()
@@ -22,7 +22,7 @@
   }
 
 	const goConrirm = () =>{
-		router.push('/chap7/confirm_member')
+		router.push('/chap7/confirm_employee')
 	}
 
 </script>
