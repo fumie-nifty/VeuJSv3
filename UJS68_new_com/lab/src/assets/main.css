@@ -21,14 +21,18 @@ header h1{
   font-size: 14pt;
   font-weight:bold;
   text-align: center;
-  background-color: rgb(39, 204, 149);
+  background-color: rgba(240, 158, 35, 0.822);
 }
 
 header h2{
   font-size: 12pt;
   margin-top: 5px;
   text-align: center;
-  background-color: rgba(39, 204, 149, 0.39);
+  background-color: rgba(240, 158, 35, 0.356);
+}
+
+nav ul {
+  list-style-type: square;
 }
 
 main h3{
@@ -43,6 +47,15 @@ main h4{
   color: rgb(51, 31, 230);
   font-weight:bold;
 }
+
+.input_output_frame {
+  margin-left: 150px;
+  margin-right: 150px;
+  padding: 10px;
+  font-size: 10pt;
+  text-align: left;
+  border: solid 1px #333;
+}
 a,
 .green {
   text-decoration: none;
@@ -52,7 +65,7 @@ a,
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: rgba(240, 158, 35, 0.356);;
   }
 }
 
