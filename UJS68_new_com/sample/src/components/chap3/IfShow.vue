@@ -1,13 +1,24 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- IfShow.vue --> 
+
 <script setup>
   import { ref } from 'vue'
 
+  // メッセージ
   const message = ref('Hello Vue!!')
-  const flag = ref(true)
+  // 表示フラグ
+  const showFlag = ref(true)
+
 </script>
 
 <template>
-  <p v-if="flag">v-if: {{ message }} </p>
-  <p v-show="flag">v-show: {{ message }} </p>
+  <p v-if="showFlag">v-if: {{ message }} </p>
+  <p v-show="showFlag">v-show: {{ message }} </p>
 </template>
 
-<style scoped></style>
+<style scoped>
+  p {
+    margin-left: 15px;
+  }
+</style>
+
