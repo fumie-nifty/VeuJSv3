@@ -1,3 +1,5 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- App.vue --> 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 </script>
@@ -11,7 +13,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
       <h2>2章</h2>
       <nav>
-        <a href="/chap2/introduction_ans/index.html" target="_blank" rel="noopener noreferrer">CDNの利用</a><br>
+        <a href="/chap2/introduction/index.html" target="_blank" rel="noopener noreferrer">ハンズオン1-1</a><br>
+        <a href="/chap2/introduction_ans/index.html" target="_blank" rel="noopener noreferrer">ハンズオン1-1　解答</a><br>
         <RouterLink to="/chap2/introduction">単一ファイルコンポーネント</RouterLink><br>
       </nav>
 

@@ -1,3 +1,6 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- IntroductionView.vue --> 
+
 <script setup>
   import Introduction from '@/components/chap2/Introduction.vue'
 </script>
@@ -8,3 +11,5 @@
     <Introduction />
   </main>
 </template>
+
+<style scoped></style>

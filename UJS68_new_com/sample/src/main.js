@@ -1,3 +1,9 @@
+/**
+ * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
+ * 
+ * ファイル名：main.js
+ */
+
 import './assets/main.css'
 
 import { createApp } from 'vue'
@@ -10,5 +16,5 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
-//setup().then(() => createApp(App).mount("#app"));
+
 app.mount('#app')

@@ -1,3 +1,8 @@
+/**
+ * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
+ * 
+ * ファイル名：index.js
+ */
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 
@@ -153,7 +158,7 @@ const router = createRouter({
         {
           path: 'confirm_employee',
           component: () => import('@/views/chap7/insert_employee/ConfirmEmployeeView.vue')
-        }    
+        }
       ]
     },
     {//Chap7/simple_route

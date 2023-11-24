@@ -2,7 +2,7 @@
   import { ref,reactive } from 'vue'
 	import { useRouter } from 'vue-router'
 	import CnfirmEmployee from '@/components/chap7/insert_employee/CnfirmEmployee.vue'
-	import { useEmployeeStore } from '@/stores/employee.js'
+	import { useEmployeeStore } from '@/stores/employeeManager.js'
 
 	const router = useRouter()
 
