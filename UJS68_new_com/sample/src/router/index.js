@@ -140,6 +140,18 @@ const router = createRouter({
       ]
     },
     {//Chap7
+      path: '/chap7/pinia',
+      component: () => import('@/views/chap7/PiniaView.vue')
+    },
+    {
+      path: '/chap7/insert_member',
+      component: () => import('@/views/chap7/InsertEmployeeView.vue')
+    },
+    {
+      path: '/chap7/confirm_member',
+      component: () => import('@/views/chap7/ConfirmEmployeeView.vue')
+    },
+    {//Chap7/simple
       path: '/chap7/simple',
       component: () => import('@/views/chap7/simple/SimpleRutingView.vue'),
       children: [
@@ -160,7 +172,7 @@ const router = createRouter({
       ]
 
     },
-    {//Chap7
+    {//Chap7 BaseMenu
       path: '/chap7',
       name: 'ruting',
       component: () => import('@/views/chap7/RutingView.vue'),

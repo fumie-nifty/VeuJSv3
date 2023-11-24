@@ -26,7 +26,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/">4章　実習問題１</RouterLink><br>
         <RouterLink to="/">5章　実習問題１</RouterLink><br>
         <RouterLink to="/">6章　実習問題１</RouterLink><br>
-        <RouterLink to="/">7章　実習問題１</RouterLink><br>
+        <RouterLink to="/answers/ans7">7章　実習問題１</RouterLink><br>
       </nav>
     </div>
   </header>

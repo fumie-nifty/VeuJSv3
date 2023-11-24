@@ -8,6 +8,7 @@
     title: 'ハイカットスニーカーFLM_RD',
     src: '/images/SH1006.gif'
   })
+
   const liColor = ref('black')
   const p1flag = ref(true)
   const p2flag = ref(false)

@@ -9,6 +9,6 @@
   <main>
     <h4>■パラメータ送信側</h4>
     <input type="number" v-model="inputId"/><br>
-    <RouterLink :to="{name:'receiveParam',params:{id:inputId}}">コンポーネント切替</RouterLink>
+    <RouterLink :to="{name:'receiveParam',params:{id:inputId}}" tag="button">コンポーネント切替</RouterLink>
   </main>
 </template>

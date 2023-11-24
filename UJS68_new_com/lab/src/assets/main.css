@@ -47,6 +47,15 @@ main h4{
   color: rgb(51, 31, 230);
   font-weight:bold;
 }
+
+.input_output_frame {
+  margin-left: 150px;
+  margin-right: 150px;
+  padding: 10px;
+  font-size: 10pt;
+  text-align: left;
+  border: solid 1px #333;
+}
 a,
 .green {
   text-decoration: none;
