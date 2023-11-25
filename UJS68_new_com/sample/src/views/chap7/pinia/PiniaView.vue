@@ -1,3 +1,6 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- PiniaView.vue --> 
+
 <script setup>
   import PiniaParentComponent from '@/components/chap7/pinia/PiniaParentComponent.vue'
 </script>

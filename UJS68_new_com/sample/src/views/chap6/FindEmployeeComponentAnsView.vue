@@ -1,14 +1,14 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- InsertEmployeeAnsView.vue --> 
+<!-- FindEmployeeComponentAnsView.vue --> 
 
 <script setup>
-  import InsertEmployeeAns from '@/components/chap4/InsertEmployeeAns.vue'
+  import FindEmployeeComponentAns from '@/components/chap6/FindEmployeeComponentAns.vue'
 </script>
 
 <template>
   <main>
-    <h3>4章　ハンズオン4-1　解答</h3>
-    <InsertEmployeeAns />
+    <h3>章6　コンポーネント　props　解答</h3>
+    <FindEmployeeComponentAns />
   </main>
 </template>
 

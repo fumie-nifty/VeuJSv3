@@ -1,9 +1,9 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- FindEmployeeComponent.vue --> 
+<!-- FindEmployeeComponentAns.vue --> 
 
 <script setup>
 	import { ref } from 'vue'
-	import FindEmployee from '/src/components/chap7/route/FindEmployee.vue'
+	import FindEmployee from '/src/components/chap7/route/FindEmployeeAns.vue'
 
 	//入力値
 	const inputId = ref('')

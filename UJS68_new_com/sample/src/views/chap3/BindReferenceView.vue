@@ -1,5 +1,6 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
 <!-- BindReferenceView.vue --> 
+
 <script setup>
   import BindReference from '@/components/chap3/BindReference.vue'
 </script>

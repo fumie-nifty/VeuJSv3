@@ -1,13 +1,13 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- AllEmployeeView.vue -->
- 
+<!-- AllEmployeeAnsView.vue --> 
+
 <script setup>
-  import AllEmployee from '@/components/chap7/route/AllEmployee.vue'
+  import AllEmployeeAns from '@/components/chap7/route/AllEmployeeAns.vue'
 </script>
 
 <template>
   <main>
     <h4>従業員一覧画面</h4>
-    <AllEmployee />
+    <AllEmployeeAns />
   </main>
 </template>

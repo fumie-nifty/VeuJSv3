@@ -1,5 +1,6 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
 <!-- BindView.vue --> 
+
 <script setup>
   import Bind from '@/components/chap3/Bind.vue'
 </script>

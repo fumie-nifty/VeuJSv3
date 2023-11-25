@@ -142,17 +142,22 @@ const router = createRouter({
     {//Chap6
       path: '/chap6',
       children: [
+       {
+          path: 'component',
+          name: 'component',
+          component: () => import('@/views/chap6/ComponentView.vue')
+        },
         {
           path: 'find_employee_component',
           name: 'find_employee_component',
           component: () => import('@/views/chap6/FindEmployeeComponentView.vue')
         },
         {
-          path: 'component',
-          name: 'component',
-          component: () => import('@/views/chap6/ComponentView.vue')
+          path: 'find_employee_component_ans',
+          name: 'find_employee_component_ans',
+          component: () => import('@/views/chap6/FindEmployeeComponentAnsView.vue')
         }
-      ]
+       ]
     },
     {//Chap7
       path: '/chap7',
@@ -166,8 +171,16 @@ const router = createRouter({
           component: () => import('@/views/chap7/insert_employee/InsertEmployeeView.vue')
         },
         {
+          path: 'insert_employee_ans',
+          component: () => import('@/views/chap7/insert_employee/InsertEmployeeAnsView.vue')
+        },
+        {
           path: 'confirm_employee',
           component: () => import('@/views/chap7/insert_employee/ConfirmEmployeeView.vue')
+        },
+        {
+          path: 'confirm_employee_ans',
+          component: () => import('@/views/chap7/insert_employee/ConfirmEmployeeAnsView.vue')
         }
       ]
     },
@@ -211,8 +224,29 @@ const router = createRouter({
           component: () => import('@/views/chap7/route/FindEmployeeComponentView.vue')
         }
       ]
+    },
+    {//Chap7 route
+      path: '/chap7/route_ans',
+      name: 'ruting_ans',
+      component: () => import('@/views/chap7/route/RutingAnsView.vue'),
+      children: [
+        {
+          path: 'all_Employee',
+          component: () => import('@/views/chap7/route/AllEmployeeAnsView.vue')
+        },
+        {
+          path: 'find_employee/:id',
+          name: "find_employee_param_ans",
+          component: () => import('@/views/chap7/route/FindEmployeeAnsView.vue'),
+          props: true
+        },
+        {
+          path: 'find_employee_component',
+          component: () => import('@/views/chap7/route/FindEmployeeComponentAnsView.vue')
+        }
+      ]
     }
-  ]
+ ]
 
 })
 

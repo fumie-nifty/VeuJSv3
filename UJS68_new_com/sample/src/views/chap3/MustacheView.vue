@@ -1,5 +1,6 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
 <!-- MustacheView.vue --> 
+
 <script setup>
   import Mustache from '@/components/chap3/Mustache.vue'
 </script>

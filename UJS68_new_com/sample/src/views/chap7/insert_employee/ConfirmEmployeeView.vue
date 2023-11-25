@@ -1,3 +1,6 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- ConfirmEmployeeView.vue --> 
+
 <script setup>
   import CnfirmEmployee from '@/components/chap7/insert_employee/CnfirmEmployee.vue'
 </script>

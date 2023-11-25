@@ -1,5 +1,6 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
 <!-- App.vue --> 
+
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 </script>
@@ -55,13 +56,16 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <RouterLink to="/chap6/component">コンポーネント指向</RouterLink><br>
         <RouterLink to="/chap6/find_employee_component">ハンズオン6-1</RouterLink><br>
+        <RouterLink to="/chap6/find_employee_component_ans">ハンズオン6-1　解答</RouterLink><br>
       </nav>
       <h2>7章</h2>
       <nav>
         <RouterLink to="/chap7/simple_route">ルーティング</RouterLink><br>
         <RouterLink to="/chap7/route">ハンズオン7-1</RouterLink><br>
+        <RouterLink to="/chap7/route_ans">ハンズオン7-1　解答</RouterLink><br>
         <RouterLink to="/chap7/pinia">状態管理</RouterLink><br>
         <RouterLink to="/chap7/insert_employee">ハンズオン7-2</RouterLink><br>
+        <RouterLink to="/chap7/insert_employee_ans">ハンズオン7-2　解答</RouterLink><br>
       </nav>
     </div>
   </header>

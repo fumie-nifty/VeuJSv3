@@ -1,20 +1,24 @@
-<script setup>
-import { ref, reactive } from 'vue'
-import { useCounterStore } from '@/stores/counter';
-import PiniaChildComponent from '@/components/chap7/pinia/PiniaChildComponent.vue'
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- PiniaParentComponent.vue --> 
 
-const counter = useCounterStore();
+<script setup>
+  import PiniaChildComponent from '@/components/chap7/pinia/PiniaChildComponent.vue'
+  
+  //conter.jsのインポート
+  import { useCounterStore } from '@/stores/counter';
+  //counterストアーオブジェクトの取得
+  const counter = useCounterStore();
 </script>
 
 <template>
   <div>
-    <h2>親コンポーネント</h2>
-    
+    <h2>親コンポーネント</h2>   
     <p>
+      <!--counterストアーの状態countの参照-->
       counter:　{{ counter.count }}　
+      <!--counterストアーの状態更新メソッドの呼出さ以-->
       <button v-on:click="counter.increment">カウントアップ</button>
     </p>
-
     <PiniaChildComponent />
   </div>
 </template>

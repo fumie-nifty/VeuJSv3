@@ -1,5 +1,6 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
 <!-- Directive2View.vue --> 
+
 <script setup>
   import Directive2 from '@/components/chap3/Directive2.vue'
 </script>

@@ -1,12 +1,12 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- FindEmployee.vue --> 
+<!-- FindEmployeeAns.vue --> 
 
 <script setup>
 	import { defineProps, ref } from 'vue'
 	import axios from "axios"
 
 	// 親コンポーネントからpropsの取得う
-	//Todo2
+	const props = defineProps(['id'])   //Todo2
 
 	//検索結果を格納する
 	const employee = ref({})
