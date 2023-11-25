@@ -18,7 +18,6 @@
   const showResult = () => {
     showFlag.value = true
   }
-
 </script>
 
 <template>
@@ -46,9 +45,7 @@
   <!-- Todo4 -->
   <table v-show="showFlag">
     <tr>
-      <th>名前</th>
-      <th>年齢</th>
-      <th>血液型</th>
+      <th>名前</th><th>年齢</th><th>血液型</th>
     </tr>
     <!-- Todo5 -->
     <tr>

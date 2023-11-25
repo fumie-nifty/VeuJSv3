@@ -1,3 +1,6 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- AllEmployee.vue --> 
+
 <script setup>
 import { ref, reactive,onMounted } from 'vue'
 import axios from "axios"

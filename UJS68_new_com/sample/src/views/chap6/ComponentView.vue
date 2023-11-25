@@ -1,3 +1,5 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- ComponentView.vue --> 
 <script setup>
   import Ref from '@/components/chap6/ParentComponent.vue'
 </script>

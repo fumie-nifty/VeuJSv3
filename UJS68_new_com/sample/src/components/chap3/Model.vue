@@ -6,7 +6,6 @@
 
   // メッセージ
   const message = ref('')
-
 </script>
 
 <template>

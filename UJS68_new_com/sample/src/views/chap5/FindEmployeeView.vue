@@ -1,3 +1,5 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- FindEmployeeView.vue --> 
 <script setup>
   import Ref from '@/components/chap5/FindEmployee.vue'
 </script>

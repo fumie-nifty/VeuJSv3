@@ -8,7 +8,6 @@
   const message = ref('Hello Vue!!')
   // 型
   const type = ref(1)
-
 </script>
 
 <template>

@@ -1,3 +1,5 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- WatchView.vue --> 
 <script setup>
   import Ref from '@/components/chap4/Watch.vue'
 </script>

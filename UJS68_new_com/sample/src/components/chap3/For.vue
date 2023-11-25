@@ -6,7 +6,6 @@
 
   // 曜日リスト
   const weekList = ref(['月', '火', '水', '木', '金'])
-  
 </script>
 
 <template>

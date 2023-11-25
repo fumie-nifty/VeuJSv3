@@ -6,7 +6,6 @@
 
   // 型
   const type = ref('B')
-
 </script>
 
 <template>

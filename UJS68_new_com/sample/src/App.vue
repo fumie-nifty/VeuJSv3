@@ -21,7 +21,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <h2>3章</h2>
       <nav>
         <RouterLink to="/chap3/mustache">リアクティブ変数＆マスタッシュ構文</RouterLink><br>
-        <RouterLink to="/chap3/if_show">v-if</RouterLink><br>
+        <RouterLink to="/chap3/if_show">v-if, v-show</RouterLink><br>
         <RouterLink to="/chap3/if_else">v-else-if v-else</RouterLink><br>
         <RouterLink to="/chap3/for">v-for</RouterLink><br>
         <RouterLink to="/chap3/directive1">ハンズオン3-1</RouterLink><br>
@@ -42,7 +42,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/chap4/computed">算出プロパティ</RouterLink><br>
         <RouterLink to="/chap4/watch">監視プロパティ</RouterLink><br>
         <RouterLink to="/chap4/insert_employee">ハンズオン4-1</RouterLink><br>
-        <RouterLink to="/chap4/insert_employee">ハンズオン4-1　解答</RouterLink><br>
+        <RouterLink to="/chap4/insert_employee_ans">ハンズオン4-1　解答</RouterLink><br>
       </nav>
 
       <h2>5章</h2>

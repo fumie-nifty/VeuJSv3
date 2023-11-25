@@ -1,3 +1,6 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- ParentComponent.vue --> 
+
 <script setup>
 import { ref, reactive } from 'vue'
 

@@ -8,20 +8,24 @@
 	const employeeName = ref('')
 
 	//従業員リスト
-	// Todo1
+	const employeeNameList = reactive([])	// Todo1
 
 	//従業員追加メソッド
-	const insertMember = () => {					
-    // Todo2
-  }
+	const insertMember = () => {
+		// Todo2
+		if (employeeName.value !== '') {
+			employeeNameList.push(employeeName.value)
+			employeeName.value = ''
+		}
+	}
 </script>
 
 <template>
 	<p>従業員登録</p>
 	<!-- Todo3 -->
-	<input type="text">
+	<input type="text" v-model="employeeName">
 	<!-- Todo4 -->
-	<button>登録</button>
+	<button v-on:click="insertMember">登録</button>
 	<table border="1">
 		<thead>
 			<th>No</th>
@@ -37,3 +41,4 @@
 </template>
 
 <style scoped></style>
+

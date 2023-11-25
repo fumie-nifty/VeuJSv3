@@ -1,3 +1,5 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- EventView.vue --> 
 <script setup>
   import Ref from '@/components/chap4/Event.vue'
 </script>
