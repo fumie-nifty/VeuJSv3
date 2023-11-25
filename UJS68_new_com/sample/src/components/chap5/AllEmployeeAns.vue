@@ -13,15 +13,15 @@
 	const searchFlag = ref(false)
 
 	// 従業員リスト
-	const employeeList = ref([])	// Todo1
+	// Todo1
 
 	const url = 'http://localhost:3000/employee/'
 
 	axios.get(url)
-		.then((response) => {				//Todo2
+		.then(() => {				//Todo2
 			//通信結果取得したデータをemplloyeeに格納
-			employeeList.value = response.data	// Todo3
-			
+			// Todo3
+
 			message.value = '検索に成功しました'
 			//検索結果のフラグをtureにする
 			searchFlag.value = true

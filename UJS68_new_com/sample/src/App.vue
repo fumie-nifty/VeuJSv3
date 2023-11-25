@@ -49,6 +49,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <RouterLink to="/chap5/find_employee">Web API</RouterLink><br>
         <RouterLink to="/chap5/all_employee">ハンズオン5-1</RouterLink><br>
+        <RouterLink to="/chap5/all_employee_ans">ハンズオン5-2　解答</RouterLink><br>
       </nav>
       <h2>6章</h2>
       <nav>
