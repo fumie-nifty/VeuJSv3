@@ -1,8 +1,11 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- BindReference.vue --> 
+
 <script setup>
   import { ref } from 'vue'
-  //import imgurl from '@/assets/images/SH1006.gif'
 
   const textDisabled = ref(true)
+
   const imgAtr = ref({
     alt: 'SH1006',
     title: 'ハイカットスニーカーFLM_RD',
@@ -12,7 +15,7 @@
   const liColor = ref('black')
   const p1flag = ref(true)
   const p2flag = ref(false)
-  const className = ref('red');
+  const className = ref('red')
 </script>
 
 <template>

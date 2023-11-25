@@ -1,3 +1,5 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- IfShowView.vue --> 
 <script setup>
   import VIf_VShow from '@/components/chap3/IfShow.vue'
 </script>

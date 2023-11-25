@@ -1,41 +1,55 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- FindEmployee.vue --> 
+
 <script setup>
-import { ref, reactive } from 'vue'
-import axios from "axios"
+	import { ref, reactive } from 'vue'
 
-const employeeId = ref('')
-const message = ref('従業員番号を入力して検索ボタンをクリックして下さい')
+	//axiosのインポート
+	import axios from "axios"
 
-const employee = ref({})
+	// テキストボックスで入力される従業員ID
+	const employeeId = ref('')
+	// メッセージ
+	const message = ref('従業員番号を入力して検索ボタンをクリックして下さい')
+	// redクラス用フラグ
+	const redFlag = ref(false)
+	// 検索結果の従業員
+	const employee = ref({})
 
-const searchMember = () => {
-	const url = 'http://localhost:3000/employee/' + employeeId.value
+	//テキストボックスの従業員IDをもとに従業員を検索する
+	const searchMember = () => {
+		const url = 'http://localhost:3000/employee/' + employeeId.value
 
-	if(employeeId.value==''){
-		message.value = '従業員番号が未入力です'
-		employee.value = {}
-		return
-	}
-
-	axios.get(url)
-		.then((response) => {
-			message.value = '検索に成功しました'
-			employee.value = response.data
-		})
-		.catch((error) => {
-			message.value = '検索に失敗しました'
+		// テキストボックスの未入力チェック
+		if (employeeId.value == '') {
+			message.value = '従業員番号が未入力です'
 			employee.value = {}
-			console.log(error)
-		})
+			redFlag.value = true
+			return
+		}
 
-}
-
+		// Web API 非同期通信
+		axios.get(url)
+			.then((response) => {
+				//通信結果取得したデータをemplloyeeに格納
+				employee.value = response.data
+				message.value = '検索に成功しました'
+				redFlag.value = false
+			})
+			.catch((error) => {
+				message.value = '検索に失敗しました'
+				employee.value = {}
+				redFlag.value = true
+				console.log(error)
+			})
+	}
 </script>
 
 <template>
 	<p>従業員検索</p>
 	<input type="text" v-model="employeeId">
 	<button v-on:click="searchMember">検索</button>
-	<p class="message">{{ message }}</p>
+	<p v-bind:class="{ red: redFlag }">{{ message }}</p>
 	<table border="1">
 		<tbody>
 			<tr>
@@ -58,4 +72,19 @@ const searchMember = () => {
 	</table>
 </template>
 
-<style scoped></style>
+<style scoped>
+	.red {
+		color: red;
+	}
+
+	table {
+		border-collapse: collapse;
+	}
+
+	table,
+	th,
+	td {
+		padding: 0px 10px 0px 10px;
+		border: 1px solid #333;
+	}
+</style>

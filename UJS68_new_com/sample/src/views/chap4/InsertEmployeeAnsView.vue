@@ -1,13 +1,13 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- Directive2AnsView.vue --> 
+<!-- InsertEmployeeAnsView.vue --> 
 <script setup>
-  import Directive2Ans from '@/components/chap3/Directive2Ans.vue'
+  import InsertMember from '@/components/chap4/InsertEmployeeAns.vue'
 </script>
 
 <template>
   <main>
-    <h3>3章　ハンズオン3-2【解答】</h3>
-    <Directive2Ans />
+    <h3>4章　ハンズオン4-1　解答</h3>
+    <InsertMember />
   </main>
 </template>
 

@@ -1,6 +1,6 @@
 <script setup>
   import { ref,reactive } from 'vue'
-	import { useEmployeeStore } from '@/stores/employee.js'
+	import { useEmployeeStore } from '@/stores/employeeManager.js'
 
 	const employeeManager = useEmployeeStore()
 

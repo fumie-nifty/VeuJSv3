@@ -1,3 +1,5 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- App.vue --> 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 </script>
@@ -11,14 +13,15 @@ import { RouterLink, RouterView } from 'vue-router'
 
       <h2>2章</h2>
       <nav>
-        <a href="/chap2/introduction_ans/index.html" target="_blank" rel="noopener noreferrer">CDNの利用</a><br>
+        <a href="/chap2/introduction/index.html" target="_blank" rel="noopener noreferrer">ハンズオン1-1</a><br>
+        <a href="/chap2/introduction_ans/index.html" target="_blank" rel="noopener noreferrer">ハンズオン1-1　解答</a><br>
         <RouterLink to="/chap2/introduction">単一ファイルコンポーネント</RouterLink><br>
       </nav>
 
       <h2>3章</h2>
       <nav>
         <RouterLink to="/chap3/mustache">リアクティブ変数＆マスタッシュ構文</RouterLink><br>
-        <RouterLink to="/chap3/if_show">v-if</RouterLink><br>
+        <RouterLink to="/chap3/if_show">v-if, v-show</RouterLink><br>
         <RouterLink to="/chap3/if_else">v-else-if v-else</RouterLink><br>
         <RouterLink to="/chap3/for">v-for</RouterLink><br>
         <RouterLink to="/chap3/directive1">ハンズオン3-1</RouterLink><br>
@@ -39,13 +42,14 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/chap4/computed">算出プロパティ</RouterLink><br>
         <RouterLink to="/chap4/watch">監視プロパティ</RouterLink><br>
         <RouterLink to="/chap4/insert_employee">ハンズオン4-1</RouterLink><br>
-        <RouterLink to="/chap4/insert_employee">ハンズオン4-1　解答</RouterLink><br>
+        <RouterLink to="/chap4/insert_employee_ans">ハンズオン4-1　解答</RouterLink><br>
       </nav>
 
       <h2>5章</h2>
       <nav>
         <RouterLink to="/chap5/find_employee">Web API</RouterLink><br>
         <RouterLink to="/chap5/all_employee">ハンズオン5-1</RouterLink><br>
+        <RouterLink to="/chap5/all_employee_ans">ハンズオン5-2　解答</RouterLink><br>
       </nav>
       <h2>6章</h2>
       <nav>

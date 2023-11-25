@@ -1,3 +1,6 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- FindEmployee.vue --> 
+
 <script setup>
 import {defineProps } from 'vue'
 

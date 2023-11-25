@@ -1,16 +1,22 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- Directive2Ans.vue --> 
+
 <script setup>
   import { ref } from 'vue'
 
+  // 従業員
   const employee = ref({
-    name: '', //名前
-    age: '',　//年齢
-    type: '', //血液型
+    name: '',   //名前
+    age: '',    //年齢
+    type: '',   //血液型
   })
 
-  const show = ref(false)
+  // 表示フラグ
+  const showFlag = ref(false)
 
+  // 表示フラグをtrueにするメソッド
   const showResult = () => {
-    show.value = true
+    showFlag.value = true
   }
 </script>
 
@@ -37,10 +43,10 @@
   <hr>
   <button v-on:click="showResult">入力した内容を確認する</button>
   <!-- Todo4 -->
-  <table border="1" v-show="show">
-    <th>名前</th>
-    <th>年齢</th>
-    <th>血液型</th>
+  <table v-show="showFlag">
+    <tr>
+      <th>名前</th><th>年齢</th><th>血液型</th>
+    </tr>
     <!-- Todo5 -->
     <tr>
       <td>{{ employee.name }}</td>
@@ -50,4 +56,26 @@
   </table>
 </template>
 
-<style scoped></style>
+<style scoped>
+  table {
+    margin-top: 10px;
+    border-collapse: collapse;
+  }
+
+  table,
+  th,
+  td {
+    padding: 0px 10px 0px 10px;
+    border: 1px solid #333;
+  }
+
+  th {
+    background-color: azure;
+    font-weight: bold;
+  }
+
+  hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+</style>

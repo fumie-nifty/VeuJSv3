@@ -1,8 +1,11 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- Bind.vue --> 
+
 <script setup>
   import { ref } from 'vue'
 
   const title = ref('Vue.jsによるSPA開発')
-  const url = ref('https://www.knowledgewing.com/kw/');
+  const url = ref('https://www.knowledgewing.com/kw/')
 </script>
 
 <template>

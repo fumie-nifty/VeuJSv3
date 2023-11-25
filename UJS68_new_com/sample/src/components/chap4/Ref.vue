@@ -1,22 +1,23 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- Ref.vue --> 
+
 <script setup>
   import { ref,reactive } from 'vue'
 
-  const title = ref('従業員一覧')
-
+  // 従業員情報（ref）
   const employee = ref({
     "id": 922101,
-    "name": "千野 陽平",
+    "name": "鈴木　一郎",
     "salary":20000
   })
 
+  // 給与の更新
   const changeData = () => {
-    employee.value.salary = 30000
+    employee.value.salary = 40000
   }
-
 </script>
 
 <template>
-    <h4>{{ title }}</h4>
     <table>
       <tr>
         <td>従業員番号</td>

@@ -1,22 +1,31 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- Watch.vue --> 
+
 <script setup>
   import { ref, reactive, watch } from 'vue'
 
-  const hour =ref(0)
+  // 時
+  const hour = ref(0)
+  // 分
   const minutes = ref(0)
+  // 給与計算結果
   const salaryResult = ref(0)
 
+  //従業員
   const employee = reactive({
     "id": 922101,
-    "name": "千野 陽平",
+    "name": "鈴木　一郎",
     "salary": 20000
   })
 
+  // hour の監視
   watch(hour, (newValue, oldValue) => {
     console.log(`${oldValue}から${newValue}へ変わりました`)
     minutes.value = newValue * 60
   })
 
-  watch(() =>employee.salary, (newValue, oldValue) => {
+  // employee.salary の監視
+  watch(() => employee.salary, (newValue, oldValue) => {
     console.log(`${oldValue}から${newValue}へ変わりました`)
     salaryResult.value = newValue * 1.15
   })
@@ -24,13 +33,15 @@
   const salaryUpdate = () => {
     employee.salary = 500000
   }
-
 </script>
 
 <template>
+  <p class="red">
+    ブラウザーの開発ツールを表示し操作してください。
+  </p>
   <h2>■refの監視</h2>
   <div class="colum">
-    <input type="number" v-model="hour"/>
+    <input type="number" v-model="hour" />
     <p>{{ minutes }}</p>
   </div>
   <h2>■getterの監視</h2>
@@ -55,13 +66,17 @@
 </template>
 
 <style scoped>
-h2 {
-  font-size: 12pt;
-  margin-top: 15px;
-  background-color: rgb(220, 253, 253);
-}
+  h2 {
+    font-size: 12pt;
+    margin-top: 15px;
+    background-color: rgb(220, 253, 253);
+  }
 
-.colum {
-  margin-left: 10px;
-}
+  .colum {
+    margin-left: 10px;
+  }
+
+  .red {
+    color: red;
+  }
 </style>

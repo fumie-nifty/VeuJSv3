@@ -1,3 +1,5 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- ReactiveView.vue --> 
 <script setup>
   import Reactive from '@/components/chap4/Reactive.vue'
 </script>
