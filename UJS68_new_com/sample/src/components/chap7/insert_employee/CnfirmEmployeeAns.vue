@@ -1,5 +1,5 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- CnfirmEmployee.vue --> 
+<!-- CnfirmEmployeeAns.vue --> 
 
 <script setup>
 	//employeeManager.jsのインポート

@@ -1,14 +1,14 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- InsertEmployeeAnsView.vue --> 
+<!-- ConfirmEmployeeAnsView.vue --> 
 
 <script setup>
-  import InsertEmployeeAns from '@/components/chap4/InsertEmployeeAns.vue'
+  import ConfirmEmployeeAnsView from '@/components/chap7/insert_employee/CnfirmEmployeeAns.vue'
 </script>
 
 <template>
   <main>
-    <h3>4章　ハンズオン4-1　解答</h3>
-    <InsertEmployeeAns />
+    <h3>章7　ハンズオン　参照画面</h3>
+    <ConfirmEmployeeAnsView />
   </main>
 </template>
 

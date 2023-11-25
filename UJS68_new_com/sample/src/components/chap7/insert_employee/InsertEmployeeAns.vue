@@ -1,5 +1,5 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- InsertEmployee.vue --> 
+<!-- InsertEmployeeAns.vue --> 
 
 <script setup>
 	import { ref } from 'vue'
@@ -11,7 +11,7 @@
 
 	const router = useRouter()
 	// employeeManagerストアーオブジェクトの取得
-	// Todo1
+	const employeeManager = useEmployeeStore()	// Todo1
 
 	//入力された従業員名を格納
 	const employeeName = ref('')
@@ -22,9 +22,9 @@
 		if (employeeName.value !== '') {
 			// employeeManagerのemployeeListに従業員オブジェクトを追加
 			// Todo 2
-			
-			
-			
+			employeeManager.addEmployee({
+				employeeName: employeeName.value
+			})
 			// 従業員名を初期化
 			employeeName.value = ''
 		}

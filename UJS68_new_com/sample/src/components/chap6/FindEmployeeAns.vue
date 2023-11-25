@@ -1,35 +1,35 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- FindEmployee.vue --> 
+<!-- FindEmployeeAns.vue --> 
 
 <script setup>
 	//vueからdefinePropsを受取る
-	//Todo2
+	import { defineProps } from 'vue'	//Todo2
 
 	//definePropsらpropsを受取る
-	//Todo3
+	const props = defineProps(['message', 'employee'])	//Todo3
 </script>
 
 <template>
 	<!--Todo4-->
-	<p class="message"></p>
+	<p class="message">{{ props.message }}</p>
 	<!--Todo5-->
 	<table border="1">
 		<tbody>
 			<tr>
 				<td style="width: 100px;">従業員番号</td>
-				<td style="width: 250px;"></td>
+				<td style="width: 250px;">{{ props.employee.id }}</td>
 			</tr>
 			<tr>
 				<td>従業員名</td>
-				<td></td>
+				<td>{{ props.employee.name }}</td>
 			</tr>
 			<tr>
 				<td>所属</td>
-				<td></td>
+				<td>{{ props.employee.section }}</td>
 			</tr>
 			<tr>
 				<td>内線</td>
-				<td></td>
+				<td>{{ props.employee.phone }}</td>
 			</tr>
 		</tbody>
 	</table>

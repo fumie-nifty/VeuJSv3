@@ -2,15 +2,17 @@
 <!-- ChildComponent.vue --> 
 
 <script setup>
-import {defineProps } from 'vue'
+  //vueからdefinePropsを受取る
+  import {defineProps } from 'vue'
 
-const props = defineProps(['title','message'])
-
+  //definePropsらpropsを受取る
+  const props = defineProps(['title','message'])
 </script>
 
 <template>
   <div>
     <h2>子コンポーネント</h2>
+    <!--propsの参照-->
     <p>title:　{{ props.title }}</p>
     <p class="message">message:　{{ props.message }}</p>
   </div>

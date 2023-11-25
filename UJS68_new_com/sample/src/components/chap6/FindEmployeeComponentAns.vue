@@ -1,11 +1,11 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- FindEmployeeComponent.vue --> 
+<!-- FindEmployeeComponentAns.vue --> 
 
 <script setup>
 	import { ref, reactive } from 'vue'
 	import axios from "axios"
 
-	import FindEmployee from '/src/components/chap6/FindEmployee.vue'
+	import FindEmployeeAns from '/src/components/chap6/FindEmployeeAns.vue'
 
 	// テキストボックスで入力される従業員ID
 	const employeeId = ref('')
@@ -45,7 +45,7 @@
 	<button v-on:click="searchMember">検索</button>
 	<!--props (massage,employee) を渡してコンポーネント呼出し-->
 	<!--Todo1-->
-	
+	<FindEmployeeAns v-bind:message="message" v-bind:employee="employee" />
 </template>
 
 <style scoped></style>

@@ -1,5 +1,5 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- AllEmployee.vue --> 
+<!-- AllEmployeeAns.vue --> 
 
 <script setup>
 	import { ref, reactive, onMounted } from 'vue'
@@ -13,15 +13,15 @@
 	const searchFlag = ref(false)
 
 	// 従業員リスト
-	// Todo1
+	const employeeList = ref([])	// Todo1
 
 	const url = 'http://localhost:3000/employee/'
 
 	axios.get(url)
-		.then(() => {				//Todo2
+		.then((response) => {				//Todo2
 			//通信結果取得したデータをemplloyeeに格納
-			// Todo3
-
+			employeeList.value = response.data	// Todo3
+			
 			message.value = '検索に成功しました'
 			//検索結果のフラグをtureにする
 			searchFlag.value = true

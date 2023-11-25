@@ -1,5 +1,6 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
 <!-- Directive1AnsView.vue --> 
+
 <script setup>
   import Directive1Ans from '@/components/chap3/Directive1Ans.vue'
 </script>
