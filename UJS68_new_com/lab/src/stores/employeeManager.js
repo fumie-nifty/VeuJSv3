@@ -10,7 +10,7 @@ import { defineStore } from 'pinia'
 
 export const useShoppingCartStore = defineStore('shoppingCart', () => {
 
-  //従業員
+  // 従業員
   const total = ref(0)
   //従業員リスト
   const itemList = ref([])

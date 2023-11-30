@@ -6,11 +6,11 @@
 	import axios from "axios"
 
 	// 親コンポーネントからpropsの取得う
-	//Todo2
+	// Todo2
 
-	//検索結果を格納する
+	// 検索結果を格納する
 	const employee = ref({})
-	//メッセージ
+	// メッセージ
 	const message = ref('')
 
 	const serachMember = (empId) => {

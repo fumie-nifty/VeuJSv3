@@ -4,7 +4,7 @@
 <script setup>
 	import { ref, reactive } from 'vue'
 
-	//axiosのインポート
+	// axiosのインポート
 	import axios from "axios"
 
 	// テキストボックスで入力される従業員ID
@@ -16,7 +16,7 @@
 	// 検索結果の従業員
 	const employee = ref({})
 
-	//テキストボックスの従業員IDをもとに従業員を検索する
+	// テキストボックスの従業員IDをもとに従業員を検索する
 	const searchMember = () => {
 		const url = 'http://localhost:3000/employee/' + employeeId.value
 
@@ -31,7 +31,7 @@
 		// Web API 非同期通信
 		axios.get(url)
 			.then((response) => {
-				//通信結果取得したデータをemplloyeeに格納
+				// 通信結果取得したデータをemplloyeeに格納
 				employee.value = response.data
 				message.value = '検索に成功しました'
 				redFlag.value = false

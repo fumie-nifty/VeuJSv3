@@ -11,7 +11,7 @@
     count: 1 //カウントアップ用
   })
 
-  //表示フラグ
+  // 表示フラグ
   const showFlag = ref(false)
 
   /* ハンドラー定義 */

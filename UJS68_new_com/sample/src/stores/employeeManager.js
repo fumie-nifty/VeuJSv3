@@ -10,9 +10,9 @@ import { defineStore } from 'pinia'
 
 export const useEmployeeStore = defineStore('employeeManager', () => {
 
-  //従業員
+  // 従業員
   const employee = ref({})
-  //従業員リスト
+  // 従業員リスト
   const employeeList = ref([])
 
   /**

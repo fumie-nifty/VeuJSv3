@@ -6,7 +6,7 @@
 	import { useRouter } from 'vue-router'
 	import CnfirmEmployeeAns from '@/components/chap7/insert_employee/CnfirmEmployeeAns.vue'
 
-	//employeeManager.jsのインポート
+	// employeeManager.jsのインポート
 	import { useEmployeeStore } from '@/stores/employeeManager.js'
 
 	const router = useRouter()
@@ -16,7 +16,7 @@
 	//入力された従業員名を格納
 	const employeeName = ref('')
 
-	//入力された従業員名をemployeeManagerのemployeeListに格納
+	// 入力された従業員名をemployeeManagerのemployeeListに格納
 	const insertMember = () => {
 		// 従業員名が未入力でない場合
 		if (employeeName.value !== '') {

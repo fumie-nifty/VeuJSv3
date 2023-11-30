@@ -2,7 +2,7 @@
 <!-- CnfirmEmployee.vue --> 
 
 <script setup>
-	//employeeManager.jsのインポート
+	// employeeManager.jsのインポート
 	import { useEmployeeStore } from '@/stores/employeeManager.js'
 	// employeeManagerストアーオブジェクトの取得
 	const employeeManager = useEmployeeStore()

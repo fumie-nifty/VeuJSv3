@@ -14,7 +14,7 @@
 	// 検索結果の従業員
 	const employee = ref({})
 
-	//テキストボックスの従業員IDをもとに従業員を検索する
+	// テキストボックスの従業員IDをもとに従業員を検索する
 	const searchMember = () => {
 		const url = 'http://localhost:3000/employee/' + employeeId.value
 

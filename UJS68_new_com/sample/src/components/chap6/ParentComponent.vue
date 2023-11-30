@@ -5,7 +5,7 @@
   import { ref } from 'vue'
   import ChildComponent from '/src/components/chap6/ChildComponent.vue'
 
-  //メッセージ
+  // メッセージ
   const message = ref('Hello Vue!!')
 </script>
 
