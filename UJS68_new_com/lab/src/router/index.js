@@ -16,6 +16,18 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/answers/ans3/question',
+      component: () => import('@/views/answers/ans3/QuestionView.vue')
+    },
+    {
+      path: '/answers/ans4/insert_item',
+      component: () => import('@/views/answers/ans4/InsertItemView.vue')
+    },
+    {
+      path: '/answers/ans5/search_item',
+      component: () => import('@/views/answers/ans5/SearchItemView.vue')
+    },
+    {
       path: '/answers/ans7',
       component: () => import('@/views/answers/ans7/AppBaseView.vue'),
       children: [

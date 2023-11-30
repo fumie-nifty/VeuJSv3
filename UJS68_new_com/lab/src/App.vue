@@ -25,9 +25,9 @@
       </RouterLink>
 
       <nav>
-        <RouterLink to="/">3章　実習問題１</RouterLink><br>
-        <RouterLink to="/">4章　実習問題１</RouterLink><br>
-        <RouterLink to="/">5章　実習問題１</RouterLink><br>
+        <RouterLink to="/answers/ans3/question">3章　実習問題１</RouterLink><br>
+        <RouterLink to="/answers/ans4/insert_item">4章　実習問題１</RouterLink><br>
+        <RouterLink to="/answers/ans5/search_item">5章　実習問題１</RouterLink><br>
         <RouterLink to="/">6章　実習問題１</RouterLink><br>
         <RouterLink to="/answers/ans7">7章　実習問題１</RouterLink><br>
       </nav>
