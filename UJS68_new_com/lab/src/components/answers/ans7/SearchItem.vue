@@ -1,54 +1,54 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- SearchItem.vue --> 
+
 <script setup>
-import { ref, reactive } from 'vue'
-import { useRouter } from 'vue-router'
-import axios from "axios"
+  import { ref, reactive } from 'vue'
+  import { useRouter } from 'vue-router'
+  import axios from "axios"
 
-const router = useRouter()
+  const router = useRouter()
 
-const itemId = ref('')
-const message = ref('')
-const searchFlag = ref(false)
-const quantity = ref(0)
+  const itemId = ref('')
+  const message = ref('')
+  const searchFlag = ref(false)
+  const quantity = ref(0)
 
-const item = ref({})
-const selectItem = ref({})
+  const item = ref({})
+  const selectItem = ref({})
 
-const searchItem = () => {
-  const url = 'http://localhost:3000/shoes/' + itemId.value
+  const searchItem = () => {
+    const url = 'http://localhost:3000/shoes/' + itemId.value
 
-  if (itemId.value == '') {
-    message.value = '商品IDが未入力です'
-    item.value = {}
-    searchFlag.value = false
-    return
-  }
-
-  axios.get(url)
-    .then((response) => {
-      message.value = '検索に成功しました'
-      item.value = response.data
-      searchFlag.value = true
-    })
-    .catch((error) => {
-      message.value = '検索に失敗しました'
+    if (itemId.value == '') {
+      message.value = '商品IDが未入力です'
       item.value = {}
       searchFlag.value = false
-      console.log(error)
-    })
+      return
+    }
 
-}
-const addShoppingCart = () => {
-  
-  selectItem.value = {
-    id: item.value.id,
-    ProductName: item.value.ProductName,
-    Price: item.value.Price,
-    Quantity:quantity.value
+    axios.get(url)
+      .then((response) => {
+        message.value = '検索に成功しました'
+        item.value = response.data
+        searchFlag.value = true
+      })
+      .catch((error) => {
+        message.value = '検索に失敗しました'
+        item.value = {}
+        searchFlag.value = false
+        console.log(error)
+      })
   }
-  
-  router.push("/answers/ans7/shopping_cart")
- 
-}
+
+  const addShoppingCart = () => {
+    selectItem.value = {
+      id: item.value.id,
+      ProductName: item.value.ProductName,
+      Price: item.value.Price,
+      Quantity: quantity.value
+    }
+    router.push("/answers/ans7/shopping_cart")
+  }
 </script>
 
 <template>

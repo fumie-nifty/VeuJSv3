@@ -1,3 +1,9 @@
+/**
+ * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
+ * 
+ * ファイル名：index.js
+ */
+
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 

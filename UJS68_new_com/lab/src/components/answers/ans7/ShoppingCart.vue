@@ -1,9 +1,11 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- ShoppingCart.vue --> 
+
 <script setup>
-import { ref, reactive } from 'vue'
+  import { ref, reactive } from 'vue'
 
-const searchFlag = ref(true)
-const message = ref('')
-
+  const searchFlag = ref(true)
+  const message = ref('')
 </script>
 
 <template>
@@ -33,7 +35,7 @@ const message = ref('')
 </template>
 
 <style scoped>
-table {
-  margin: auto;
-}
+  table {
+    margin: auto;
+  }
 </style>

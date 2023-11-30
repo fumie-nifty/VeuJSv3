@@ -1,13 +1,14 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- Question.vue --> 
+
 <script setup>
-import { ref, reactive } from 'vue'
+  import { ref, reactive } from 'vue'
 
-const question = ref({
-  productName: '', //商品名
-  level: '', //満足度
-  free: '' //自由記述欄
-})
-
-
+  const question = ref({
+    productName: '', //商品名
+    level: '', //満足度
+    free: '' //自由記述欄
+  })
 </script>
 
 <template>
@@ -31,20 +32,20 @@ const question = ref({
     <p>満足度：{{ question.level }}</p>
     <p v-bind:class="'red'">自由記述欄:</p>
     <p v-bind:class="'red'">{{ question.free }}</p>
- </div>
+  </div>
 </template>
 
 <style scoped>
-.red {
-  color: red;
-  font-size: large;
-}
+  .red {
+    color: red;
+    font-size: large;
+  }
 
-.input_output_frame {
-  margin-bottom: 15px;
- }
+  .input_output_frame {
+    margin-bottom: 15px;
+  }
 
-table {
-  margin-top: 5px;
-}
+  table {
+    margin-top: 5px;
+  }
 </style>

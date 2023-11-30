@@ -1,30 +1,27 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- AllItem.vue --> 
+
 <script setup>
-import { ref, reactive,onMounted } from 'vue'
-import axios from "axios"
+	import { ref, reactive,onMounted } from 'vue'
+	import axios from "axios"
 
-const message = ref('')
+	const message = ref('')
+	const itemList = ref([])
 
-const itemList = ref([])
+	onMounted(() => {
+		const url = 'http://localhost:3000/shoes'
 
-onMounted(() => {
-	const url = 'http://localhost:3000/shoes'
-
-	axios.get(url)
-		.then((response) => {
-			message.value = '検索に成功しました'
-			itemList.value = response.data
-		})
-		.catch((error) => {
-			message.value ='検索に失敗しました'
-			itemList.value = []
-			console.log(error)
-		})
-
-})
-
-
-
-
+		axios.get(url)
+			.then((response) => {
+				message.value = '検索に成功しました'
+				itemList.value = response.data
+			})
+			.catch((error) => {
+				message.value ='検索に失敗しました'
+				itemList.value = []
+				console.log(error)
+			})
+	})
 </script>
 
 <template>
@@ -48,8 +45,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
-table{
-  margin: auto;
-}
-
+	table{
+		margin: auto;
+	}
 </style>

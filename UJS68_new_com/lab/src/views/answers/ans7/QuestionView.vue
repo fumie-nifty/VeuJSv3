@@ -1,5 +1,8 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- QuestionView.vue --> 
+
 <script setup>
-import InsertItem from '@/components/answers/ans7/Question.vue'
+  import InsertItem from '@/components/answers/ans7/Question.vue'
 </script>
 
 <template>

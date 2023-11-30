@@ -1,51 +1,49 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- InsertItem.vue --> 
+
 <script setup>
-import { ref, reactive } from 'vue'
+  import { ref, reactive } from 'vue'
 
-const data = reactive({
-  options: ['ハイカットスニーカー', 'ミドルスニーカー', 'ローカットスニーカー', 'サンダル'],
-  id: 0, //商品コード
-  productName: '', //商品名
-  color: '', //色
-  price: 0, //金額
-})
+  const data = reactive({
+    options: ['ハイカットスニーカー', 'ミドルスニーカー', 'ローカットスニーカー', 'サンダル'],
+    id: 0, //商品コード
+    productName: '', //商品名
+    color: '', //色
+    price: 0, //金額
+  })
 
-const itemList = reactive([])
-const showFlag = ref(false)
+  const itemList = reactive([])
+  const showFlag = ref(false)
 
-const insertItem = () => {
-
-  //すべての情報が入力されていない場合  
-  if (data.productName == '' || data.color == '' || data.price == 0) {
-    alert('すべての商品情報を入力してください。')
-    return
-  }
-
-  //商品コード算出（
-  data.id = data.id + 1
-  //すべての情報が入力されている場合 
-  itemList.push({ id: data.id, productName: data.productName, color: data.color, price: data.price })
-  //テーブルの表示
-  showFlag.value = true 
-  //入力値のクリア
-  data.productName = ''
-  data.color = ''
-  data.price = 0
-}
-
-const deleteItem = (index) => {
-  
-  if(window.confirm('削除しますか？')){
-    //選択された商品情報を削除
-    itemList.splice(index,1)
-    //商品情報が空の場合テーブルを非表示にする
-    if(itemList.length === 0){
-      showFlag.value = false
+  const insertItem = () => {
+    //すべての情報が入力されていない場合  
+    if (data.productName == '' || data.color == '' || data.price == 0) {
+      alert('すべての商品情報を入力してください。')
+      return
     }
+    //商品コード算出（
+    data.id = data.id + 1
+    //すべての情報が入力されている場合 
+    itemList.push({ id: data.id, productName: data.productName, color: data.color, price: data.price })
+    //テーブルの表示
+    showFlag.value = true 
+    //入力値のクリア
+    data.productName = ''
+    data.color = ''
+    data.price = 0
   }
-  
-  console.log('deleteItem:' + index)
 
-}
+  const deleteItem = (index) => { 
+    if(window.confirm('削除しますか？')){
+      //選択された商品情報を削除
+      itemList.splice(index,1)
+      //商品情報が空の場合テーブルを非表示にする
+      if(itemList.length === 0){
+        showFlag.value = false
+      }
+    }    
+    console.log('deleteItem:' + index)
+  }
 </script>
 
 <template>
@@ -102,8 +100,7 @@ const deleteItem = (index) => {
 </template>
 
 <style scoped>
-
-table{
-  margin-top: 5px;
-}
+  table{
+    margin-top: 5px;
+  }
 </style>

@@ -1,5 +1,8 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- App.vue --> 
+
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+  import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
@@ -35,10 +38,10 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped>
-nav {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  margin-left: 5px;
-  font-size: 12px;
-}
+  nav {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font-size: 12px;
+  }
 </style>

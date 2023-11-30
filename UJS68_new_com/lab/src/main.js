@@ -1,3 +1,9 @@
+/**
+ * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
+ * 
+ * ファイル名：main.js
+ */
+
 import './assets/main.css'
 
 import { createApp } from 'vue'

@@ -1,5 +1,8 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- SearchItemView.vue --> 
+
 <script setup>
-import SearchItem from '@/components/answers/ans7/SearchItem.vue'
+  import SearchItem from '@/components/answers/ans7/SearchItem.vue'
 </script>
 
 <template>
