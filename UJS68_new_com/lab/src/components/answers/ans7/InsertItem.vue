@@ -78,7 +78,7 @@
 
     <button v-on:click="insertItem">登録</button>
 
-    <table border="1" v-show="showFlag" align="center">
+    <table v-show="showFlag" class="insertItem">
       <thead>
         <th>No</th>
         <th>商品名</th>
@@ -100,7 +100,19 @@
 </template>
 
 <style scoped>
-  table{
+	table.insertItem{
     margin-top: 5px;
+    border-collapse: collapse;
   }
+
+  table.insertItem,.insertItem th,.insertItem td {
+    padding: 0px 10px 0px 10px;
+    border:1px solid #333;
+  }
+
+  .insertItem th{
+  background-color:azure;
+  font-weight: bold;
+  }
+  
 </style>

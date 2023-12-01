@@ -42,7 +42,18 @@
 </template>
 
 <style scoped>
-  table {
-    margin: auto;
+	table{
+		margin: auto;
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    padding: 0px 10px 0px 10px;
+    border:1px solid #333;
+  }
+
+  th{
+  background-color:azure;
+  font-weight: bold;
   }
 </style>
