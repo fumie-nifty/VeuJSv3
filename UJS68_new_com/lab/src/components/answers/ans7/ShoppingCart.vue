@@ -31,10 +31,10 @@
       <tbody>
         <tr v-for="(item) in shopingCartStore.shoppingCart" v-bind:key="item.id">
           <td>{{ item.id }}</td>
-          <td>{{ item.ProductName }}</td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>{{ item.productName }}</td>
+          <td>{{ item.Price }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.Price *  item.quantity}}</td>
         </tr>
       </tbody>
     </table>

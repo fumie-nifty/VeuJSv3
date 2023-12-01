@@ -47,13 +47,21 @@
   }
 
   const addShoppingCart = () => {
+    if (quantity.value == 0) {
+      message.value = '数量が未入力です'
+      return
+    }
+    if (item.value.Stock < quantity.value ) {
+      message.value = '在庫数を超えた数量が入力されています'
+      return
+    }
     selectItem.value = {
       id: item.value.id,
-      ProductName: item.value.ProductName,
+      productName: item.value.ProductName,
       Price: item.value.Price,
-      Quantity: quantity.value
+      quantity: quantity.value
     }
-    shopingCartStore.addShoppingCart(selectItem)
+    shopingCartStore.addShoppingCart(selectItem.value)
     router.push("/answers/ans7/shopping_cart")
   }
 </script>
