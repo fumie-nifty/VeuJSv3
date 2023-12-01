@@ -6,6 +6,12 @@
   import { useRouter } from 'vue-router'
   import axios from "axios"
 
+  // shopingCartStore.jsのインポート
+	import { useShoppingCartStore } from '@/stores/shopingCartStore.js'
+	// shopingCartStoreストアーオブジェクトの取得
+	const shopingCartStore = useShoppingCartStore()	
+
+
   const router = useRouter()
 
   const itemId = ref('')
@@ -47,6 +53,7 @@
       Price: item.value.Price,
       Quantity: quantity.value
     }
+    shopingCartStore.addShoppingCart(selectItem)
     router.push("/answers/ans7/shopping_cart")
   }
 </script>

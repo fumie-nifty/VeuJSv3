@@ -1,19 +1,19 @@
 /**
  * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
  * 
- * ファイル名：shoppingCart.js
- * 　　従業員登録用store
+ * ファイル名：shopingCartStore.js
+ * 　　ショッピングカートstore
  */
 
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useShoppingCartStore = defineStore('shoppingCart', () => {
 
-  // 従業員
+  // 合計
   const total = ref(0)
-  //従業員リスト
-  const itemList = ref([])
+  //ショッピングカート
+  const shoppingCart = ref([])
 
   /**
    * addEmployee
@@ -21,9 +21,10 @@ export const useShoppingCartStore = defineStore('shoppingCart', () => {
    * @function
    * @param emp {object} 従業員オブジェクト{employeeName : employeeName.value}
    */
-  const addItemList= (emp) => {
-    itemList.value.push(emp)
+  const addShoppingCart= (item) => {
+    shoppingCart.value.push(item)
+    total.value += total.value
   }
 
-  return { addShoppingCart,}
+  return { addShoppingCart,shoppingCart,total}
 })

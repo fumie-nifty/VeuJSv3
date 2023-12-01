@@ -2,15 +2,22 @@
 <!-- ShoppingCart.vue --> 
 
 <script setup>
-  import { ref, reactive } from 'vue'
+  import { ref } from 'vue'
 
+  // shopingCartStore.jsのインポート
+	import { useShoppingCartStore } from '@/stores/shopingCartStore.js'
+	// shopingCartStoreストアーオブジェクトの取得
+	const shopingCartStore = useShoppingCartStore()	
+
+  //const shoppingCart = shopingCartStore.shoppingCart
   const searchFlag = ref(true)
-  const message = ref('')
+  //const message = ref('')
+
 </script>
 
 <template>
   <div class="input_output_frame">
-    <p>{{ message }}</p>
+    <p></p>
     <table v-show="searchFlag" align="center" border="1">
       <thead>
         <tr align="center">
@@ -22,9 +29,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td></td>
-          <td></td>
+        <tr v-for="(item) in shopingCartStore.shoppingCart" v-bind:key="item.id">
+          <td>{{ item.id }}</td>
+          <td>{{ item.ProductName }}</td>
           <td></td>
           <td></td>
           <td></td>
