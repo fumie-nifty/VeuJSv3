@@ -20,6 +20,14 @@ const router = createRouter({
       component: () => import('@/views/answers/ans3/QuestionView.vue')
     },
     {
+      path: '/answers/ans3/all_item',
+      component: () => import('@/views/answers/ans3/AllItemView.vue')
+    },
+    {
+      path: '/answers/ans4/insert_item_opt',
+      component: () => import('@/views/answers/ans4/InsertItemOptView.vue')
+    },
+    {
       path: '/answers/ans4/insert_item',
       component: () => import('@/views/answers/ans4/InsertItemView.vue')
     },

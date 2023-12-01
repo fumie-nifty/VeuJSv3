@@ -37,10 +37,10 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <h2>3章</h2>
         <RouterLink to="/answers/ans3/question">・実習問題１</RouterLink><br>
-        <RouterLink to="/">・オプション１</RouterLink><br>
+        <RouterLink to="/answers/ans3/all_item">・オプション１</RouterLink><br>
         <h2>4章</h2>
         <RouterLink to="/answers/ans4/insert_item">・実習問題１</RouterLink><br>
-        <RouterLink to="/">・オプション１</RouterLink><br>
+        <RouterLink to="/answers/ans4/insert_item_opt">・オプション１</RouterLink><br>
         <h2>5章</h2>
         <RouterLink to="/answers/ans5/search_item">・実習問題１</RouterLink><br>
         <RouterLink to="/">・オプション１</RouterLink><br>
