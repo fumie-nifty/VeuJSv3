@@ -2,15 +2,20 @@
 <!-- AllItem.vue --> 
 
 <script setup>
-	import { ref, reactive,onMounted } from 'vue'
+	import { ref,onMounted } from 'vue'
 	import axios from "axios"
 
+	// メッセージ
 	const message = ref('')
+	// 商品リスト
 	const itemList = ref([])
 
+	// ★Action　onMouted使うか要検討 サンプルでは使用してない
 	onMounted(() => {
+		// 商品全件取得するWebAPI URL
 		const url = 'http://localhost:3000/shoes'
 
+		// Web API呼出し
 		axios.get(url)
 			.then((response) => {
 				message.value = '検索に成功しました'

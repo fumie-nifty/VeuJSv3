@@ -9,15 +9,14 @@
 	// shopingCartStoreストアーオブジェクトの取得
 	const shopingCartStore = useShoppingCartStore()	
 
-  //const shoppingCart = shopingCartStore.shoppingCart
   const searchFlag = ref(true)
-  //const message = ref('')
+  const message = ref('')
 
 </script>
 
 <template>
   <div class="input_output_frame">
-    <p></p>
+    <p>{{ message }}</p>
     <table v-show="searchFlag">
       <thead>
         <tr>

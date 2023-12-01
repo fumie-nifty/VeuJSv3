@@ -21,4 +21,4 @@ createApp({
       name
     }
   }
-}).mount('#app')// アプリケーションのマウント
+}).mount('#app') // アプリケーションのマウント

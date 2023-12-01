@@ -2,12 +2,12 @@
 <!-- Question.vue --> 
 
 <script setup>
-  import { ref, reactive } from 'vue'
+  import { ref } from 'vue'
 
   const question = ref({
-    productName: '', //商品名
-    level: '', //満足度
-    free: '' //自由記述欄
+    productName: '', // 商品名
+    level: '', // 満足度
+    free: '' // 自由記述欄
   })
 </script>
 

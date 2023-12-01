@@ -2,7 +2,7 @@
 <!-- SearchItem.vue --> 
 
 <script setup>
-  import { ref, reactive } from 'vue'
+  import { ref } from 'vue'
   import { useRouter } from 'vue-router'
   import axios from "axios"
 
