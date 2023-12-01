@@ -2,15 +2,9 @@
 <!-- SearchItem.vue --> 
 
 <script setup>
-  import { ref } from 'vue'
+  import { ref, reactive } from 'vue'
   import { useRouter } from 'vue-router'
   import axios from "axios"
-
-  // shopingCartStore.jsのインポート
-	import { useShoppingCartStore } from '@/stores/shopingCartStore.js'
-	// shopingCartStoreストアーオブジェクトの取得
-	const shopingCartStore = useShoppingCartStore()	
-
 
   const router = useRouter()
 
@@ -47,21 +41,12 @@
   }
 
   const addShoppingCart = () => {
-    if (quantity.value == 0) {
-      message.value = '数量が未入力です'
-      return
-    }
-    if (item.value.Stock < quantity.value ) {
-      message.value = '在庫数を超えた数量が入力されています'
-      return
-    }
     selectItem.value = {
       id: item.value.id,
-      productName: item.value.ProductName,
+      ProductName: item.value.ProductName,
       Price: item.value.Price,
-      quantity: quantity.value
+      Quantity: quantity.value
     }
-    shopingCartStore.addShoppingCart(selectItem.value)
     router.push("/answers/ans7/shopping_cart")
   }
 </script>

@@ -2,13 +2,21 @@
 <!-- QuestionView.vue --> 
 
 <script setup>
-  import InsertItem from '@/components/answers/ans7/Question.vue'
+  import InsertItem from '@/components/answers/ans3/Question.vue'
 </script>
 
 <template>
+  <main>
   <h2>アンケート画面</h2>
   <InsertItem/>
+</main>
 </template>
 
 <style scoped>
+main {
+  margin: 0 auto;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
 </style>

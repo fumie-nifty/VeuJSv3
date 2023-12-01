@@ -2,9 +2,9 @@
 <!-- PiniaChildComponent.vue --> 
 
 <script setup>
-  //conter.jsのインポート
+  // conter.jsのインポート
   import { useCounterStore } from '@/stores/counter';
-  //counterストアーオブジェクトの取得
+  // counterストアーオブジェクトの取得
   const counter = useCounterStore()
 </script>
 

@@ -1,5 +1,8 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- AllItemView.vue --> 
+
 <script setup>
-import AllItem from '@/components/answers/ans7/AllItem.vue'
+  import AllItem from '@/components/answers/ans7/AllItem.vue'
 </script>
 
 <template>

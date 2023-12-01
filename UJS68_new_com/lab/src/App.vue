@@ -1,3 +1,6 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- App.vue --> 
+
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 </script>
@@ -10,11 +13,21 @@ import { RouterLink, RouterView } from 'vue-router'
       </RouterLink>
 
       <nav>
-        <RouterLink to="/">3章　実習問題１</RouterLink><br>
-        <RouterLink to="/">4章　実習問題１</RouterLink><br>
-        <RouterLink to="/">5章　実習問題１</RouterLink><br>
-        <RouterLink to="/">6章　実習問題１</RouterLink><br>
-        <RouterLink to="/">7章　実習問題１</RouterLink><br>
+        <h2>3章</h2>
+        <RouterLink to="/">・実習問題１</RouterLink><br>
+        <RouterLink to="/">・オプション１</RouterLink><br>
+        <h2>4章</h2>
+        <RouterLink to="/">・実習問題１</RouterLink><br>
+        <RouterLink to="/">・オプション１</RouterLink><br>
+        <h2>5章</h2>
+        <RouterLink to="/">・実習問題１</RouterLink><br>
+        <RouterLink to="/">・オプション１</RouterLink><br>
+        <h2>6章</h2>
+        <RouterLink to="/">・実習問題１</RouterLink><br>
+        <RouterLink to="/">・オプション１</RouterLink><br>
+        <h2>7章</h2>
+        <RouterLink to="/">・実習問題１</RouterLink><br>
+        <RouterLink to="/">・オプション１</RouterLink><br>
       </nav>
 
       <RouterLink to="/">
@@ -22,11 +35,21 @@ import { RouterLink, RouterView } from 'vue-router'
       </RouterLink>
 
       <nav>
-        <RouterLink to="/">3章　実習問題１</RouterLink><br>
-        <RouterLink to="/">4章　実習問題１</RouterLink><br>
-        <RouterLink to="/">5章　実習問題１</RouterLink><br>
-        <RouterLink to="/">6章　実習問題１</RouterLink><br>
-        <RouterLink to="/answers/ans7">7章　実習問題１</RouterLink><br>
+        <h2>3章</h2>
+        <RouterLink to="/answers/ans3/question">・実習問題１</RouterLink><br>
+        <RouterLink to="/answers/ans3/all_item">・オプション１</RouterLink><br>
+        <h2>4章</h2>
+        <RouterLink to="/answers/ans4/insert_item">・実習問題１</RouterLink><br>
+        <RouterLink to="/answers/ans4/insert_item_opt">・オプション１</RouterLink><br>
+        <h2>5章</h2>
+        <RouterLink to="/answers/ans5/search_item">・実習問題１</RouterLink><br>
+        <RouterLink to="/answers/ans5/all_item">・オプション１</RouterLink><br>
+        <h2>6章</h2>
+        <RouterLink to="/">・実習問題１</RouterLink><br>
+        <RouterLink to="/">・オプション１</RouterLink><br>
+        <h2>7章</h2>
+        <RouterLink to="/answers/ans7">・実習問題１</RouterLink><br>
+        <RouterLink to="/">・オプション１</RouterLink><br>
       </nav>
     </div>
   </header>
@@ -38,7 +61,10 @@ import { RouterLink, RouterView } from 'vue-router'
 nav {
   margin-top: 5px;
   margin-bottom: 10px;
-  margin-left: 5px;
   font-size: 12px;
+}
+
+nav a{
+  margin-left: 5px;
 }
 </style>

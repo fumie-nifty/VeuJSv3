@@ -23,7 +23,7 @@
     return employee.salary * 1.15
   }
 
-  //給与の更新をするメソッドの定義
+  // 給与の更新をするメソッドの定義
   const salaryUpdate = () => {
     employee.salary = 500000
   }

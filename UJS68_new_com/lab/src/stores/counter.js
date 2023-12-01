@@ -1,3 +1,10 @@
+/**
+ * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
+ * 
+ * ファイル名：counter.js
+ * 　　カウントアップ用のstore
+ */
+
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 

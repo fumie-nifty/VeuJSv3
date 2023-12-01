@@ -4,7 +4,7 @@
 <script setup>
 	import { ref, reactive, onMounted } from 'vue'
 
-	//axiosのインポート
+	// axiosのインポート
 	import axios from "axios"
 
 	// メッセージ
@@ -19,11 +19,11 @@
 
 	axios.get(url)
 		.then((response) => {				//Todo2
-			//通信結果取得したデータをemplloyeeに格納
+			// 通信結果取得したデータをemplloyeeに格納
 			employeeList.value = response.data	// Todo3
 			
 			message.value = '検索に成功しました'
-			//検索結果のフラグをtureにする
+			// 検索結果のフラグをtureにする
 			searchFlag.value = true
 			// 取得した配列が空だった場合
 			if(employeeList.value.length == 0){
@@ -34,7 +34,7 @@
 		})
 		.catch((error) => {
 			message.value = '検索に失敗しました'
-			//検索結果のフラグをfalseにする
+			// 検索結果のフラグをfalseにする
 			searchFlag.value = false
 			employeeList.value = []
 			console.log(error)

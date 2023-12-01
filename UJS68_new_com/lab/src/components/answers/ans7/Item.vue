@@ -1,3 +1,6 @@
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- Item.vue --> 
+
 <script setup>
 </script>
 

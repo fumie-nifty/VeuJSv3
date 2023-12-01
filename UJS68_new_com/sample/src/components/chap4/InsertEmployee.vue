@@ -4,10 +4,10 @@
 <script setup>
 	import { ref, reactive } from 'vue'
 
-	//従業員名
+	// 従業員名
 	const employeeName = ref('')
 
-	//従業員リスト
+	// 従業員リスト
 	// Todo1
 
 	//従業員追加メソッド

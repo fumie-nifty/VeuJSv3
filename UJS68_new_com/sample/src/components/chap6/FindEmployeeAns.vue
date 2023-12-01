@@ -2,10 +2,10 @@
 <!-- FindEmployeeAns.vue --> 
 
 <script setup>
-	//vueからdefinePropsを受取る
+	// vueからdefinePropsを受取る
 	import { defineProps } from 'vue'	//Todo2
 
-	//definePropsらpropsを受取る
+	// definePropsらpropsを受取る
 	const props = defineProps(['message', 'employee'])	//Todo3
 </script>
 

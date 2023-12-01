@@ -1,5 +1,7 @@
-<script setup>
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
+<!-- TheWelcome.vue --> 
 
+<script setup>
 </script>
 
 <template>

@@ -5,7 +5,7 @@
 	import { ref } from 'vue'
 	import FindEmployee from '/src/components/chap7/route/FindEmployeeAns.vue'
 
-	//入力値
+	// 入力値
 	const inputId = ref('')
 	// 子コンポーネントFindEmployeeを格納するrefオブジェクトの準備
 	const findEmployee = ref();

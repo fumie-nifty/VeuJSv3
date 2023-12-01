@@ -11,7 +11,7 @@
   // 給与計算結果
   const salaryResult = ref(0)
 
-  //従業員
+  // 従業員
   const employee = reactive({
     "id": 922101,
     "name": "鈴木　一郎",

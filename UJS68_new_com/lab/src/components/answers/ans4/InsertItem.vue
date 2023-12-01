@@ -16,18 +16,18 @@
   const showFlag = ref(false)
 
   const insertItem = () => {
-    // すべての情報が入力されていない場合  
+    //すべての情報が入力されていない場合  
     if (data.productName == '' || data.color == '' || data.price == 0) {
       alert('すべての商品情報を入力してください。')
       return
     }
-    // 商品コード算出（
+    //商品コード算出（
     data.id = data.id + 1
-    // すべての情報が入力されている場合 
+    //すべての情報が入力されている場合 
     itemList.push({ id: data.id, productName: data.productName, color: data.color, price: data.price })
-    // テーブルの表示
+    //テーブルの表示
     showFlag.value = true 
-    // 入力値のクリア
+    //入力値のクリア
     data.productName = ''
     data.color = ''
     data.price = 0
@@ -35,9 +35,9 @@
 
   const deleteItem = (index) => { 
     if(window.confirm('削除しますか？')){
-      // 選択された商品情報を削除
+      //選択された商品情報を削除
       itemList.splice(index,1)
-      // 商品情報が空の場合テーブルを非表示にする
+      //商品情報が空の場合テーブルを非表示にする
       if(itemList.length === 0){
         showFlag.value = false
       }
@@ -78,7 +78,7 @@
 
     <button v-on:click="insertItem">登録</button>
 
-    <table v-show="showFlag" class="insertItem">
+    <table border="1" v-show="showFlag" align="center">
       <thead>
         <th>No</th>
         <th>商品名</th>
@@ -100,19 +100,7 @@
 </template>
 
 <style scoped>
-	table.insertItem{
+  table{
     margin-top: 5px;
-    border-collapse: collapse;
   }
-
-  table.insertItem,.insertItem th,.insertItem td {
-    padding: 0px 10px 0px 10px;
-    border:1px solid #333;
-  }
-
-  .insertItem th{
-  background-color:azure;
-  font-weight: bold;
-  }
-  
 </style>

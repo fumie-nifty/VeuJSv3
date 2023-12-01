@@ -19,7 +19,7 @@ const router = createRouter({
       name: 'introduction',
       component: () => import('@/views/chap2/IntroductionView.vue')
     },
-    {//Chap3
+    {// Chap3
       path: '/chap3',
       children: [
         {
@@ -79,7 +79,7 @@ const router = createRouter({
         }
       ]
     },
-    {//Chap4
+    {// Chap4
       path: '/chap4',
       children: [
         {
@@ -119,7 +119,7 @@ const router = createRouter({
         }
       ]
     },
-    {//Chap5
+    {// Chap5
       path: '/chap5',
       children: [
         {
@@ -139,7 +139,7 @@ const router = createRouter({
         }
       ]
     },
-    {//Chap6
+    {// Chap6
       path: '/chap6',
       children: [
        {
@@ -159,7 +159,7 @@ const router = createRouter({
         }
        ]
     },
-    {//Chap7
+    {// Chap7
       path: '/chap7',
       children: [
         {
@@ -184,7 +184,7 @@ const router = createRouter({
         }
       ]
     },
-    {//Chap7/simple_route
+    {// Chap7/simple_route
       path: '/chap7/simple_route',
       component: () => import('@/views/chap7/simple_route/SimpleRutingView.vue'),
       children: [
@@ -204,7 +204,7 @@ const router = createRouter({
         }
       ]
     },
-    {//Chap7 route
+    {// Chap7 route
       path: '/chap7/route',
       name: 'ruting',
       component: () => import('@/views/chap7/route/RutingView.vue'),
@@ -225,7 +225,7 @@ const router = createRouter({
         }
       ]
     },
-    {//Chap7 route
+    {// Chap7 route
       path: '/chap7/route_ans',
       name: 'ruting_ans',
       component: () => import('@/views/chap7/route/RutingAnsView.vue'),
