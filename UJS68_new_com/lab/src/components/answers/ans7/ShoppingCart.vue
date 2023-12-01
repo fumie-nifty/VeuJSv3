@@ -37,7 +37,7 @@
           <td class="number_column">{{ item.Price *  item.quantity}}</td>
         </tr>
         <tr>
-          <td colspan="4" class="sub_title">小　計</td>
+          <td colspan="4" class="sub_title">合　　計</td>
           <td class="number_column">{{ shopingCartStore.total }}</td>
         </tr>
       </tbody>

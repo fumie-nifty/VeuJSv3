@@ -36,6 +36,10 @@ const router = createRouter({
       component: () => import('@/views/answers/ans5/SearchItemView.vue')
     },
     {
+      path: '/answers/ans5/all_item',
+      component: () => import('@/views/answers/ans5/AllItemView.vue')
+    },
+    {
       path: '/answers/ans7',
       component: () => import('@/views/answers/ans7/AppBaseView.vue'),
       children: [
