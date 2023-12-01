@@ -23,7 +23,7 @@ export const useShoppingCartStore = defineStore('shoppingCart', () => {
    */
   const addShoppingCart= (item) => {
     shoppingCart.value.push(item)
-    total.value += total.value
+    total.value += item.Price *  item.quantity
   }
 
   return { addShoppingCart,shoppingCart,total}

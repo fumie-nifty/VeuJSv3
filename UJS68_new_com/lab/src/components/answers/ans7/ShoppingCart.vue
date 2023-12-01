@@ -18,10 +18,10 @@
 <template>
   <div class="input_output_frame">
     <p></p>
-    <table v-show="searchFlag" align="center" border="1">
+    <table v-show="searchFlag">
       <thead>
-        <tr align="center">
-          <th width="80">商品ID</th>
+        <tr>
+          <th width="70">商品ID</th>
           <th width="200px">商品名</th>
           <th width="70px">価格</th>
           <th width="50px">数量</th>
@@ -32,9 +32,13 @@
         <tr v-for="(item) in shopingCartStore.shoppingCart" v-bind:key="item.id">
           <td>{{ item.id }}</td>
           <td>{{ item.productName }}</td>
-          <td>{{ item.Price }}</td>
-          <td>{{ item.quantity }}</td>
-          <td>{{ item.Price *  item.quantity}}</td>
+          <td class="number_column">{{ item.Price }}</td>
+          <td class="number_column">{{ item.quantity }}</td>
+          <td class="number_column">{{ item.Price *  item.quantity}}</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="sub_title">小　計</td>
+          <td class="number_column">{{ shopingCartStore.total }}</td>
         </tr>
       </tbody>
     </table>
@@ -52,7 +56,11 @@
     border:1px solid #333;
   }
 
-  th{
+  .number_column{
+    text-align: right;
+  }
+  th,.sub_title{
+  text-align: center;
   background-color:azure;
   font-weight: bold;
   }
