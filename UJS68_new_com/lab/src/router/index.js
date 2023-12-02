@@ -68,8 +68,10 @@ const router = createRouter({
           component: () => import('@/views/answers/ans7/ShoppingCartView.vue')
         },
        {
-          path: 'detail_item',
-          component: () => import('@/views/answers/ans7/DetailItemView.vue')
+          path: 'detail_item/:id',
+          name:"detail_item_params_ans",
+          component: () => import('@/views/answers/ans7/DetailItemView.vue'),
+          props: true
         }
       ]
     }
