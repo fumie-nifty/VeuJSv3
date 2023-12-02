@@ -37,20 +37,20 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <h2>3章</h2>
         <RouterLink to="/answers/ans3/question">・実習問題１</RouterLink><br>
-        <RouterLink to="/answers/ans3/all_item">・オプション１</RouterLink><br>
+        <RouterLink to="/answers/ans3op1/all_item">・オプション１</RouterLink><br>
         <h2>4章</h2>
         <RouterLink to="/answers/ans4/insert_item">・実習問題１</RouterLink><br>
-        <RouterLink to="/answers/ans4/insert_item_opt">・オプション１</RouterLink><br>
+        <RouterLink to="/answers/ans4op1/insert_item">・オプション１</RouterLink><br>
+        <RouterLink to="/answers/ans4op2/insert_item_opt">・オプション２</RouterLink><br>
         <h2>5章</h2>
         <RouterLink to="/answers/ans5/search_item">・実習問題１</RouterLink><br>
-        <RouterLink to="/answers/ans5/all_item">・オプション１</RouterLink><br>
+        <RouterLink to="/answers/ans5op1/all_item">・オプション１</RouterLink><br>
         <h2>6章</h2>
-        <RouterLink to="/">・実習問題１</RouterLink><br>
-        <RouterLink to="/">・オプション１</RouterLink><br>
+        <RouterLink to="/answers/ans6/search_item">・実習問題１</RouterLink><br>
+        <RouterLink to="/answers/ans6op1/all_item">・オプション１</RouterLink><br>
         <h2>7章</h2>
-        <RouterLink to="/answers/ans7">・実習問題１</RouterLink><br>
-        <RouterLink to="/">・オプション１</RouterLink><br>
-      </nav>
+        <RouterLink to="/answers/ans7/top">・実習問題１& オプション１</RouterLink><br>
+       </nav>
     </div>
   </header>
 

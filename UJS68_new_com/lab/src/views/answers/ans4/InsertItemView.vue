@@ -7,7 +7,7 @@ import InsertItem from '@/components/answers/ans4/InsertItem.vue'
 
 <template>
   <main>
-    <h2>商品登録画面</h2>
+    <h2>【4章 実習１】商品登録画面</h2>
     <InsertItem />
   </main>
 </template>

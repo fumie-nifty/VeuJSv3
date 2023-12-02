@@ -5,6 +5,8 @@
   import { ref } from 'vue'
   import axios from "axios"
 
+	import ItemComponent from '@/components/answers/ans6/ItemComponent.vue'
+
   const itemId = ref('')        // 検索値（商品ID）
   const message = ref('')       // メッセージ
   const searchFlag = ref(false) // 検索結果フラグ
@@ -43,7 +45,7 @@
       })
   }
 
- </script>
+</script>
 
 <template>
   <div class="input_output_frame">
@@ -53,26 +55,8 @@
     <p>{{ message }}</p>
     <table v-show="searchFlag" align="center">
       <tbody>
-        <tr>
-          <td>商品ID</td>
-          <td>{{ item.id }}</td>
-        </tr>
-        <tr>
-          <td>商品名</td>
-          <td>{{ item.productName }}</td>
-        </tr>
-        <tr>
-          <td>在庫数</td>
-          <td>{{ item.stock }}</td>
-        </tr>
-        <tr>
-          <td>価格</td>
-          <td>{{ item.price }}</td>
-        </tr>
-        <tr>
-          <td>商品イメージ</td>
-          <td><img v-bind:src="'/images/' + item.img"></td>
-        </tr>
+        <!--子コンポーネント呼出し-->
+        <ItemComponent v-bind:item="item"/>
         <tr>
           <td>購入数</td>
           <td><input type="number" v-model="quantity" /></td>

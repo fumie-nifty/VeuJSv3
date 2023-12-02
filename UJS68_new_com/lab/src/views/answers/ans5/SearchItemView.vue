@@ -7,7 +7,7 @@
 
 <template>
   <main>
-    <h2>商品検索画面</h2>
+    <h2>【5章 実習１】商品検索画面</h2>
     <SearchItem />
   </main>
 </template>

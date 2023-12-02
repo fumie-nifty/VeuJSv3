@@ -20,24 +20,42 @@ const router = createRouter({
       component: () => import('@/views/answers/ans3/QuestionView.vue')
     },
     {
-      path: '/answers/ans3/all_item',
-      component: () => import('@/views/answers/ans3/AllItemView.vue')
-    },
-    {
-      path: '/answers/ans4/insert_item_opt',
-      component: () => import('@/views/answers/ans4/InsertItemOptView.vue')
+      path: '/answers/ans3op1/all_item',
+      component: () => import('@/views/answers/ans3op1/AllItemView.vue')
     },
     {
       path: '/answers/ans4/insert_item',
       component: () => import('@/views/answers/ans4/InsertItemView.vue')
     },
     {
+      path: '/answers/ans4op1/insert_item',
+      component: () => import('@/views/answers/ans4op1/InsertItemView.vue')
+    },
+    {
+      path: '/answers/ans4op2/insert_item_opt',
+      component: () => import('@/views/answers/ans4op2/InsertItemOptView.vue')
+    },
+    {
       path: '/answers/ans5/search_item',
       component: () => import('@/views/answers/ans5/SearchItemView.vue')
     },
     {
-      path: '/answers/ans5/all_item',
-      component: () => import('@/views/answers/ans5/AllItemView.vue')
+      path: '/answers/ans5op1/all_item',
+      component: () => import('@/views/answers/ans5op1/AllItemView.vue')
+    },
+    {
+      path: '/answers/ans6/search_item',
+      component: () => import('@/views/answers/ans6/SearchItemView.vue')
+    },
+    {
+      path: '/answers/ans6op1/all_item',
+      component: () => import('@/views/answers/ans6op1/AllItemView.vue')
+    },
+    {
+      path: '/answers/ans6op1/detail_item/:id',
+      name: "detail_item_params_ansop",
+      component: () => import('@/views/answers/ans6op1/DetailItemView.vue'),
+      props: true
     },
     {
       path: '/answers/ans7',
@@ -67,9 +85,11 @@ const router = createRouter({
           path: 'shopping_cart',
           component: () => import('@/views/answers/ans7/ShoppingCartView.vue')
         },
-       {
-          path: 'detail_item',
-          component: () => import('@/views/answers/ans7/DetailItemView.vue')
+        {
+          path: 'detail_item/:id',
+          name: "detail_item_params_ans",
+          component: () => import('@/views/answers/ans7/DetailItemView.vue'),
+          props: true
         }
       ]
     }

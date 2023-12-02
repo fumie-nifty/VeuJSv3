@@ -37,7 +37,7 @@
 		<tbody>
 			<tr v-for="(item) in itemList" v-bind:key="item.id">
 				<td>
-					<RouterLink :to="{ name: 'detail_item_params_ans', params: { id: item.id } }">
+					<RouterLink :to="{ name: 'detail_item_params_ansop', params: { id: item.id } }">
 						<img v-bind:src="'/images/' + item.img">
 					</RouterLink>
 				</td>

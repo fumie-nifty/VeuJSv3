@@ -1,14 +1,14 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- AllItemView.vue --> 
+<!-- InsertItemView.vue --> 
 
 <script setup>
-  import AllItem from '@/components/answers/ans3/AllItem.vue'
+import InsertItem from '@/components/answers/ans4op2/InsertItemOpt.vue'
 </script>
 
 <template>
   <main>
-    <h2>商品一覧画面</h2>
-    <AllItem />
+    <h2>【4章 オプ２】商品登録画面</h2>
+    <InsertItem />
   </main>
 </template>
 

@@ -10,8 +10,8 @@
 </template>
 
 <style scoped>
-img{
-  margin-top: 30px;
-  width: 60%;
-}
+  img{
+    margin-top: 30px;
+    width: 60%;
+  }
 </style>

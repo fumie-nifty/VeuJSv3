@@ -2,26 +2,26 @@
 <!-- AllItem.vue --> 
 
 <script setup>
-	import { ref, reactive,onMounted } from 'vue'
+	import { ref } from 'vue'
 	import axios from "axios"
 
-	const message = ref('')
-	const itemList = ref([])
+	const message = ref('')		// メッセージ
+	const itemList = ref([])	// 商品リスト
 
-	onMounted(() => {
-		const url = 'http://localhost:3000/shoes'
+	// 商品を全件取得するWebAPI URL
+	const url = 'http://localhost:3000/shoes'
 
-		axios.get(url)
-			.then((response) => {
-				message.value = '検索に成功しました'
-				itemList.value = response.data
-			})
-			.catch((error) => {
-				message.value ='検索に失敗しました'
-				itemList.value = []
-				console.log(error)
-			})
-	})
+	// WebAPI呼出し
+	axios.get(url)
+		.then((response) => {
+			message.value = '検索に成功しました'
+			itemList.value = response.data
+		})
+		.catch((error) => {
+			message.value = '検索に失敗しました'
+			itemList.value = []
+			console.log(error)
+		})
 </script>
 
 <template>
@@ -36,9 +36,9 @@
     </thead>
 		<tbody>
 			<tr v-for="(item) in itemList" v-bind:key="item.id">
-				<td><img v-bind:src="'/images/' + item.Img"></td>
-				<td>{{ item.ProductName }}</td>
-				<td>{{ item.Price }}円</td>
+				<td><img v-bind:src="'/images/' + item.img"></td>
+				<td>{{ item.productName }}</td>
+				<td>{{ item.price }}円</td>
 			</tr>
 		</tbody>
 	</table>
