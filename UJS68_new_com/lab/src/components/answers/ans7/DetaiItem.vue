@@ -2,62 +2,72 @@
 <!-- SearchItem.vue --> 
 
 <script setup>
-import { ref, defineProps } from 'vue'
-import { useRouter } from 'vue-router'
-import axios from "axios"
+  import { ref, defineProps } from 'vue'
+  import { useRouter } from 'vue-router'
+  import axios from "axios"
 
-// shopingCartStore.jsのインポート
-import { useShoppingCartStore } from '@/stores/shopingCartStore.js'
-// shopingCartStoreストアーオブジェクトの取得
-const shopingCartStore = useShoppingCartStore()
+  // ルーターオブジェクトの取得
+  const router = useRouter()
 
-// 親コンポーネントからpropsの取得う
-const props = defineProps(['id'])   //Todo2
-console.log(props.id)
+  // shopingCartStore.jsのインポート
+  import { useShoppingCartStore } from '@/stores/shopingCartStore.js'
+  // shopingCartStoreストアーオブジェクトの取得
+  const shopingCartStore = useShoppingCartStore()
 
-const router = useRouter()
+  // 親コンポーネントからpropsの取得う
+  const props = defineProps(['id'])   
 
-const message = ref('')
-const searchFlag = ref(false)
-const quantity = ref(0)
+  const message = ref('')       // メッセージ
+  const searchFlag = ref(false) // 検索結果フラグ
+  const quantity = ref(0)       // 数量入力用
+  const item = ref({})          // 商品検索APIの戻り値
+  const selectItem = ref({})    // カート追加用商品情報
 
-const item = ref({})
-const selectItem = ref({})
+  // 商品を１件検索するWebAPI URL
+  const url = 'http://localhost:3000/shoes/' + props.id
 
-const url = 'http://localhost:3000/shoes/' + props.id
+  // WebAPI呼出し
+  axios.get(url)
+    .then((response) => {
+      message.value = '検索に成功しました'
+      item.value = response.data
+      searchFlag.value = true
+    })
+    .catch((error) => {
+      message.value = '検索に失敗しました'
+      item.value = {}
+      searchFlag.value = false
+      console.log(error)
+    })
 
-
-axios.get(url)
-  .then((response) => {
-    message.value = '検索に成功しました'
-    item.value = response.data
-    searchFlag.value = true
-  })
-  .catch((error) => {
-    message.value = '検索に失敗しました'
-    item.value = {}
-    searchFlag.value = false
-    console.log(error)
-  })
-
-const addShoppingCart = () => {
-  if (quantity.value == 0) {
-    message.value = '数量が未入力です'
-    return
+  /**
+   * addShoppingCart
+   * 　カートに購入商品情報を追加しショッピングカート画面に遷移する
+   * @function
+   */
+  const addShoppingCart = () => {
+    // 数量が0の場合
+    if (quantity.value == 0) {
+      message.value = '数量が未入力です'
+      return
+    }
+    // 数量が在庫数を超える場合
+    if (item.value.stock < quantity.value) {
+      message.value = '在庫数を超えた数量が入力されています'
+      return
+    }
+    // 購入商品情報を生成
+    selectItem.value = {
+      id: item.value.id,
+      productName: item.value.productName,
+      Price: item.value.price,
+      quantity: quantity.value
+    }
+    // 購入商品情報をカートに追加
+    shopingCartStore.addShoppingCart(selectItem.value)
+    // ショッピングカート画面に遷移
+    router.push("/answers/ans7/shopping_cart")
   }
-  if (item.value.stock < quantity.value) {
-    message.value = '在庫数を超えた数量が入力されています'
-    return
-  }
-  selectItem.value = {
-    id: item.value.id,
-    productName: item.value.productName,
-    Price: item.value.price,
-    quantity: quantity.value
-  }
-  shopingCartStore.addShoppingCart(selectItem.value)
-  router.push("/answers/ans7/shopping_cart")
-}
 </script>
 
 <template>

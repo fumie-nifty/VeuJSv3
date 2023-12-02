@@ -2,20 +2,16 @@
 <!-- AllItem.vue --> 
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import axios from "axios"
+	import { ref } from 'vue'
+	import axios from "axios"
 
-// メッセージ
-const message = ref('')
-// 商品リスト
-const itemList = ref([])
+	const message = ref('')		// メッセージ
+	const itemList = ref([])	// 商品リスト
 
-// ★Action　onMouted使うか要検討 サンプルでは使用してない
-onMounted(() => {
-	// 商品全件取得するWebAPI URL
+	// 商品を全件取得するWebAPI URL
 	const url = 'http://localhost:3000/shoes'
 
-	// Web API呼出し
+	// WebAPI呼出し
 	axios.get(url)
 		.then((response) => {
 			message.value = '検索に成功しました'
@@ -26,7 +22,6 @@ onMounted(() => {
 			itemList.value = []
 			console.log(error)
 		})
-})
 </script>
 
 <template>
@@ -57,20 +52,20 @@ onMounted(() => {
 </template>
 
 <style scoped>
-table {
-	margin: auto;
-	border-collapse: collapse;
-}
+	table {
+		margin: auto;
+		border-collapse: collapse;
+	}
 
-table,
-th,
-td {
-	padding: 0px 10px 0px 10px;
-	border: 1px solid #333;
-}
+	table,
+	th,
+	td {
+		padding: 0px 10px 0px 10px;
+		border: 1px solid #333;
+	}
 
-th {
-	background-color: azure;
-	font-weight: bold;
-}
+	th {
+		background-color: azure;
+		font-weight: bold;
+	}
 </style>

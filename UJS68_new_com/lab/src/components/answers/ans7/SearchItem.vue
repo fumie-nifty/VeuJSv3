@@ -8,6 +8,7 @@
 
   // ルーターオブジェクトの取得
   const router = useRouter()
+  
   // shopingCartStore.jsのインポート
   import { useShoppingCartStore } from '@/stores/shopingCartStore.js'
   // shopingCartStoreストアーオブジェクトの取得
@@ -26,7 +27,7 @@
    * @function
    */
   const searchItem = () => {
-    // 検索API URL
+    // 商品を１件検索するWebAPI URL
     const url = 'http://localhost:3000/shoes/' + itemId.value
 
     // 商品IDが未入力の場合
@@ -37,7 +38,7 @@
       return
     }
 
-    // 検索API呼出し
+    // WebAPI呼出し
     axios.get(url)
       .then((response) => {
         message.value = '検索に成功しました'
