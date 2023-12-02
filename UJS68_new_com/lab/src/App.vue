@@ -48,9 +48,8 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/">・実習問題１</RouterLink><br>
         <RouterLink to="/">・オプション１</RouterLink><br>
         <h2>7章</h2>
-        <RouterLink to="/answers/ans7/top">・実習問題１</RouterLink><br>
-        <RouterLink to="/">・オプション１</RouterLink><br>
-      </nav>
+        <RouterLink to="/answers/ans7/top">・実習問題１& オプション１</RouterLink><br>
+       </nav>
     </div>
   </header>
 
