@@ -1,14 +1,14 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- InsertItemView.vue --> 
+<!-- SearchItemView.vue --> 
 
 <script setup>
-import InsertItem from '@/components/answers/ans4/InsertItemOpt.vue'
+  import SearchItem from '@/components/answers/ans6/SearchItem.vue'
 </script>
 
 <template>
   <main>
-    <h2>商品登録画面</h2>
-    <InsertItem />
+    <h2>【6章 実習１】商品検索画面</h2>
+    <SearchItem />
   </main>
 </template>
 
@@ -19,4 +19,5 @@ main {
   align-content: center;
   text-align: center;
 }
+
 </style>

@@ -46,6 +46,29 @@
     errorFlag.value = false
   }
 
+  /**
+   * deleteItem
+   * 　商品リストから引数で渡されたindexの要素を削除する
+   * @function
+   * @param index 配列のindex
+   * @param item {object} 商品オブジェクト{id,productName,color,price}
+   */
+   const deleteItem = (index, item) => {
+    // 削除確認アラートのキャンセルが押下されたらメソッドを終了する
+    if (!window.confirm('削除しますか？')) {
+      return
+    }
+    // 選択された商品情報を削除
+    itemList.splice(index, 1)
+    // 商品情報が空の場合テーブルを非表示にする
+    if (itemList.length === 0) {
+      showFlag.value = false
+    }
+    // 削除完了メッセージの設定
+    message.value = `No${item.id}の${item.productName}を削除しました。`
+    // index確認用ログ出力
+    console.log('deleteItem:' + index)
+  }
 </script>
 
 <template>
@@ -96,7 +119,7 @@
           <td>{{ item.color }}</td>
           <td>{{ item.price }}円</td>
           <td style="text-align: center;">
-            <button>削除</button>
+            <button v-on:click="deleteItem(index, item)">削除</button>
           </td>
         </tr>
       </tbody>

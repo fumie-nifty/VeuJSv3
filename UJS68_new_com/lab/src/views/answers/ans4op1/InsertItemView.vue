@@ -1,15 +1,15 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- QuestionView.vue --> 
+<!-- InsertItemView.vue --> 
 
 <script setup>
-  import InsertItem from '@/components/answers/ans3/Question.vue'
+import InsertItem from '@/components/answers/ans4op1/InsertItem.vue'
 </script>
 
 <template>
   <main>
-  <h2>【3章 実習１】アンケート画面</h2>
-  <InsertItem/>
-</main>
+    <h2>【4章 オプ１】商品登録画面</h2>
+    <InsertItem />
+  </main>
 </template>
 
 <style scoped>
