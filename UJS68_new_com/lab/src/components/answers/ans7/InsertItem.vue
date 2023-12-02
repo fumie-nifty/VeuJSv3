@@ -2,75 +2,63 @@
 <!-- InsertItem.vue --> 
 
 <script setup>
-import { ref, reactive } from 'vue'
+  import { ref, reactive } from 'vue'
 
-const data = reactive({
-  options: [
-    'ハイカットスニーカー',
-    'ミドルスニーカー',
-    'ローカットスニーカー',
-    'サンダル'
-  ],
-  id: 0, //商品コード
-  productName: '', //商品名
-  color: '', //色
-  price: 0, //金額
-})
-
-const itemList = reactive([]) // 商品リスト
-const showFlag = ref(false)   // テーブル表示フラグ
-const message = ref('')       // メッセージ
-const errorFlag = ref(false)  // エラーフラグ
-
-// dataの値を商品リストに追加する
-const insertItem = () => {
-  // すべての情報が入力されていない場合  
-  if (data.productName == '' || data.color == '' || data.price == 0) {
-    message.value = 'すべての商品情報を入力してください。'
-    errorFlag.value = true
-    return
-  }
-  // 商品コード算出
-  data.id = data.id + 1
-  // すべての情報が入力されている場合 
-  itemList.push({
-    id: data.id,
-    productName: data.productName,
-    color: data.color,
-    price: data.price
+  // 入力値格納用
+  const data = reactive({
+    options: ['ハイカットスニーカー', 'ミドルスニーカー', 'ローカットスニーカー', 'サンダル'],
+    productName: '', //商品名
+    color: '', //色
+    price: 0, //金額
   })
-  // テーブルの表示
-  showFlag.value = true
-  // 入力値のクリア
-  data.productName = ''
-  data.color = ''
-  data.price = 0
-  message.value = '登録完了しました'
-  errorFlag.value = false
-}
 
-// 商品リストから引数で渡されたindexの要素を削除する
-const deleteItem = (index,item) => {
+  const itemId = ref(0)   //商品コードカウント用
+  const itemList = reactive([]) // 商品リスト
+  const message = ref('')       // メッセージ
+  const errorFlag = ref(false)  // エラーフラグ
 
-  // 削除確認アラートのキャンセルが押下されたらメソッドを終了する
-  if (!window.confirm('削除しますか？')) {
-    return
+  // dataの値を商品リストに追加する
+  const insertItem = () => {
+    // すべての情報が入力されていない場合  
+    if (data.productName == '' || data.color == '' || data.price == 0) {
+      message.value = 'すべての商品情報を入力してください。'
+      errorFlag.value = true
+      return
+    }
+    // 商品コード算出
+    itemId.value += 1
+    // 入力情報を商品リストに追加 
+    itemList.push({
+      id: itemId.value,
+      productName: data.productName,
+      color: data.color,
+      price: data.price
+    })
+    // 入力値のクリア
+    data.productName = ''
+    data.color = ''
+    data.price = 0
+    message.value = '登録完了しました'
+    errorFlag.value = false
   }
 
-  // 選択された商品情報を削除
-  itemList.splice(index, 1)
-
-  // 商品情報が空の場合テーブルを非表示にする
-  if (itemList.length === 0) {
-    showFlag.value = false
+  // 商品リストから引数で渡されたindexの要素を削除する
+  const deleteItem = (index, item) => {
+    // 削除確認アラートのキャンセルが押下されたらメソッドを終了する
+    if (!window.confirm('削除しますか？')) {
+      return
+    }
+    // 選択された商品情報を削除
+    itemList.splice(index, 1)
+    // 商品情報が空の場合テーブルを非表示にする
+    if (itemList.length === 0) {
+      showFlag.value = false
+    }
+    // 削除完了メッセージの設定
+    message.value = `No${item.id}の${item.productName}を削除しました。`
+    // index確認用ログ出力
+    console.log('deleteItem:' + index)
   }
-
-  // 削除完了メッセージの設定
-  message.value = `No${item.id}の${item.productName}を削除しました。`
-
-  // index確認用ログ出力
-  console.log('deleteItem:' + index)
-}
 </script>
 
 <template>
@@ -110,7 +98,7 @@ const deleteItem = (index,item) => {
 
     <button v-on:click="insertItem">登録</button>
 
-    <table v-show="showFlag" class="insertItem">
+    <table class="insertItem">
       <thead>
         <th>No</th>
         <th>商品名</th>
@@ -125,7 +113,7 @@ const deleteItem = (index,item) => {
           <td>{{ item.color }}</td>
           <td>{{ item.price }}円</td>
           <td style="text-align: center;">
-            <button v-on:click="deleteItem(index,item)">削除</button>
+            <button v-on:click="deleteItem(index, item)">削除</button>
           </td>
         </tr>
       </tbody>
