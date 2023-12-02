@@ -17,8 +17,12 @@
   const message = ref('')       // メッセージ
   const errorFlag = ref(false)  // エラーフラグ
 
-  // dataの値を商品リストに追加する
-  const insertItem = () => {
+  /**
+   * insertItem
+   * 　dataの値を商品リストに追加する
+   * @function
+   */
+   const insertItem = () => {
     // すべての情報が入力されていない場合  
     if (data.productName == '' || data.color == '' || data.price == 0) {
       message.value = 'すべての商品情報を入力してください。'
@@ -42,8 +46,14 @@
     errorFlag.value = false
   }
 
-  // 商品リストから引数で渡されたindexの要素を削除する
-  const deleteItem = (index, item) => {
+  /**
+   * deleteItem
+   * 　商品リストから引数で渡されたindexの要素を削除する
+   * @function
+   * @param index 配列のindex
+   * @param item {object} 商品オブジェクト{id,productName,color,price}
+   */
+   const deleteItem = (index, item) => {
     // 削除確認アラートのキャンセルが押下されたらメソッドを終了する
     if (!window.confirm('削除しますか？')) {
       return
@@ -100,11 +110,7 @@
 
     <table class="insertItem">
       <thead>
-        <th>No</th>
-        <th>商品名</th>
-        <th>カラー</th>
-        <th>金額</th>
-        <th>キャンセル</th>
+        <th>No</th><th>商品名</th><th>カラー</th><th>金額</th><th>キャンセル</th>
       </thead>
       <tbody>
         <tr v-for="(item, index) in itemList" v-bind:key="item.id">
