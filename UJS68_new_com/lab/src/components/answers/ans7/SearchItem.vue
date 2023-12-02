@@ -51,14 +51,14 @@
       message.value = '数量が未入力です'
       return
     }
-    if (item.value.Stock < quantity.value ) {
+    if (item.value.stock < quantity.value ) {
       message.value = '在庫数を超えた数量が入力されています'
       return
     }
     selectItem.value = {
       id: item.value.id,
-      productName: item.value.ProductName,
-      Price: item.value.Price,
+      productName: item.value.productName,
+      Price: item.value.price,
       quantity: quantity.value
     }
     shopingCartStore.addShoppingCart(selectItem.value)
@@ -80,19 +80,19 @@
         </tr>
         <tr>
           <td>商品名</td>
-          <td>{{ item.ProductName }}</td>
+          <td>{{ item.productName }}</td>
         </tr>
         <tr>
           <td>在庫数</td>
-          <td>{{ item.Stock }}</td>
+          <td>{{ item.stock }}</td>
         </tr>
         <tr>
           <td>価格</td>
-          <td>{{ item.Price }}</td>
+          <td>{{ item.price }}</td>
         </tr>
         <tr>
           <td>商品イメージ</td>
-          <td><img v-bind:src="'/images/' + item.Img"></td>
+          <td><img v-bind:src="'/images/' + item.img"></td>
         </tr>
         <tr>
           <td>購入数</td>

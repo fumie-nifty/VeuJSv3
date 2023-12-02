@@ -43,13 +43,13 @@ onMounted(() => {
 			<tr v-for="(item) in itemList" v-bind:key="item.id">
 				<td>
 					<RouterLink :to="{ name: 'detail_item_params_ans', params: { id: item.id } }">
-						<img v-bind:src="'/images/' + item.Img">
+						<img v-bind:src="'/images/' + item.img">
 					</RouterLink>
 				</td>
 				<td>
-					{{ item.ProductName }}
+					{{ item.productName }}
 				</td>
-				<td>{{ item.Price }}円</td>
+				<td>{{ item.price }}円</td>
 			</tr>
 
 		</tbody>
