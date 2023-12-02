@@ -5,6 +5,7 @@
 </script>
 
 <template>
+  <!--ナビゲーションメニュー-->
   <div id="nav">
     <p><img src="/images/NewLogo.jpg" alt=""></p>
     <router-link to="/answers/ans7/top">home</router-link> |
@@ -18,15 +19,15 @@
 </template>
 
 <style scoped>
-img {
-  width: 90%;
-  height: auto;
-}
+  img {
+    width: 90%;
+    height: auto;
+  }
 
-#nav {
-  margin: 0 auto;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-}
+  #nav {
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
 </style>

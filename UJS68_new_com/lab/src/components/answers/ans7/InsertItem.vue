@@ -2,53 +2,85 @@
 <!-- InsertItem.vue --> 
 
 <script setup>
-  import { ref, reactive } from 'vue'
+import { ref, reactive } from 'vue'
 
-  const data = reactive({
-    options: ['ハイカットスニーカー', 'ミドルスニーカー', 'ローカットスニーカー', 'サンダル'],
-    id: 0, //商品コード
-    productName: '', //商品名
-    color: '', //色
-    price: 0, //金額
+const data = reactive({
+  options: [
+    'ハイカットスニーカー',
+    'ミドルスニーカー',
+    'ローカットスニーカー',
+    'サンダル'
+  ],
+  id: 0, //商品コード
+  productName: '', //商品名
+  color: '', //色
+  price: 0, //金額
+})
+
+const itemList = reactive([]) // 商品リスト
+const showFlag = ref(false)   // テーブル表示フラグ
+const message = ref('')       // メッセージ
+const errorFlag = ref(false)  // エラーフラグ
+
+// dataの値を商品リストに追加する
+const insertItem = () => {
+  // すべての情報が入力されていない場合  
+  if (data.productName == '' || data.color == '' || data.price == 0) {
+    message.value = 'すべての商品情報を入力してください。'
+    errorFlag.value = true
+    return
+  }
+  // 商品コード算出
+  data.id = data.id + 1
+  // すべての情報が入力されている場合 
+  itemList.push({
+    id: data.id,
+    productName: data.productName,
+    color: data.color,
+    price: data.price
   })
+  // テーブルの表示
+  showFlag.value = true
+  // 入力値のクリア
+  data.productName = ''
+  data.color = ''
+  data.price = 0
+  message.value = '登録完了しました'
+  errorFlag.value = false
+}
 
-  const itemList = reactive([])
-  const showFlag = ref(false)
+// 商品リストから引数で渡されたindexの要素を削除する
+const deleteItem = (index,item) => {
 
-  const insertItem = () => {
-    // すべての情報が入力されていない場合  
-    if (data.productName == '' || data.color == '' || data.price == 0) {
-      alert('すべての商品情報を入力してください。')
-      return
-    }
-    // 商品コード算出（
-    data.id = data.id + 1
-    // すべての情報が入力されている場合 
-    itemList.push({ id: data.id, productName: data.productName, color: data.color, price: data.price })
-    // テーブルの表示
-    showFlag.value = true 
-    // 入力値のクリア
-    data.productName = ''
-    data.color = ''
-    data.price = 0
+  // 削除確認アラートのキャンセルが押下されたらメソッドを終了する
+  if (!window.confirm('削除しますか？')) {
+    return
   }
 
-  const deleteItem = (index) => { 
-    if(window.confirm('削除しますか？')){
-      // 選択された商品情報を削除
-      itemList.splice(index,1)
-      // 商品情報が空の場合テーブルを非表示にする
-      if(itemList.length === 0){
-        showFlag.value = false
-      }
-    }    
-    console.log('deleteItem:' + index)
+  // 選択された商品情報を削除
+  itemList.splice(index, 1)
+
+  // 商品情報が空の場合テーブルを非表示にする
+  if (itemList.length === 0) {
+    showFlag.value = false
   }
+
+  // 削除完了メッセージの設定
+  message.value = `No${item.id}の${item.productName}を削除しました。`
+
+  // index確認用ログ出力
+  console.log('deleteItem:' + index)
+}
 </script>
 
 <template>
   <div class="input_output_frame">
-    <p style="text-align: center;">登録したい商品情報を入力後、INSERTボタンを押下してください</p>
+    <p style="text-align: center;">
+      登録したい商品情報を入力後、INSERTボタンを押下してください
+    </p>
+    <p v-bind:class="{ red: errorFlag }" class="message">
+      {{ message }}
+    </p>
     <table>
       <tr>
         <td>商品名：</td>
@@ -84,7 +116,7 @@
         <th>商品名</th>
         <th>カラー</th>
         <th>金額</th>
-        <th>CANCEL</th>
+        <th>キャンセル</th>
       </thead>
       <tbody>
         <tr v-for="(item, index) in itemList" v-bind:key="item.id">
@@ -92,7 +124,9 @@
           <td>{{ item.productName }}</td>
           <td>{{ item.color }}</td>
           <td>{{ item.price }}円</td>
-          <td><button v-on:click="deleteItem(index)">削除</button></td>
+          <td style="text-align: center;">
+            <button v-on:click="deleteItem(index,item)">削除</button>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -100,19 +134,30 @@
 </template>
 
 <style scoped>
-	table.insertItem{
-    margin-top: 5px;
-    border-collapse: collapse;
-  }
-
-  table.insertItem,.insertItem th,.insertItem td {
-    padding: 0px 10px 0px 10px;
-    border:1px solid #333;
-  }
-
-  .insertItem th{
-  background-color:azure;
+.message {
   font-weight: bold;
-  }
-  
+  color: blue;
+}
+
+.red {
+  color: red;
+  font-size: large;
+}
+
+table.insertItem {
+  margin-top: 5px;
+  border-collapse: collapse;
+}
+
+table.insertItem,
+.insertItem th,
+.insertItem td {
+  padding: 0px 10px 0px 10px;
+  border: 1px solid #333;
+}
+
+.insertItem th {
+  background-color: azure;
+  font-weight: bold;
+}
 </style>
