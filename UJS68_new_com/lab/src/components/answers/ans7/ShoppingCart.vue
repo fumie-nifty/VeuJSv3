@@ -9,15 +9,24 @@
 	// shopingCartStoreストアーオブジェクトの取得
 	const shopingCartStore = useShoppingCartStore()	
 
-  const searchFlag = ref(true)
-  const message = ref('')
+  const cartFlag = ref(true)  // 検索結果フラグ
+  const message = ref('')       // メッセージ
+
+  // ショッピングカートの要素数の取得
+  const count = shopingCartStore.shoppingCart.length
+
+  // ショッピングカートが要素0だった場合
+  if(count == 0){
+    message.value = '商品は何も追加されていません。'
+    cartFlag.value = false
+  }
 
 </script>
 
 <template>
   <div class="input_output_frame">
     <p>{{ message }}</p>
-    <table v-show="searchFlag">
+    <table v-show="cartFlag">
       <thead>
         <tr>
           <th width="70">商品ID</th>
