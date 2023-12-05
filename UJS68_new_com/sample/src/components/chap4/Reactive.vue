@@ -2,9 +2,9 @@
 <!-- Reactive.vue --> 
 
 <script setup>
-  import { ref,reactive } from 'vue'
+  import { reactive } from 'vue'
 
-  // 従業員情報（ref）
+  // 従業員情報（reactive）
   const employee = reactive({
     "id": 922101,
     "name": "鈴木　一郎",
