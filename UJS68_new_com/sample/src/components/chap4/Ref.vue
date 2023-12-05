@@ -2,7 +2,7 @@
 <!-- Ref.vue --> 
 
 <script setup>
-  import { ref,reactive } from 'vue'
+  import { ref } from 'vue'
 
   // 従業員情報（ref）
   const employee = ref({
