@@ -67,19 +67,19 @@
 </template>
 
 <style scoped>
-.red {
-  color: red;
-}
+  .red {
+    color: red;
+  }
 
-table {
-  border-collapse: collapse;
-}
+  table {
+    border-collapse: collapse;
+  }
 
-table,
-th,
-td {
-  padding: 0px 10px 0px 10px;
-  border: 1px solid #333;
-}
+  table,
+  th,
+  td {
+    padding: 0px 10px 0px 10px;
+    border: 1px solid #333;
+  }
 </style>
 
