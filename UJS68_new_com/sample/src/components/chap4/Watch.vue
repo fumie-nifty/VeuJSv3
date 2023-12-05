@@ -4,12 +4,9 @@
 <script setup>
   import { ref, reactive, watch } from 'vue'
 
-  // 時
-  const hour = ref(0)
-  // 分
-  const minutes = ref(0)
-  // 給与計算結果
-  const salaryResult = ref(0)
+  const hour = ref(0)         // 時
+  const minutes = ref(0)      // 分
+  const salaryResult = ref(0) // 給与計算結果
 
   // 従業員
   const employee = reactive({
@@ -36,9 +33,7 @@
 </script>
 
 <template>
-  <p class="red">
-    ブラウザーの開発ツールを表示し操作してください。
-  </p>
+  <p class="red">ブラウザーの開発ツールを表示し操作してください。</p>
   <h2>■refの監視</h2>
   <div class="colum">
     <input type="number" v-model="hour" />
