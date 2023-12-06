@@ -3,16 +3,16 @@
 
 <script setup>
 	// vueからdefinePropsを受取る
-	// Todo2
+	// Todo3
 
 	// definePropsらpropsを受取る
-	// Todo3
+	// Todo4
 </script>
 
 <template>
-	<!--Todo4-->
-	<p class="message"></p>
 	<!--Todo5-->
+	<p class="message"></p>
+	<!--Todo6-->
 	<table border="1">
 		<tbody>
 			<tr>

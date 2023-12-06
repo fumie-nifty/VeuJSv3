@@ -8,7 +8,8 @@
 <template>
   <main>
     <h3>章6　コンポーネント　props　解答</h3>
-    <FindEmployeeComponentAns />
+    <!--Todo1-->
+    <FindEmployeeComponentAns />  
   </main>
 </template>
 
