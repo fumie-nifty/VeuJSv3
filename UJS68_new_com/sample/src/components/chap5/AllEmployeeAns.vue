@@ -5,7 +5,7 @@
   import { ref, reactive, onMounted } from 'vue'
 
   // axiosのインポート
-  import axios from "axios"
+  import axios from 'axios'
 
   // メッセージ
   const message = ref('')
