@@ -2,11 +2,8 @@
 <!-- FindEmployee.vue --> 
 
 <script setup>
-	// vueからdefinePropsを受取る
-	// Todo3
-
 	// definePropsらpropsを受取る
-	// Todo4
+	// Todo3
 </script>
 
 <template>
