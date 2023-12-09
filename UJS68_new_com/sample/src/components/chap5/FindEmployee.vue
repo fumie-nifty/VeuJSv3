@@ -5,7 +5,7 @@
   import { ref, reactive } from 'vue'
 
   // axiosのインポート
-  import axios from "axios"
+  import axios from 'axios'
 
   // テキストボックスで入力される従業員ID
   const employeeId = ref('')
