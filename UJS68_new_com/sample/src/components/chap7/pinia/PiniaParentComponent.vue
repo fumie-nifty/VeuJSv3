@@ -5,9 +5,9 @@
   import PiniaChildComponent from '@/components/chap7/pinia/PiniaChildComponent.vue'
   
   // conter.jsのインポート
-  import { useCounterStore } from '@/stores/counter';
+  import { useCounterStore } from '@/stores/counterStore';
   //counterストアーオブジェクトの取得
-  const counter = useCounterStore();
+  const counterStore = useCounterStore();
 </script>
 
 <template>
@@ -15,9 +15,9 @@
     <h2>親コンポーネント</h2>   
     <p>
       <!--counterストアーの状態countの参照-->
-      counter:　{{ counter.count }}　
+      counterStore:　{{ counterStore.count }}　
       <!--counterストアーの状態更新メソッドの呼出さ以-->
-      <button v-on:click="counter.increment">カウントアップ</button>
+      <button v-on:click="counterStore.increment">カウントアップ</button>
     </p>
     <PiniaChildComponent />
   </div>

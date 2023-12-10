@@ -1,7 +1,7 @@
 /**
  * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
  * 
- * ファイル名：counter.js
+ * ファイル名：counterStore.js
  * 　　カウントアップ用のstore
  */
 
@@ -10,7 +10,7 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
 // defineStore()の戻り値をuseCounterStoreに格納
-export const useCounterStore = defineStore('counter', () => {
+export const useCounterStore = defineStore('counterStore', () => {
 
   // リアクティブ変数の定義（state）
   const count = ref(0)
