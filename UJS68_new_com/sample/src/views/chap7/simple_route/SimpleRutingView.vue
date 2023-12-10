@@ -8,7 +8,7 @@
 
 <template>
   <main>
-    <h3>章7　ルーティングの階層化とパラメータ渡し</h3>
+    <h3>章7　ルーティング</h3>
     <nav>
       <RouterLink to="/chap7/simple_route/nest">ネスト画面</RouterLink>｜
       <RouterLink to="/chap7/simple_route/sendParam">送信画面</RouterLink>
