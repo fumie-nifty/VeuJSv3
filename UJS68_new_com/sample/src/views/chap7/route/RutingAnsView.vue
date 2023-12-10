@@ -7,9 +7,9 @@
 
 <template>
   <main>
-    <h3>章7　ルーティング</h3>
+    <h3>章7　ルーティング　解答</h3>
     <nav>
-      <!--Todo1-->
+      <!--Todo2-->
       <RouterLink to="/chap7/route_ans/all_employee">従業員一覧</RouterLink>｜
       <RouterLink to="/chap7/route_ans/find_employee_component">従業員検索</RouterLink>
     </nav>
@@ -17,4 +17,8 @@
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+  h3{
+    background-color: rgba(248, 137, 193, 0.377);
+  }
+</style>

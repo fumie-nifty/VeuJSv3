@@ -7,7 +7,7 @@
 
 <template>
   <main>
-    <h3>章7　ハンズオン</h3>
+    <h3>章7　ハンズオン　解答</h3>
     <InsertEmployeeAns />
   </main>
 </template>

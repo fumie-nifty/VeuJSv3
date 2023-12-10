@@ -62,4 +62,20 @@
 	</table>
 </template>
 
-<style scoped></style>
+<style scoped>
+.red {
+  color: red;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  padding: 0px 10px 0px 10px;
+  border: 1px solid #333;
+}
+</style>
+
