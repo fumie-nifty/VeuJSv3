@@ -23,6 +23,6 @@ export const useCounterStore = defineStore('counterStore', () => {
     count.value++
   }
 
-  // 公開するメソッドとプロパティを戻り値として返す
+  // 公開するものを戻り値として返す
   return { count, doubleCount, increment }
 })

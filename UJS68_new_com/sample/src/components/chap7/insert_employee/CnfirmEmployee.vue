@@ -2,10 +2,10 @@
 <!-- CnfirmEmployee.vue --> 
 
 <script setup>
-	// employeeManager.jsのインポート
-	import { useEmployeeStore } from '@/stores/employeeManager.js'
-	// employeeManagerストアーオブジェクトの取得
-	const employeeManager = useEmployeeStore()
+	// employeeStore.jsのインポート
+	import { useEmployeeStore } from '@/stores/employeeStore.js'
+	// employeeStoreストアーオブジェクトの取得
+	const employeeStore = useEmployeeStore()
 </script>
 
 <template>
@@ -16,7 +16,7 @@
 			<th>従業員名</th>
 		</thead>
 		<tbody>
-			<tr v-for="(employee, index) in employeeManager.employeeList" 
+			<tr v-for="(employee, index) in employeeStore.employeeList" 
 					v-bind:key="employee.employeeName">
 				<td>{{ index + 1 }}</td>
 				<td>{{ employee.employeeName }}</td>

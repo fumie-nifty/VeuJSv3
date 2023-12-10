@@ -3,7 +3,7 @@
 
 <script setup>
   // conter.jsのインポート
-  import { useCounterStore } from '@/stores/counterStore';
+  import { useCounterStore } from '@/stores/counterStore'
   // counterストアーオブジェクトの取得
   const counterStore = useCounterStore()
 </script>
