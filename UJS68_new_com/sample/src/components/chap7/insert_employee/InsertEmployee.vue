@@ -6,13 +6,12 @@
 	import { useRouter } from 'vue-router'
 	import CnfirmEmployeeAns from '@/components/chap7/insert_employee/CnfirmEmployeeAns.vue'
 
+  const router = useRouter()
+
 	// employeeStore.jsのインポート
 	import { useEmployeeStore } from '@/stores/employeeStore.js'
-
-	const router = useRouter()
 	// employeeStoreストアーオブジェクトの取得
-	// Todo1
-
+	// Todo3
 	//入力された従業員名を格納
 	const employeeName = ref('')
 
@@ -21,7 +20,7 @@
 		// 従業員名が未入力でない場合
 		if (employeeName.value !== '') {
 			// employeeStoreのemployeeListに従業員オブジェクトを追加
-			// Todo 2
+			// Todo4
 			
 			
 			
