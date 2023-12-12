@@ -7,14 +7,14 @@ import { ref, reactive, computed } from 'vue'
 // 入力値格納用
 const data = reactive({
   options: ['ハイカットスニーカー', 'ミドルスニーカー', 'ローカットスニーカー', 'サンダル'],
-  id: 0, // 商品ID
+  id: 0, // 商品コード
   productName: '', // 商品名
   color: '', // 色
   price: 0, // 金額
   quantity: 0 // 数量
 })
 
-const itemId = ref(0)   //商品IDカウント用
+const itemId = ref(0)   //商品コードカウント用
 const itemList = reactive([]) // 商品リスト
 const message = ref('')       // メッセージ
 const errorFlag = ref(false)  // エラーフラグ
@@ -31,7 +31,7 @@ const insertItem = () => {
     errorFlag.value = true
     return
   }
-  // 商品ID算出
+  // 商品コード算出
   itemId.value += 1
   // すべての情報が入力されている場合 
   itemList.push({
@@ -79,7 +79,7 @@ const deleteItem = (index, item) => {
 const subtotal = computed(() => (item) => {
   // ★実習1★
   // 価格×数量の結果を戻り値として返す
-  return item.price * item.quantity
+  
 })
 
 </script>
@@ -145,7 +145,7 @@ const subtotal = computed(() => (item) => {
           <td>{{ item.price }}円</td>
           <td><input type="number" v-model.number="item.quantity" min="0" class="quantity"></td>
           <!--★実習2★-->
-          <td>{{ subtotal(item) }}円</td>
+          <td>円</td>
           <td><button v-on:click="deleteItem(index)">削除</button></td>
         </tr>
       </tbody>

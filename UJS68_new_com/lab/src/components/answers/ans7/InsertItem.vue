@@ -12,7 +12,7 @@
     price: 0, //金額
   })
 
-  const itemId = ref(0)   //商品コードカウント用
+  const itemId = ref(0)   //商品IDカウント用
   const itemList = reactive([]) // 商品リスト
   const message = ref('')       // メッセージ
   const errorFlag = ref(false)  // エラーフラグ
@@ -29,7 +29,7 @@
       errorFlag.value = true
       return
     }
-    // 商品コード算出
+    // 商品ID算出
     itemId.value += 1
     // 入力情報を商品リストに追加 
     itemList.push({
@@ -60,10 +60,6 @@
     }
     // 選択された商品情報を削除
     itemList.splice(index, 1)
-    // 商品情報が空の場合テーブルを非表示にする
-    if (itemList.length === 0) {
-      showFlag.value = false
-    }
     // 削除完了メッセージの設定
     message.value = `No${item.id}の${item.productName}を削除しました。`
     // index確認用ログ出力
@@ -74,7 +70,7 @@
 <template>
   <div class="input_output_frame">
     <p style="text-align: center;">
-      登録したい商品情報を入力後、INSERTボタンを押下してください
+      登録したい商品情報を入力後、削除ボタンを押下してください
     </p>
     <p v-bind:class="{ red: errorFlag }" class="message">
       {{ message }}
@@ -131,6 +127,7 @@
 .message {
   font-weight: bold;
   color: blue;
+  font-size: large;
 }
 
 .red {

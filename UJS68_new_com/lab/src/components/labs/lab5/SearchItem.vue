@@ -33,21 +33,21 @@
       .then((response) => {
         // ★実装4★
         // メッセージの格納
-        message.value = '検索に成功しました'  
+          
         // レスポンスされたデータをitemに格納
-        item.value = response.data
+        
         // searchFlagにtureを設定
-        searchFlag.value = true
+        
       })
       .catch((error) => {
         // ★実装4★
         // メッセージの格納
-        message.value = '検索に失敗しました'
+       
         // itemに空のオブジェクトを格納
-        item.value = {}
+        
         // searchFlagにfalseを設定
-        searchFlag.value = false
-        console.log(error)
+        
+        
       })
   }
 
@@ -58,26 +58,26 @@
     <h2>検索したい商品IDを入力してください</h2>
     <input type="text" v-model="itemId">　
     <!--★実装5★-->
-    <button v-on:click="searchItem">検索</button>
+    <button>検索</button>
     <p>{{ message }}</p>
     <!--★実装6★-->
     <table v-show="searchFlag" align="center">
       <tbody>
         <tr>
           <td>商品ID</td>
-          <td>{{ item.id }}</td>
+          <td></td>
         </tr>
         <tr>
           <td>商品名</td>
-          <td>{{ item.productName }}</td>
+          <td></td>
         </tr>
         <tr>
           <td>在庫数</td>
-          <td>{{ item.stock }}</td>
+          <td></td>
         </tr>
         <tr>
           <td>価格</td>
-          <td>{{ item.price }}</td>
+          <td></td>
         </tr>
         <tr>
           <td>商品イメージ</td>

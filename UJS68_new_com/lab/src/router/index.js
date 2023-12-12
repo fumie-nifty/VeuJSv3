@@ -16,6 +16,84 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/labs/lab3/question',
+      component: () => import('@/views/labs/lab3/QuestionView.vue')
+    },
+    {
+      path: '/labs/lab3op1/all_item',
+      component: () => import('@/views/labs/lab3op1/AllItemView.vue')
+    },
+    {
+      path: '/labs/lab4/insert_item',
+      component: () => import('@/views/labs/lab4/InsertItemView.vue')
+    },
+    {
+      path: '/labs/lab4op1/insert_item',
+      component: () => import('@/views/labs/lab4op1/InsertItemView.vue')
+    },
+    {
+      path: '/labs/lab4op2/insert_item_opt',
+      component: () => import('@/views/labs/lab4op2/InsertItemOptView.vue')
+    },
+    {
+      path: '/labs/lab5/search_item',
+      component: () => import('@/views/labs/lab5/SearchItemView.vue')
+    },
+    {
+      path: '/labs/lab5op1/all_item',
+      component: () => import('@/views/labs/lab5op1/AllItemView.vue')
+    },
+    {
+      path: '/labs/lab6/search_item',
+      component: () => import('@/views/labs/lab6/SearchItemView.vue')
+    },
+    {
+      path: '/labs/lab6op1/all_item',
+      component: () => import('@/views/labs/lab6op1/AllItemView.vue')
+    },
+    {
+      path: '/labs/lab6op1/detail_item/:id',
+      name: "detail_item_params_ansop",
+      component: () => import('@/views/labs/lab6op1/DetailItemView.vue'),
+      props: true
+    },
+    {
+      path: '/labs/lab7',
+      component: () => import('@/views/labs/lab7/AppBaseView.vue'),
+      children: [
+        {
+          path: 'question',
+          component: () => import('@/views/labs/lab7/QuestionView.vue')
+        },
+        {
+          path: 'insert_item',
+          component: () => import('@/views/labs/lab7/InsertItemView.vue')
+        },
+        {
+          path: 'search_item',
+          component: () => import('@/views/labs/lab7/SearchItemView.vue')
+        },
+        {
+          path: 'all_item',
+          component: () => import('@/views/labs/lab7/AllItemView.vue')
+        },
+        {
+          path: 'top',
+          component: () => import('@/views/labs/lab7/TopView.vue')
+        },
+        {
+          path: 'shopping_cart',
+          component: () => import('@/views/labs/lab7/ShoppingCartView.vue')
+        },
+        {
+          path: 'detail_item/:id',
+          name: "detail_item_params_ans",
+          component: () => import('@/views/labs/lab7/DetailItemView.vue'),
+          props: true
+        }
+      ]
+    },
+    {
       path: '/answers/ans3/question',
       component: () => import('@/views/answers/ans3/QuestionView.vue')
     },

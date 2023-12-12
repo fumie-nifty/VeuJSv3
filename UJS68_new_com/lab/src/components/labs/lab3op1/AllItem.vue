@@ -60,10 +60,10 @@ const itemList = ref([
     </thead>
     <tbody>
       <!--★実装2★-->
-      <tr v-for="(item) in itemList" v-bind:key="item.id">
-        <td><img v-bind:src="'/images/' + item.img"></td>
-        <td>{{ item.productName }}</td>
-        <td>{{ item.price }}円</td>
+      <tr>
+        <td><img ></td>
+        <td></td>
+        <td>円</td>
       </tr>
     </tbody>
   </table>

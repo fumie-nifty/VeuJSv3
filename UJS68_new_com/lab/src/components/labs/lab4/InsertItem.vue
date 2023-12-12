@@ -14,7 +14,7 @@
 
   const itemId = ref(0)   //商品IDカウント用
   // ★実装1★
-  const itemList = reactive([]) // 商品リスト
+  // 商品リスト
   const message = ref('')       // メッセージ
   const errorFlag = ref(false)  // エラーフラグ
 
@@ -34,12 +34,12 @@
     itemId.value += 1
     // ★実装2★
     // 入力情報を商品リストに追加 
-    itemList.push({
-      id: itemId.value,
-      productName: data.productName,
-      color: data.color,
-      price: data.price
-    })
+    
+    
+    
+    
+    
+    
     // 入力値のクリア
     data.productName = ''
     data.color = ''
@@ -85,7 +85,7 @@
     </table>
 
     <!--★実装3★-->
-    <button v-on:click="insertItem">登録</button>
+    <button>登録</button>
 
     <table class="insertItem">
       <thead>

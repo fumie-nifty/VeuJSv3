@@ -14,13 +14,14 @@ import { RouterLink, RouterView } from 'vue-router'
 
       <nav>
         <h2>3章</h2>
-        <RouterLink to="/">・実習問題１</RouterLink><br>
-        <RouterLink to="/">・オプション１</RouterLink><br>
+        <RouterLink to="/labs/lab3/question">・実習問題１</RouterLink><br>
+        <RouterLink to="/labs/lab3op1/all_item">・オプション１</RouterLink><br>
         <h2>4章</h2>
-        <RouterLink to="/">・実習問題１</RouterLink><br>
-        <RouterLink to="/">・オプション１</RouterLink><br>
+        <RouterLink to="/labs/lab4/insert_item">・実習問題１</RouterLink><br>
+        <RouterLink to="/labs/lab4op1/insert_item">・オプション１</RouterLink><br>
+        <RouterLink to="/labs/lab4op2/insert_item_opt">・オプション２</RouterLink><br>
         <h2>5章</h2>
-        <RouterLink to="/">・実習問題１</RouterLink><br>
+        <RouterLink to="/labs/lab5/search_item">・実習問題１</RouterLink><br>
         <RouterLink to="/">・オプション１</RouterLink><br>
         <h2>6章</h2>
         <RouterLink to="/">・実習問題１</RouterLink><br>

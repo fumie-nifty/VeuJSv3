@@ -13,7 +13,6 @@
   })
 
   const itemId = ref(0)   //商品IDカウント用
-  // ★実装1★
   const itemList = reactive([]) // 商品リスト
   const message = ref('')       // メッセージ
   const errorFlag = ref(false)  // エラーフラグ
@@ -32,7 +31,6 @@
     }
     // 商品ID算出
     itemId.value += 1
-    // ★実装2★
     // 入力情報を商品リストに追加 
     itemList.push({
       id: itemId.value,
@@ -46,6 +44,28 @@
     data.price = 0
     message.value = '登録完了しました'
     errorFlag.value = false
+  }
+
+  /**
+   * deleteItem
+   * 　商品リストから引数で渡されたindexの要素を削除する
+   * @function
+   * @param index 配列のindex
+   * @param item {object} 商品オブジェクト{id,productName,color,price}
+   */
+   const deleteItem = (index, item) => {
+    // 削除確認アラートのキャンセルが押下されたらメソッドを終了する
+    if (!window.confirm('削除しますか？')) {
+      return
+    }
+    // ★実装2★
+    // 選択された商品情報を削除
+   
+    // 削除完了メッセージの設定
+    
+    
+    // index確認用ログ出力
+    console.log('deleteItem:' + index)
   }
 </script>
 
@@ -84,7 +104,6 @@
       </tr>
     </table>
 
-    <!--★実装3★-->
     <button v-on:click="insertItem">登録</button>
 
     <table class="insertItem">
@@ -98,7 +117,7 @@
           <td>{{ item.color }}</td>
           <td>{{ item.price }}円</td>
           <td style="text-align: center;">
-            <button>削除</button>
+            <button v-on:click="deleteItem(index, item)">削除</button>
           </td>
         </tr>
       </tbody>

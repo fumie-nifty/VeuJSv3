@@ -2,7 +2,7 @@
 <!-- AllItem.vue --> 
 
 <script setup>
-	import { ref } from 'vue'
+  import { ref, onMounted } from 'vue'
 	import axios from "axios"
 
 	const message = ref('')		// メッセージ
@@ -11,6 +11,8 @@
 	// 商品を全件取得するWebAPI URL
 	const url = 'http://localhost:3000/shoes'
 
+  // コンポーネントがマウントされた後に呼び出されるコールバックの登録
+  onMounted(() => {
 	// WebAPI呼出し
 	axios.get(url)
 		.then((response) => {
@@ -22,6 +24,7 @@
 			itemList.value = []
 			console.log(error)
 		})
+  })
 </script>
 
 <template>
