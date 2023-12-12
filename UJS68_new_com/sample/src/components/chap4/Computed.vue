@@ -2,7 +2,7 @@
 <!-- Computed.vue --> 
 
 <script setup>
-  import { ref, reactive, computed } from 'vue'
+  import { reactive, computed } from 'vue'
 
   // 従業員情報の定義
   const employee = reactive({

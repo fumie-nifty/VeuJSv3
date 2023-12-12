@@ -2,15 +2,13 @@
 <!-- Reactive.vue --> 
 
 <script setup>
-  import { ref,reactive } from 'vue'
-
-  // 従業員情報（ref）
+  import { reactive } from 'vue'
+  // 従業員情報（reactive）
   const employee = reactive({
     "id": 922101,
     "name": "鈴木　一郎",
     "salary":20000   
   })
-
   // 給与の更新
   const changeData = () => {
     employee.salary = 40000

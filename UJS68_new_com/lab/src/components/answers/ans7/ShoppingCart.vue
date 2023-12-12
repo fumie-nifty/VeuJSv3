@@ -4,14 +4,16 @@
 <script setup>
   import { ref } from 'vue'
 
+  // ★実習5★
   // shopingCartStore.jsのインポート
-	import { useShoppingCartStore } from '@/stores/shopingCartStore.js'
+	import { useShoppingCartStore } from '@/stores/shopingCartStoreAns.js'
 	// shopingCartStoreストアーオブジェクトの取得
 	const shopingCartStore = useShoppingCartStore()	
 
   const cartFlag = ref(true)  // 検索結果フラグ
   const message = ref('')       // メッセージ
 
+  // ★実習6★
   // ショッピングカートの要素数の取得
   const count = shopingCartStore.shoppingCart.length
 
@@ -37,12 +39,13 @@
         </tr>
       </thead>
       <tbody>
+        <!--★実習7★-->
         <tr v-for="(item) in shopingCartStore.shoppingCart" v-bind:key="item.id">
           <td>{{ item.id }}</td>
           <td>{{ item.productName }}</td>
-          <td class="number_column">{{ item.Price }}</td>
+          <td class="number_column">{{ item.price }}</td>
           <td class="number_column">{{ item.quantity }}</td>
-          <td class="number_column">{{ item.Price *  item.quantity}}</td>
+          <td class="number_column">{{ item.price *  item.quantity}}</td>
         </tr>
         <tr>
           <td colspan="4" class="sub_title">合　　計</td>

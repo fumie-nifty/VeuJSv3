@@ -49,14 +49,14 @@ import { RouterLink, RouterView } from 'vue-router'
       <h2>5章</h2>
       <nav>
         <RouterLink to="/chap5/find_employee">Web API</RouterLink><br>
-        <RouterLink to="/chap5/all_employee">ハンズオン5-1</RouterLink><br>
+        <RouterLink to="/chap5/all_employee">ハンズオン5-2</RouterLink><br>
         <RouterLink to="/chap5/all_employee_ans">ハンズオン5-2　解答</RouterLink><br>
       </nav>
       <h2>6章</h2>
       <nav>
         <RouterLink to="/chap6/component">コンポーネント指向</RouterLink><br>
-        <RouterLink to="/chap6/find_employee_component">ハンズオン6-1</RouterLink><br>
-        <RouterLink to="/chap6/find_employee_component_ans">ハンズオン6-1　解答</RouterLink><br>
+        <RouterLink to="/chap6/find_employee_component">ハンズオン6-2</RouterLink><br>
+        <RouterLink to="/chap6/find_employee_component_ans">ハンズオン6-2　解答</RouterLink><br>
       </nav>
       <h2>7章</h2>
       <nav>

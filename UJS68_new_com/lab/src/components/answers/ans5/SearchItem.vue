@@ -31,13 +31,21 @@
     // WebAPI呼出し
     axios.get(url)
       .then((response) => {
-        message.value = '検索に成功しました'
+        // ★実装4★
+        // メッセージの格納
+        message.value = '検索に成功しました'  
+        // レスポンスされたデータをitemに格納
         item.value = response.data
+        // searchFlagにtureを設定
         searchFlag.value = true
       })
       .catch((error) => {
+        // ★実装4★
+        // メッセージの格納
         message.value = '検索に失敗しました'
+        // itemに空のオブジェクトを格納
         item.value = {}
+        // searchFlagにfalseを設定
         searchFlag.value = false
         console.log(error)
       })
@@ -48,9 +56,11 @@
 <template>
   <div class="input_output_frame">
     <h2>検索したい商品IDを入力してください</h2>
-    <input type="text" v-model="itemId">
-    <button v-on:click="searchItem"> Search</button>
+    <input type="text" v-model="itemId">　
+    <!--★実装5★-->
+    <button v-on:click="searchItem">検索</button>
     <p>{{ message }}</p>
+    <!--★実装6★-->
     <table v-show="searchFlag" align="center">
       <tbody>
         <tr>

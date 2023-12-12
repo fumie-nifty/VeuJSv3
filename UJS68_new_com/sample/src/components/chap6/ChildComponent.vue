@@ -2,9 +2,6 @@
 <!-- ChildComponent.vue --> 
 
 <script setup>
-  // vueからdefinePropsを受取る
-  import {defineProps } from 'vue'
-
   // definePropsらpropsを受取る
   const props = defineProps(['title','message'])
 </script>

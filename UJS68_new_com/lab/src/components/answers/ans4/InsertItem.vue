@@ -12,7 +12,8 @@
     price: 0, //金額
   })
 
-  const itemId = ref(0)   //商品コードカウント用
+  const itemId = ref(0)   //商品IDカウント用
+  // ★実装1★
   const itemList = reactive([]) // 商品リスト
   const message = ref('')       // メッセージ
   const errorFlag = ref(false)  // エラーフラグ
@@ -29,8 +30,9 @@
       errorFlag.value = true
       return
     }
-    // 商品コード算出
+    // 商品ID算出
     itemId.value += 1
+    // ★実装2★
     // 入力情報を商品リストに追加 
     itemList.push({
       id: itemId.value,
@@ -45,13 +47,12 @@
     message.value = '登録完了しました'
     errorFlag.value = false
   }
-
 </script>
 
 <template>
   <div class="input_output_frame">
     <p style="text-align: center;">
-      登録したい商品情報を入力後、INSERTボタンを押下してください
+      登録したい商品情報を入力後、削除ボタンを押下してください
     </p>
     <p v-bind:class="{ red: errorFlag }" class="message">
       {{ message }}
@@ -83,6 +84,7 @@
       </tr>
     </table>
 
+    <!--★実装3★-->
     <button v-on:click="insertItem">登録</button>
 
     <table class="insertItem">
@@ -108,6 +110,7 @@
 .message {
   font-weight: bold;
   color: blue;
+  font-size: large;
 }
 
 .red {

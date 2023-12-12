@@ -6,22 +6,21 @@
 	import { useRouter } from 'vue-router'
 	import CnfirmEmployeeAns from '@/components/chap7/insert_employee/CnfirmEmployeeAns.vue'
 
-	// employeeManager.jsのインポート
-	import { useEmployeeStore } from '@/stores/employeeManager.js'
+  const router = useRouter()
 
-	const router = useRouter()
-	// employeeManagerストアーオブジェクトの取得
-	// Todo1
-
+	// employeeStore.jsのインポート
+	import { useEmployeeStore } from '@/stores/employeeStore.js'
+	// employeeStoreストアーオブジェクトの取得
+	// Todo3
 	//入力された従業員名を格納
 	const employeeName = ref('')
 
-	// 入力された従業員名をemployeeManagerのemployeeListに格納
+	// 入力された従業員名をemployeeStoreのemployeeListに格納
 	const insertMember = () => {
 		// 従業員名が未入力でない場合
 		if (employeeName.value !== '') {
-			// employeeManagerのemployeeListに従業員オブジェクトを追加
-			// Todo 2
+			// employeeStoreのemployeeListに従業員オブジェクトを追加
+			// Todo4
 			
 			
 			
@@ -46,7 +45,7 @@
 			<th>従業員名</th>
 		</thead>
 		<tbody>
-			<tr v-for="(employee, index) in employeeManager.employeeList" 
+			<tr v-for="(employee, index) in employeeStore.employeeList" 
 					v-bind:key="employee.employeeName">
 				<td>{{ index + 1 }}</td>
 				<td>{{ employee.employeeName }}</td>

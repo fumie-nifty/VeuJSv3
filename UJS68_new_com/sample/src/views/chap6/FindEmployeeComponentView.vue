@@ -8,6 +8,7 @@
 <template>
   <main>
     <h3>章6　コンポーネント　props</h3>
-    <FindEmployeeComponent />
+    <!--Todo1-->
+    
   </main>
 </template>

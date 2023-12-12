@@ -44,7 +44,7 @@
 	<input type="text" v-model="employeeId">
 	<button v-on:click="searchMember">検索</button>
 	<!--props (massage,employee) を渡してコンポーネント呼出し-->
-	<!--Todo1-->
+	<!--Todo2-->
 	
 </template>
 

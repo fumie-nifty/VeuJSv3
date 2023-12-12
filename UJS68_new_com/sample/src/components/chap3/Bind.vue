@@ -24,6 +24,7 @@
       富士通ラーニングメディア社
     </a>
   </p>
+  <p>入力された値：{{title}}</p>
 </template>
 
 <style scoped></style>

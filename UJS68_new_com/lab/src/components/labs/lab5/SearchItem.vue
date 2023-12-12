@@ -5,8 +5,6 @@
   import { ref } from 'vue'
   import axios from "axios"
 
-	import ItemComponent from '@/components/answers/ans6/ItemComponent.vue'
-
   const itemId = ref('')        // 検索値（商品ID）
   const message = ref('')       // メッセージ
   const searchFlag = ref(false) // 検索結果フラグ
@@ -33,30 +31,58 @@
     // WebAPI呼出し
     axios.get(url)
       .then((response) => {
-        message.value = '検索に成功しました'
-        item.value = response.data
-        searchFlag.value = true
+        // ★実装4★
+        // メッセージの格納
+          
+        // レスポンスされたデータをitemに格納
+        
+        // searchFlagにtureを設定
+        
       })
       .catch((error) => {
-        message.value = '検索に失敗しました'
-        item.value = {}
-        searchFlag.value = false
-        console.log(error)
+        // ★実装4★
+        // メッセージの格納
+       
+        // itemに空のオブジェクトを格納
+        
+        // searchFlagにfalseを設定
+        
+        
       })
   }
 
-</script>
+ </script>
 
 <template>
   <div class="input_output_frame">
     <h2>検索したい商品IDを入力してください</h2>
-    <input type="text" v-model="itemId">
-    <button v-on:click="searchItem"> Search</button>
+    <input type="text" v-model="itemId">　
+    <!--★実装5★-->
+    <button>検索</button>
     <p>{{ message }}</p>
+    <!--★実装6★-->
     <table v-show="searchFlag" align="center">
       <tbody>
-        <!--子コンポーネント呼出し-->
-        <ItemComponent v-bind:item="item"/>
+        <tr>
+          <td>商品ID</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>商品名</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>在庫数</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>価格</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>商品イメージ</td>
+          <td><img v-bind:src="'/images/' + item.img"></td>
+        </tr>
         <tr>
           <td>購入数</td>
           <td><input type="number" v-model="quantity" /></td>

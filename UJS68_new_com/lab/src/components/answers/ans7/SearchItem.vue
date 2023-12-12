@@ -9,8 +9,9 @@
   // ルーターオブジェクトの取得
   const router = useRouter()
   
+  // ★実習3★
   // shopingCartStore.jsのインポート
-  import { useShoppingCartStore } from '@/stores/shopingCartStore.js'
+  import { useShoppingCartStore } from '@/stores/shopingCartStoreAns.js'
   // shopingCartStoreストアーオブジェクトの取得
   const shopingCartStore = useShoppingCartStore()
 
@@ -71,15 +72,17 @@
       return
     }
 
+    // ★実習4★
     // 購入商品情報を生成
     selectItem.value = {
       id: item.value.id,
       productName: item.value.productName,
-      Price: item.value.price,
+      price: item.value.price,
       quantity: quantity.value
     }
 
-    // 購入商品情報をカートに追加
+    // ★実習4★
+    // 購入商品情報をストアーのカートに追加
     shopingCartStore.addShoppingCart(selectItem.value)
 
     // ショッピングカート画面に遷移

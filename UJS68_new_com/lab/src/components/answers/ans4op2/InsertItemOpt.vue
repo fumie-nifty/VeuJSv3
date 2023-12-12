@@ -1,5 +1,5 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- InsertItem.vue --> 
+<!-- InsertItemOpt.vue --> 
 
 <script setup>
 import { ref, reactive, computed } from 'vue'
@@ -7,14 +7,14 @@ import { ref, reactive, computed } from 'vue'
 // 入力値格納用
 const data = reactive({
   options: ['ハイカットスニーカー', 'ミドルスニーカー', 'ローカットスニーカー', 'サンダル'],
-  id: 0, // 商品コード
+  id: 0, // 商品ID
   productName: '', // 商品名
   color: '', // 色
   price: 0, // 金額
   quantity: 0 // 数量
 })
 
-const itemId = ref(0)   //商品コードカウント用
+const itemId = ref(0)   //商品IDカウント用
 const itemList = reactive([]) // 商品リスト
 const message = ref('')       // メッセージ
 const errorFlag = ref(false)  // エラーフラグ
@@ -31,7 +31,7 @@ const insertItem = () => {
     errorFlag.value = true
     return
   }
-  // 商品コード算出
+  // 商品ID算出
   itemId.value += 1
   // すべての情報が入力されている場合 
   itemList.push({
@@ -64,10 +64,6 @@ const deleteItem = (index, item) => {
   }
   // 選択された商品情報を削除
   itemList.splice(index, 1)
-  // 商品情報が空の場合テーブルを非表示にする
-  if (itemList.length === 0) {
-    showFlag.value = false
-  }
   // 削除完了メッセージの設定
   message.value = `No${item.id}の${item.productName}を削除しました。`
   // index確認用ログ出力
@@ -81,6 +77,8 @@ const deleteItem = (index, item) => {
  * @function
  */
 const subtotal = computed(() => (item) => {
+  // ★実習1★
+  // 価格×数量の結果を戻り値として返す
   return item.price * item.quantity
 })
 
@@ -134,10 +132,10 @@ const subtotal = computed(() => (item) => {
         <th>No</th>
         <th>商品名</th>
         <th>カラー</th>
-        <th>金額</th>
+        <th>価格</th>
         <th>数量</th>
         <th>金額</th>
-        <th>小計</th>
+        <th></th>
       </thead>
       <tbody>
         <tr v-for="(item, index) in itemList" v-bind:key="item.id">
@@ -146,6 +144,7 @@ const subtotal = computed(() => (item) => {
           <td>{{ item.color }}</td>
           <td>{{ item.price }}円</td>
           <td><input type="number" v-model.number="item.quantity" min="0" class="quantity"></td>
+          <!--★実習2★-->
           <td>{{ subtotal(item) }}円</td>
           <td><button v-on:click="deleteItem(index)">削除</button></td>
         </tr>

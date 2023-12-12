@@ -9,7 +9,7 @@
   <main>
     <h3>章7　ルーティング</h3>
     <nav>
-      <!--Todo1-->
+      <!--Todo2-->
       <RouterLink to="/">従業員一覧</RouterLink>｜
       <RouterLink to="/chap7/route/find_employee_component">従業員検索</RouterLink>
     </nav>

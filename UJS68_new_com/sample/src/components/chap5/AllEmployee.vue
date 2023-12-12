@@ -5,7 +5,7 @@
 	import { ref } from 'vue'
 
 	// axiosのインポート
-	import axios from "axios"
+	import axios from 'axios'
 
 	// メッセージ
 	const message = ref('')
@@ -17,28 +17,30 @@
 
 	const url = 'http://localhost:3000/employee/'
 
-	axios.get(url)
-		.then(() => {				//Todo2
-			// 通信結果取得したデータをemplloyeeに格納
-			// Todo3
+  onMounted(() => {
+    axios.get(url)
+      .then(() => {				//Todo2
+        // 通信結果取得したデータをemplloyeeに格納
+        // Todo3
 
-			message.value = '検索に成功しました'
-			// 検索結果のフラグをtureにする
-			searchFlag.value = true
-			// 取得した配列が空だった場合
-			if(employeeList.value.length == 0){
-				message.value = '従業員データが存在しません'
-				// 検索結果のフラグをfalseにする
-				searchFlag.value = false
-			}
-		})
-		.catch((error) => {
-			message.value = '検索に失敗しました'
-			// 検索結果のフラグをfalseにする
-			searchFlag.value = false
-			employeeList.value = []
-			console.log(error)
-		})
+        message.value = '検索に成功しました'
+        // 検索結果のフラグをtureにする
+        searchFlag.value = true
+        // 取得した配列が空だった場合
+        if(employeeList.value.length == 0){
+          message.value = '従業員データが存在しません'
+          // 検索結果のフラグをfalseにする
+          searchFlag.value = false
+        }
+      })
+      .catch((error) => {
+        message.value = '検索に失敗しました'
+        // 検索結果のフラグをfalseにする
+        searchFlag.value = false
+        employeeList.value = []
+        console.log(error)
+      })
+  })
 </script>
 
 <template>

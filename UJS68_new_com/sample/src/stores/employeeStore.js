@@ -1,14 +1,14 @@
 /**
  * All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited
  * 
- * ファイル名：employeeManager.js
+ * ファイル名：employeeStore.js
  * 　　従業員登録用store
  */
 
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useEmployeeStore = defineStore('employeeManager', () => {
+export const useEmployeeStore = defineStore('employeeStore', () => {
 
   // 従業員
   const employee = ref({})

@@ -22,8 +22,11 @@ export const useShoppingCartStore = defineStore('shoppingCart', () => {
    * @param emp {object} 従業員オブジェクト{employeeName : employeeName.value}
    */
   const addShoppingCart= (item) => {
-    shoppingCart.value.push(item)
-    total.value += item.Price *  item.quantity
+    // ★実習2★
+    //shoppingCartにitemを追加
+    
+    // 単価×数量をtotalに加算代入
+    
   }
 
   return { addShoppingCart,shoppingCart,total}

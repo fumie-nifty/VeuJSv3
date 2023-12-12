@@ -1,5 +1,5 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- SearchItem.vue --> 
+<!-- DetaiItem.vue --> 
 
 <script setup>
   import { ref, defineProps } from 'vue'
@@ -10,10 +10,11 @@
   const router = useRouter()
 
   // shopingCartStore.jsのインポート
-  import { useShoppingCartStore } from '@/stores/shopingCartStore.js'
+  import { useShoppingCartStore } from '@/stores/shopingCartStoreAns.js'
   // shopingCartStoreストアーオブジェクトの取得
   const shopingCartStore = useShoppingCartStore()
 
+  // ★実習4★
   // 親コンポーネントからpropsの取得う
   const props = defineProps(['id'])   
 
@@ -23,7 +24,8 @@
   const item = ref({})          // 商品検索APIの戻り値
   const selectItem = ref({})    // カート追加用商品情報
 
-  // 商品を１件検索するWebAPI URL
+  // ★実習5★
+  // 商品を１件検索するWebAPI URL（http://localhost:3000/shoes/商品ID）
   const url = 'http://localhost:3000/shoes/' + props.id
 
   // WebAPI呼出し
@@ -56,15 +58,18 @@
       message.value = '在庫数を超えた数量が入力されています'
       return
     }
+
     // 購入商品情報を生成
     selectItem.value = {
       id: item.value.id,
       productName: item.value.productName,
-      Price: item.value.price,
+      price: item.value.price,
       quantity: quantity.value
     }
+
     // 購入商品情報をカートに追加
     shopingCartStore.addShoppingCart(selectItem.value)
+
     // ショッピングカート画面に遷移
     router.push("/answers/ans7/shopping_cart")
   }
