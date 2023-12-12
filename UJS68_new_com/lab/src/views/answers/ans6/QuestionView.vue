@@ -1,15 +1,15 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- SearchItemView.vue --> 
+<!-- QuestionView.vue --> 
 
 <script setup>
-  import SearchItem from '@/components/answers/ans6/SearchItem.vue'
+  import InsertItem from '@/components/answers/ans6/Question.vue'
 </script>
 
 <template>
   <main>
-    <h2>【6章 実習１】商品検索画面</h2>
-    <SearchItem />
-  </main>
+  <h2>【6章 実習１】アンケート画面</h2>
+  <InsertItem/>
+</main>
 </template>
 
 <style scoped>
@@ -19,5 +19,4 @@ main {
   align-content: center;
   text-align: center;
 }
-
 </style>

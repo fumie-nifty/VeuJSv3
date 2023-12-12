@@ -22,10 +22,10 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/labs/lab4op2/insert_item_opt">・オプション２</RouterLink><br>
         <h2>5章</h2>
         <RouterLink to="/labs/lab5/search_item">・実習問題１</RouterLink><br>
-        <RouterLink to="/">・オプション１</RouterLink><br>
+        <RouterLink to="/labs/lab5op1/all_item">・オプション１</RouterLink><br>
         <h2>6章</h2>
-        <RouterLink to="/">・実習問題１</RouterLink><br>
-        <RouterLink to="/">・オプション１</RouterLink><br>
+        <RouterLink to="/labs/lab6/question">・実習問題１</RouterLink><br>
+        <RouterLink to="/labs/lab6op1/search_item">・オプション１</RouterLink><br>
         <h2>7章</h2>
         <RouterLink to="/">・実習問題１</RouterLink><br>
         <RouterLink to="/">・オプション１</RouterLink><br>
@@ -47,8 +47,8 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/answers/ans5/search_item">・実習問題１</RouterLink><br>
         <RouterLink to="/answers/ans5op1/all_item">・オプション１</RouterLink><br>
         <h2>6章</h2>
-        <RouterLink to="/answers/ans6/search_item">・実習問題１</RouterLink><br>
-        <RouterLink to="/answers/ans6op1/all_item">・オプション１</RouterLink><br>
+        <RouterLink to="/answers/ans6/question">・実習問題１</RouterLink><br>
+        <RouterLink to="/answers/ans6op1/search_item">・オプション１</RouterLink><br>
         <h2>7章</h2>
         <RouterLink to="/answers/ans7/top">・実習問題１& オプション１</RouterLink><br>
        </nav>

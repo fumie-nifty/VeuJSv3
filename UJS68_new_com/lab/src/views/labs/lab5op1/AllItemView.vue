@@ -2,12 +2,12 @@
 <!-- AllItemView.vue --> 
 
 <script setup>
-  import AllItem from '@/components/answers/ans6op1/AllItem.vue'
+  import AllItem from '@/components/labs/lab5op1/AllItem.vue'
 </script>
 
 <template>
   <main>
-    <h2>【6章 オプ１】商品一覧画面</h2>
+    <h2>【5章 オプ１】商品一覧画面</h2>
     <AllItem />
   </main>
 </template>

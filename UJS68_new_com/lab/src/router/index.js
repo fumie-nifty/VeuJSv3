@@ -44,18 +44,12 @@ const router = createRouter({
       component: () => import('@/views/labs/lab5op1/AllItemView.vue')
     },
     {
-      path: '/labs/lab6/search_item',
-      component: () => import('@/views/labs/lab6/SearchItemView.vue')
+      path: '/labs/lab6/question',
+      component: () => import('@/views/labs/lab6/QuestionView.vue')
     },
     {
-      path: '/labs/lab6op1/all_item',
-      component: () => import('@/views/labs/lab6op1/AllItemView.vue')
-    },
-    {
-      path: '/labs/lab6op1/detail_item/:id',
-      name: "detail_item_params_ansop",
-      component: () => import('@/views/labs/lab6op1/DetailItemView.vue'),
-      props: true
+      path: '/labs/lab6op1/search_item',
+      component: () => import('@/views/labs/lab6op1/SearchItemView.vue')
     },
     {
       path: '/labs/lab7',
@@ -122,18 +116,12 @@ const router = createRouter({
       component: () => import('@/views/answers/ans5op1/AllItemView.vue')
     },
     {
-      path: '/answers/ans6/search_item',
-      component: () => import('@/views/answers/ans6/SearchItemView.vue')
+      path: '/answers/ans6/question',
+      component: () => import('@/views/answers/ans6/QuestionView.vue')
     },
     {
-      path: '/answers/ans6op1/all_item',
-      component: () => import('@/views/answers/ans6op1/AllItemView.vue')
-    },
-    {
-      path: '/answers/ans6op1/detail_item/:id',
-      name: "detail_item_params_ansop",
-      component: () => import('@/views/answers/ans6op1/DetailItemView.vue'),
-      props: true
+      path: '/answers/ans6op1/search_item',
+      component: () => import('@/views/answers/ans6op1/SearchItemView.vue')
     },
     {
       path: '/answers/ans7',

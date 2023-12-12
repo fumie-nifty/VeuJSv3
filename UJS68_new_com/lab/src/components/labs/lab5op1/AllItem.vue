@@ -10,22 +10,22 @@
 
   // 商品を全件取得するWebAPI URL
   // ★実装4★
-  const url = 'http://localhost:3000/shoes'
+  
 
   // コンポーネントがマウントされた後に呼び出されるコールバックの登録
   onMounted(() => {
     // ★実装5★
     // WebAPI呼出し
-    axios.get(url)
-      .then((response) => {
-        message.value = '検索に成功しました'
-        itemList.value = response.data
-      })
-      .catch((error) => {
-        message.value = '検索に失敗しました'
-        itemList.value = []
-        console.log(error)
-      })
+  
+  
+   
+   
+  
+  
+   
+   
+   
+      
   })
 </script>
 
@@ -41,10 +41,10 @@
     </thead>
     <tbody>
       <!--★実装6★-->
-      <tr v-for="(item) in itemList" v-bind:key="item.id">
-        <td><img v-bind:src="'/images/' + item.img"></td>
-        <td>{{ item.productName }}</td>
-        <td>{{ item.price }}円</td>
+      <tr>
+        <td><img></td>
+        <td></td>
+        <td>円</td>
       </tr>
     </tbody>
   </table>

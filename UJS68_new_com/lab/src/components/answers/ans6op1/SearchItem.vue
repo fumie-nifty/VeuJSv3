@@ -5,7 +5,7 @@
   import { ref } from 'vue'
   import axios from "axios"
 
-	import ItemComponent from '@/components/answers/ans6/ItemComponent.vue'
+	import ItemComponent from '@/components/answers/ans6op1/ItemComponent.vue'
 
   const itemId = ref('')        // 検索値（商品ID）
   const message = ref('')       // メッセージ
@@ -55,6 +55,7 @@
     <p>{{ message }}</p>
     <table v-show="searchFlag" align="center">
       <tbody>
+        <!--★実習4★-->
         <!--子コンポーネント呼出し-->
         <ItemComponent v-bind:item="item"/>
         <tr>
