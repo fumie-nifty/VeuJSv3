@@ -8,13 +8,13 @@
   <!--ナビゲーションメニュー-->
   <div id="nav">
     <p><img src="/images/NewLogo.jpg" alt=""></p>
-    <router-link to="/answers/ans7/top">home</router-link> |
-    <router-link to="/answers/ans7/question">アンケート</router-link> |
-    <router-link to="/answers/ans7/insert_item">商品登録</router-link> |
-    <router-link to="/answers/ans7/search_item">商品検索</router-link> |
+    <router-link to="/labs/lab7/top">home</router-link> |
+    <router-link to="/labs/lab7/question">アンケート</router-link> |
+    <router-link to="/labs/lab7/insert_item">商品登録</router-link> |
+    <router-link to="/labs/lab7/search_item">商品検索</router-link> |
     <!--★実習★-->
-    <router-link to="/answers/ans7/shopping_cart">カート</router-link> |
-    <router-link to="/answers/ans7/all_item">商品一覧</router-link> |
+    <router-link to="/labs/lab7/shopping_cart">カート</router-link> |
+    <router-link to="/labs/lab7/all_item">商品一覧</router-link> |
     <router-view />
   </div>
 </template>

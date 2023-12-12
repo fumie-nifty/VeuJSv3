@@ -27,8 +27,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/labs/lab6/question">・実習問題１</RouterLink><br>
         <RouterLink to="/labs/lab6op1/search_item">・オプション１</RouterLink><br>
         <h2>7章</h2>
-        <RouterLink to="/">・実習問題１</RouterLink><br>
-        <RouterLink to="/">・オプション１</RouterLink><br>
+        <RouterLink to="/labs/lab7/top">・実習問題& オプション</RouterLink><br>
       </nav>
 
       <RouterLink to="/">
@@ -50,7 +49,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/answers/ans6/question">・実習問題１</RouterLink><br>
         <RouterLink to="/answers/ans6op1/search_item">・オプション１</RouterLink><br>
         <h2>7章</h2>
-        <RouterLink to="/answers/ans7/top">・実習問題１& オプション１</RouterLink><br>
+        <RouterLink to="/answers/ans7/top">・実習問題& オプション</RouterLink><br>
        </nav>
     </div>
   </header>

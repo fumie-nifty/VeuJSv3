@@ -6,7 +6,7 @@
 	import axios from "axios"
 
 	// 親コンポーネントからpropsの取得う
-	// Todo2
+	const props = defineProps(['id']) 
 
 	// 検索結果を格納する
 	const employee = ref({})

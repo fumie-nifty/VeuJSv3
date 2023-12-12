@@ -40,8 +40,8 @@
     <tbody>
       <tr v-for="(item) in itemList" v-bind:key="item.id">
         <td>
-          <!--★実習★3-->
-          <RouterLink :to="{ name: 'detail_item_params_ans', params: { id: item.id } }">
+          <!--★実習3-->
+          <RouterLink :to="{}">
             <img v-bind:src="'/images/' + item.img">
           </RouterLink>
         </td>
@@ -50,7 +50,6 @@
         </td>
         <td>{{ item.price }}円</td>
       </tr>
-
     </tbody>
   </table>
 </template>

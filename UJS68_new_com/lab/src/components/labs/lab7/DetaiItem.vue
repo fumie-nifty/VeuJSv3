@@ -16,7 +16,7 @@
 
   // ★実習4★
   // 親コンポーネントからpropsの取得う
-  const props = defineProps(['id'])   
+    
 
   const message = ref('')       // メッセージ
   const searchFlag = ref(false) // 検索結果フラグ
@@ -26,7 +26,7 @@
 
   // ★実習5★
   // 商品を１件検索するWebAPI URL（http://localhost:3000/shoes/商品ID）
-  const url = 'http://localhost:3000/shoes/' + props.id
+  // const url = 
 
   // WebAPI呼出し
   axios.get(url)

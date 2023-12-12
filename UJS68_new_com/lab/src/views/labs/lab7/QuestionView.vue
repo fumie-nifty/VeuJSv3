@@ -1,13 +1,13 @@
 <!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited --> 
-<!-- AllItemView.vue --> 
+<!-- QuestionView.vue --> 
 
 <script setup>
-  import AllItem from '@/components/labs/lab7/AllItem.vue'
+  import InsertItem from '@/components/labs/lab7/Question.vue'
 </script>
 
 <template>
-  <h2>商品一覧画面</h2>
-  <AllItem />
+  <h2>アンケート画面</h2>
+  <InsertItem/>
 </template>
 
 <style scoped>

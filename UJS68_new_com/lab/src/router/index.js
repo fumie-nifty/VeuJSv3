@@ -81,7 +81,7 @@ const router = createRouter({
         },
         {
           path: 'detail_item/:id',
-          name: "detail_item_params_ans",
+          name: "detail_item_params",
           component: () => import('@/views/labs/lab7/DetailItemView.vue'),
           props: true
         }
