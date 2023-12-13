@@ -67,4 +67,9 @@ nav {
 nav a{
   margin-left: 5px;
 }
+
+.router-link-active{
+   font-weight: bold;
+   color: brown;
+  }
 </style>

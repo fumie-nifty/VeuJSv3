@@ -31,4 +31,9 @@
     align-content: center;
     text-align: center;
   }
+  .router-link-active{
+    background-color: bisque;
+    font-weight: bold;
+    color: brown;
+  }
 </style>

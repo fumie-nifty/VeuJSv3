@@ -79,4 +79,10 @@ nav {
   margin-bottom: 10px;
   font-size: 10px;
 }
+
+.router-link-active{
+   font-weight: bold;
+   color: rgb(9, 64, 245);
+  }
+
 </style>
