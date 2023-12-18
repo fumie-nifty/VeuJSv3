@@ -17,8 +17,9 @@
    * @function
    */
   const searchItem = () => {
+    // ★実装4★
     // 商品を１件検索するWebAPI URL
-    const url = 'http://localhost:3000/shoes/' + itemId.value
+    
 
     // 商品IDが未入力の場合
     if (itemId.value == '') {
@@ -31,7 +32,7 @@
     // WebAPI呼出し
     axios.get(url)
       .then((response) => {
-        // ★実装4★
+        // ★実装5★
         // メッセージの格納
           
         // レスポンスされたデータをitemに格納
@@ -40,7 +41,7 @@
         
       })
       .catch((error) => {
-        // ★実装4★
+        // ★実装5★
         // メッセージの格納
        
         // itemに空のオブジェクトを格納
@@ -57,10 +58,10 @@
   <div class="input_output_frame">
     <h2>検索したい商品IDを入力してください</h2>
     <input type="text" v-model="itemId">　
-    <!--★実装5★-->
+    <!--★実装6★-->
     <button>検索</button>
     <p>{{ message }}</p>
-    <!--★実装6★-->
+    <!--★実装7★-->
     <table v-show="searchFlag" align="center">
       <tbody>
         <tr>
