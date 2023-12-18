@@ -2,7 +2,7 @@
 <!-- AllItemView.vue --> 
 
 <script setup>
-  import AllItem from '@/components/answers/ans7/AllItem.vue'
+  import AllItem from '@/components/labs/lab7/AllItem.vue'
 </script>
 
 <template>
