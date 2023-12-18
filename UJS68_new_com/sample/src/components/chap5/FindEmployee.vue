@@ -7,7 +7,7 @@
   // axiosのインポート
   import axios from 'axios'
 
-  // テキストボックスで入力される従業員ID
+  // テキストボックスで入力される従業員番号
   const employeeId = ref('')
   // メッセージ
   const message = ref('従業員番号を入力して検索ボタンをクリックして下さい')
@@ -16,7 +16,7 @@
   // 検索結果の従業員
   const employee = ref({})
 
-  // テキストボックスの従業員IDをもとに従業員を検索する
+  // テキストボックスの従業員番号をもとに従業員を検索する
   const searchMember = () => {
     const url = 'http://localhost:3000/employee/' + employeeId.value
 
